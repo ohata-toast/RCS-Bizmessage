@@ -192,7 +192,7 @@ Content-Type: application/json
 | isAd | Boolean | X | 광고 발송 여부 | 기본값: false |
 | unsubscribeNo | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
 | mmsType | String | O | MMS 타입 | HORIZONTAL, VERTICAL, CAROUSEL_MEDIUM, CAROUSEL_SMALL |
-| cards | List | O | 카드들 | HORIZONTAL(1), VERTICAL(1), CAROUSEL_MEDIUM(3~6), CAROUSEL_SMALL(3~6) |
+| cards | List | O | 카드들 | HORIZONTAL(1), VERTICAL(1), CAROUSEL_MEDIUM(3 ~ 6), CAROUSEL_SMALL(3 ~ 6) |
 | card.title | String | X |  제목 | 최대 30자 |
 | card.description | String | X | 내용 | 슬라이드 X( MAX:1300), CAROUSEL_MEDIUM(MAX:60), CAROUSEL_SMALL(MAX:30) |
 | card.media | String | O | 첨부파일 ID | 첨부파일 업로드 시, 발급되는 ID 값 |
