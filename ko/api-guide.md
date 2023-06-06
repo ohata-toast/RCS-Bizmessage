@@ -6,21 +6,23 @@
 https://rcs-bizmessage.api.nhncloudservice.com
 ```
 
-## SMS 타입 발송
-### Method, URI
+## 메시지 발송
+
+### SMS 타입 발송
+[Method, URI]
 
 ```
 POST /rcs/v1.0/messages/sms
 Content-Type: application/json
 ```
 
-### Header
+[Header]
 ```
 "X-TC-APP-KEY" : String,
 "X-SECRET-KEY": String
 ```
 
-### Request Body
+[Request Body]
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
@@ -33,7 +35,7 @@ Content-Type: application/json
 | body | String | O | 본문 | 최대 100자 |
 | buttons | List | X | 버튼 | 최대 2개 |
 | button.buttonType | String | X | 버튼 타입 | COMPOSE, CLIPBOARD, DIALER, MAP_SHOW, MAP_QUERY, MAP_SHARE, URL, CALENDAR |
-| button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
+| button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
 | isFallback | Boolean | X | 대체 발송 여부 | 기본값: false |
 
 * 요청 예시
@@ -41,8 +43,7 @@ Content-Type: application/json
 {
 	"brandId":"BR.AGNtIngI0u",
 	"chatbotId":"15887967",
-	"countryCode" :"82",
-	"recipientNo":"01020060836",
+	"recipientNumber":"01020060836",
 	"isAd": false,
 	"body":"testBody",
 	"buttons" : [
@@ -54,7 +55,7 @@ Content-Type: application/json
 }
 ```
 
-### Response Body
+[Response Body]
 
 * 성공 예시
 ```json
@@ -86,35 +87,35 @@ Content-Type: application/json
 | header.isSuccessful | Boolean | 성공 여부 |
 
 
-## LMS 타입 발송
-### Method, URI
+### LMS 타입 발송
+[Method, URI]
 
 ```
 POST /rcs/v1.0/messages/lms
 Content-Type: application/json
 ```
 
-### Header
+[Header]
 ```
 "X-TC-APP-KEY" : String,
 "X-SECRET-KEY": String
 ```
 
-### Request Body
+[Request Body]
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
 | sendDateTime | String | X | 발송 희망 시간 | 현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
-| recipientNo | String | O | 수신 번호 |  |
+| recipientNumber | String | O | 수신 번호 |  |
 | isAd | Boolean | X | 광고 발송 여부 | 기본값: false |
 | unsubscribeNo | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
 | title | String | X | 제목 | 최대 30자 |
 | body | String | O | 본문 | 최대 1300자 |
 | buttons | List | X | 버튼 | 최대 3개 |
 | button.buttonType | String | X | 버튼 타입 | COMPOSE, CLIPBOARD, DIALER, MAP_SHOW, MAP_QUERY, MAP_SHARE, URL, CALENDAR |
-| button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
+| button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
 | isFallback | Boolean | X | 대체 발송 여부 | 기본값: false |
 
 * 요청 예시
@@ -122,8 +123,7 @@ Content-Type: application/json
 {
 	"brandId":"BR.AGNtIngI0u",
 	"chatbotId":"15887967",
-	"countryCode" :"82",
-	"recipientNo":"01020060836",
+	"recipientNumber":"01020060836",
 	"isAd": false,
     "title":"testTitle",
 	"body":"testBody",
@@ -136,7 +136,7 @@ Content-Type: application/json
 }
 ```
 
-### Response Body
+[Response Body]
 
 * 성공 예시
 ```json
@@ -167,28 +167,28 @@ Content-Type: application/json
 | header.resultMessage | String | 결과 메시지 |
 | header.isSuccessful | Boolean | 성공 여부 |
 
-## MMS 타입 발송
-### Method, URI
+### MMS 타입 발송
+[Method, URI]
 
 ```
 POST /rcs/v1.0/messages/mms
 Content-Type: application/json
 ```
 
-### Header
+[Header]
 ```
 "X-TC-APP-KEY" : String,
 "X-SECRET-KEY": String
 ```
 
-### Request Body
+[Request Body]
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
 | sendDateTime | String | X | 발송 희망 시간 | 현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
-| recipientNo | String | O | 수신 번호 |  |
+| recipientNumber | String | O | 수신 번호 |  |
 | isAd | Boolean | X | 광고 발송 여부 | 기본값: false |
 | unsubscribeNo | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
 | mmsType | String | O | MMS 타입 | HORIZONTAL, VERTICAL, CAROUSEL_MEDIUM, CAROUSEL_SMALL |
@@ -198,7 +198,7 @@ Content-Type: application/json
 | card.media | String | O | 첨부파일 ID | 첨부파일 업로드 시, 발급되는 ID 값 |
 | card.buttons | List | X | 버튼 | 최대 2개 |
 | button.buttonType | String | X | 버튼 타입 | COMPOSE, CLIPBOARD, DIALER, MAP_SHOW, MAP_QUERY, MAP_SHARE, URL, CALENDAR |
-| button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
+| button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
 | isFallback | Boolean | X | 대체 발송 여부 | 기본값:false |
 
 * 요청 예시
@@ -206,8 +206,7 @@ Content-Type: application/json
 {
 	"brandId":"BR.AGNtIngI0u",
 	"chatbotId":"15887967",
-	"countryCode" :"82",
-	"recipientNo":"01020060836",
+	"recipientNumber":"01020060836",
 	"isAd": false,
 	"cards": {
         "title":"testTitle",
@@ -228,7 +227,7 @@ Content-Type: application/json
 ```
 
 
-### Response Body
+[Response Body]
 
 * 성공 예시
 ```json
@@ -259,21 +258,21 @@ Content-Type: application/json
 | header.resultMessage | String | 결과 메시지 |
 | header.isSuccessful | Boolean | 성공 여부 |
 
-## Template 타입 발송
-### Method, URI
+### Template 타입 발송
+[Method, URI]
 
 ```
 POST /rcs/v1.0/messages/template
 Content-Type: application/json
 ```
 
-### Header
+[Header]
 ```
 "X-TC-APP-KEY" : String,
 "X-SECRET-KEY": String
 ```
 
-### Request Body
+[Request Body]
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
@@ -281,7 +280,7 @@ Content-Type: application/json
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | messagebaseId  | String | O | 템플릿 ID | |
-| recipientNo | String | O | 수신 번호 |  |
+| recipientNumber | String | O | 수신 번호 |  |
 | body | String | X | 본문 | 최대 90자, Free 템플릿인 경우에만 해당 |
 | templateParameter | Map | X | 치환자 key, value |
 | isFallback | Boolean | X | 대체 발송 여부 |  |
@@ -296,11 +295,11 @@ Content-Type: application/json
     "templateParameter" : {
         "key1":"value1"
     }
-	"recipientNo":"01020060836"
+	"recipientNumber":"01020060836"
 }
 ```
 
-### Response Body
+[Response Body]
 
 * 성공 예시
 ```json
@@ -331,20 +330,22 @@ Content-Type: application/json
 | header.resultMessage | String | 결과 메시지 |
 | header.isSuccessful | Boolean | 성공 여부 |
 
-## SMS 메시지 조회 API
-### Method, URI
+## 메시지 조회
+
+### SMS 메시지 조회 API
+[Method, URI]
 ```
 GET /rcs/v1.0/messages/sms
 Content-Type: multipart/form-data
 ```
 
-### Header
+[Header]
 ```
 "X-TC-APP-KEY" : String
 "X-SECRET-KEY" : String
 ```
 
-### Query Parameter
+[Query Parameter]
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
@@ -421,21 +422,21 @@ Content-Type: multipart/form-data
 | receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
 
-## LMS 메시지 조회 API
-### Method, URI
+### LMS 메시지 조회 API
+[Method, URI]
 
 ```
 GET /rcs/v1.0/messages/lms
 Content-Type: application/json
 ```
 
-### Header
+[Header]
 ```
 "X-TC-APP-KEY" : String
 "X-SECRET-KEY" : String
 ```
 
-### Query Parameter
+[Query Parameter]
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
@@ -511,21 +512,21 @@ Content-Type: application/json
 | sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
 | receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
-## MMS 메시지 조회 API
-### Method, URI
+### MMS 메시지 조회 API
+[Method, URI]
 
 ```
 GET /rcs/v1.0/messages/mms
 Content-Type: application/json
 ```
 
-### Header
+[Header]
 ```
 "X-TC-APP-KEY" : String
 "X-SECRET-KEY" : String
 ```
 
-### Query Parameter
+[Query Parameter]
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
@@ -601,21 +602,21 @@ Content-Type: application/json
 | sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
 | receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
-## TEMPLATE 메시지 조회 API
-### Method, URI
+### TEMPLATE 메시지 조회 API
+[Method, URI]
 
 ```
 GET /rcs/v1.0/messages/template
 Content-Type: application/json
 ```
 
-### Header
+[Header]
 ```
 "X-TC-APP-KEY" : String
 "X-SECRET-KEY" : String
 ```
 
-### Query Parameter
+[Query Parameter]
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
@@ -691,15 +692,17 @@ Content-Type: application/json
 | sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
 | receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
-## 첨부파일 업로드 API
-### Method, URI
+## 리소스 API
+
+### 첨부파일 업로드 API
+[Method, URI]
 
 ```
 POST /rcs/v1.0/media
 Content-Type: multipart/form-data
 ```
 
-### Header
+[Header]
 ```
 "X-TC-APP-KEY" : String
 "X-SECRET-KEY" : String
@@ -707,14 +710,14 @@ Content-Type: multipart/form-data
 
 * 첨부파일 유효기간은 7일
 
-### Request Body
+[Request Body]
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
 | uploadFile | MultipartFile | O | 첨부 파일 |  |
 | uploadUser | String | X | 업로드 사용자 명 |  |
 
-### Response Body
+[Response Body]
 
 * 성공 예시
 ```json
