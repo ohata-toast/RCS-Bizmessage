@@ -337,7 +337,7 @@ Content-Type: application/json
 [Method, URI]
 ```
 GET /rcs/v1.0/messages/sms
-Content-Type: multipart/form-data
+Content-Type: application/json
 ```
 
 [Header]
