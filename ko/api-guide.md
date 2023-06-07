@@ -709,7 +709,9 @@ Content-Type: multipart/form-data
 "X-SECRET-KEY" : String
 ```
 
-* 첨부파일 유효기간은 7일
+* 첨부파일 유효기간은 7일 입니다.
+* 파일 용량제한은 1MB입니다.
+* 이미지 첨부는 'jpg', 'jpeg', 'png', 'gif', 'bmp' 확장자만 지원합니다.
 
 [Request Body]
 
