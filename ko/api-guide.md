@@ -57,7 +57,7 @@ Content-Type: application/json
 
 [Response Body]
 
-* 성공 예시
+[성공 예시]
 ```json
 {
     "header": {
@@ -68,7 +68,7 @@ Content-Type: application/json
     "messageId" : "20220914184500weq0u9pNu30"
 }
 ```
-* 실패 예시
+[실패 예시]
 ```json
 {
     "header": {
@@ -138,7 +138,7 @@ Content-Type: application/json
 
 [Response Body]
 
-* 성공 예시
+[성공 예시]
 ```json
 {
     "header": {
@@ -149,7 +149,7 @@ Content-Type: application/json
     "messageId" : "20220914184500weq0u9pNu30"
 }
 ```
-* 실패 예시
+[실패 예시]
 ```json
 {
     "header": {
@@ -230,7 +230,7 @@ Content-Type: application/json
 
 [Response Body]
 
-* 성공 예시
+[성공 예시]
 ```json
 {
     "header": {
@@ -241,7 +241,7 @@ Content-Type: application/json
     "messageId" : "20220914184500weq0u9pNu30"
 }
 ```
-* 실패 예시
+[실패 예시]
 ```json
 {
     "header": {
@@ -302,7 +302,7 @@ Content-Type: application/json
 
 [Response Body]
 
-* 성공 예시
+[성공 예시]
 ```json
 {
     "header": {
@@ -313,7 +313,7 @@ Content-Type: application/json
     "messageId" : "20220914184500weq0u9pNu30"
 }
 ```
-* 실패 예시
+[실패 예시]
 ```json
 {
     "header": {
@@ -350,18 +350,22 @@ Content-Type: multipart/form-data
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| messageId | String | O | 메시지 ID | 요청 시 발급되는 메시지 ID |
+| messageId | String | O(선택적 필수) | 메시지 ID | 요청 시 발급되는 메시지 ID |
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O | 요청 시간 from | from ~ to 최대 31일 |
-| endSendDateTime | String | O | 요청 시간 to | from ~ to 최대 31일 |
-| startReceiveDateTime | String | O | 수신 시간 from | from ~ to 최대 31일 |
-| endReceiveDateTime | String | O | 수신 시간 to | from ~ to 최대 31일 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
 | limit | Integer | X | Limit | 기본값: 15 max : 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
-* 성공 예시
+* messageId 또는 startSendDateTime / endSendDateTime 또는 startReceiveDateTime / endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
+* 요청 시간과 수신 시간 날짜를 동시에 검색은 불가능합니다.
+
+
+[성공 예시]
 ```json
 {
     "header": {
@@ -393,7 +397,7 @@ Content-Type: multipart/form-data
 ```
 
 
-* 실패 예시
+[실패 예시]
 ```json
 {
     "header": {
@@ -441,18 +445,21 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| messageId | String | O | 메시지 ID | 요청 시 발급되는 메시지 ID |
+| messageId | String | O(선택적 필수) | 메시지 ID | 요청 시 발급되는 메시지 ID |
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O | 요청 시간 from | from ~ to 최대 31일 |
-| endSendDateTime | String | O | 요청 시간 to | from ~ to 최대 31일 |
-| startReceiveDateTime | String | O | 수신 시간 from | from ~ to 최대 31일 |
-| endReceiveDateTime | String | O | 수신 시간 to | from ~ to 최대 31일 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
 | limit | Integer | X | Limit | 기본값: 15 max : 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
-* 성공 예시
+* messageId 또는 startSendDateTime / endSendDateTime 또는 startReceiveDateTime / endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
+* 요청 시간과 수신 시간 날짜를 동시에 검색은 불가능합니다.
+
+[성공 예시]
 ```json
 {
     "header": {
@@ -484,7 +491,7 @@ Content-Type: application/json
 ```
 
 
-* 실패 예시
+[실패 예시]
 ```json
 {
     "header": {
@@ -531,18 +538,21 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| messageId | String | O | 메시지 ID | 요청 시 발급되는 메시지 ID |
+| messageId | String | O(선택적 필수) | 메시지 ID | 요청 시 발급되는 메시지 ID |
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O | 요청 시간 from | from ~ to 최대 31일 |
-| endSendDateTime | String | O | 요청 시간 to | from ~ to 최대 31일 |
-| startReceiveDateTime | String | O | 수신 시간 from | from ~ to 최대 31일 |
-| endReceiveDateTime | String | O | 수신 시간 to | from ~ to 최대 31일 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
 | limit | Integer | X | Limit | 기본값: 15 max : 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
-* 성공 예시
+* messageId 또는 startSendDateTime / endSendDateTime 또는 startReceiveDateTime / endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
+* 요청 시간과 수신 시간 날짜를 동시에 검색은 불가능합니다.
+
+[성공 예시]
 ```json
 {
     "header": {
@@ -574,7 +584,7 @@ Content-Type: application/json
 ```
 
 
-* 실패 예시
+[실패 예시]
 ```json
 {
     "header": {
@@ -621,18 +631,21 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| messageId | String | O | 메시지 ID | 요청 시 발급되는 메시지 ID |
+| messageId | String | O(선택적 필수) | 메시지 ID | 요청 시 발급되는 메시지 ID |
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O | 요청 시간 from | from ~ to 최대 31일 |
-| endSendDateTime | String | O | 요청 시간 to | from ~ to 최대 31일 |
-| startReceiveDateTime | String | O | 수신 시간 from | from ~ to 최대 31일 |
-| endReceiveDateTime | String | O | 수신 시간 to | from ~ to 최대 31일 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
 | limit | Integer | X | Limit | 기본값: 15 max : 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
-* 성공 예시
+* messageId 또는 startSendDateTime / endSendDateTime 또는 startReceiveDateTime / endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
+* 요청 시간과 수신 시간 날짜를 동시에 검색은 불가능합니다.
+
+[성공 예시]
 ```json
 {
     "header": {
@@ -664,7 +677,7 @@ Content-Type: application/json
 ```
 
 
-* 실패 예시
+[실패 예시]
 ```json
 {
     "header": {
@@ -722,7 +735,7 @@ Content-Type: multipart/form-data
 
 [Response Body]
 
-* 성공 예시
+[성공 예시]
 ```json
 {
     "header": {
@@ -733,7 +746,7 @@ Content-Type: multipart/form-data
 }
 ```
 
-* 실패 예시
+[실패 예시]
 ```json
 {
     "header": {
