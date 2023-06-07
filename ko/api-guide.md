@@ -31,7 +31,7 @@ Content-Type: application/json
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
 | isAd | Boolean | X | 광고 발송 여부 | 기본값: false |
-| unsubscribeNo | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
+| unsubscribeNumber | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
 | body | String | O | 본문 | 최대 100자 |
 | buttons | List | X | 버튼 | 최대 1개 |
 | button.buttonType | String | X | 버튼 타입 | 대화방열기(COMPOSE), 복사하기(CLIPBOARD), 전화걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
@@ -110,7 +110,7 @@ Content-Type: application/json
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
 | isAd | Boolean | X | 광고 발송 여부 | 기본값: false |
-| unsubscribeNo | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
+| unsubscribeNumber | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
 | title | String | X | 제목 | 최대 30자 |
 | body | String | O | 본문 | 최대 1300자 |
 | buttons | List | X | 버튼 | 최대 3개 |
@@ -190,7 +190,7 @@ Content-Type: application/json
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
 | isAd | Boolean | X | 광고 발송 여부 | 기본값: false |
-| unsubscribeNo | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
+| unsubscribeNumber | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
 | mmsType | String | O | MMS 타입 | 가로형(HORIZONTAL), 세로형(VERTICAL), 슬라이드 중형(CAROUSEL_MEDIUM), 슬라이드 소형(CAROUSEL_SMALL) |
 | cards | List | O | 카드들 | HORIZONTAL(1), VERTICAL(1), CAROUSEL_MEDIUM(3 ~ 6), CAROUSEL_SMALL(3 ~ 6) |
 | card.title | String | X |  제목 | 최대 30자 |
