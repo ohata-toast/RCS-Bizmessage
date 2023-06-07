@@ -26,7 +26,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식 : yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
@@ -105,7 +105,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식 : yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
@@ -185,7 +185,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식 : yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
@@ -277,7 +277,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식 : yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | messagebaseId  | String | O | 템플릿 ID | |
