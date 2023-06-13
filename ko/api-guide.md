@@ -34,7 +34,7 @@ Content-Type: application/json
 | unsubscribeNumber | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
 | body | String | O | 본문 | 최대 100자 |
 | buttons | List | X | 버튼 | 최대 1개 |
-| button.buttonType | String | X | 버튼 타입 | 대화방열기(COMPOSE), 복사하기(CLIPBOARD), 전화걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
+| button.buttonType | String | X | 버튼 타입 | 대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
 | button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
 | isFallback | Boolean | X | 대체 발송 여부 | 기본값: false |
 
@@ -114,7 +114,7 @@ Content-Type: application/json
 | title | String | X | 제목 | 최대 30자 |
 | body | String | O | 본문 | 최대 1300자 |
 | buttons | List | X | 버튼 | 최대 3개 |
-| button.buttonType | String | X | 버튼 타입 | 대화방열기(COMPOSE), 복사하기(CLIPBOARD), 전화걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
+| button.buttonType | String | X | 버튼 타입 | 대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
 | button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
 | isFallback | Boolean | X | 대체 발송 여부 | 기본값: false |
 
@@ -197,7 +197,7 @@ Content-Type: application/json
 | card.description | String | X | 내용 | 슬라이드 X(최대:1300), CAROUSEL_MEDIUM(최대:60), CAROUSEL_SMALL(MAX:30) |
 | card.media | String | O | 첨부파일 ID | 첨부파일 업로드 시, 발급되는 ID 값 |
 | card.buttons | List | X | 버튼 | 최대 2개 |
-| button.buttonType | String | X | 버튼 타입 | 대화방열기(COMPOSE), 복사하기(CLIPBOARD), 전화걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
+| button.buttonType | String | X | 버튼 타입 | 대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
 | button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
 | isFallback | Boolean | X | 대체 발송 여부 | 기본값:false |
 
@@ -766,7 +766,7 @@ Content-Type: multipart/form-data
 
 ## 버튼 유형
 
-### 메시지 전송 버튼
+### 대화방 열기
 
 ```json
 {
@@ -777,7 +777,7 @@ Content-Type: multipart/form-data
         "text": "전송할 메시지"
       }
     },
-    "displayText": "메시지 전송"
+    "displayText": "대화방 열기"
   }
 }
 ```
@@ -789,7 +789,7 @@ Content-Type: multipart/form-data
 | action.composeAction.composeTextMessage.phoneNumber | 메시지 수신 번호 | |
 | action.composeAction.composeTextMessage.text | 전송할 메시지 | 최대 100자 |
 
-### 복사하기 버튼
+### 복사하기
 
 ```json
 {
@@ -799,7 +799,7 @@ Content-Type: multipart/form-data
         "text": "복사할 메시지"
       }
     },
-    "displayText": "메시지 복사"
+    "displayText": "복사하기"
   }
 }
 ```
@@ -809,7 +809,7 @@ Content-Type: multipart/form-data
 | action.displayText | 버튼 명 | 최대 17자 |
 | action.clipboardAction.copyToClipboard.text | 클립보드로 복사할 내용 | 최대 200자 |
 
-### 전화걸기 버튼
+### 전화 걸기
 
 ```json
 {
@@ -829,7 +829,7 @@ Content-Type: multipart/form-data
 | action.displayText | 버튼 명 | 최대 17자 |
 | action.dialerAction.dialPhoneNumber.phoneNumber | 전화 번호 | |
 
-### 지도 보여주기 버튼
+### 지도 보여주기
 
 ```json
 {
@@ -844,7 +844,7 @@ Content-Type: multipart/form-data
         "fallbackUrl": "https://www.google.co.kr/maps"
       }
     },
-    "displayText": "지도 보기"
+    "displayText": "지도 보여주기"
   }
 }
 ```
@@ -857,7 +857,7 @@ Content-Type: multipart/form-data
 | action.mapAction.showLocation.location.label | 위치 이름 | 최대 200자 |
 | action.mapAction.showLocation.fallbackUrl | 액션 실패 시 호출 할 링크 | |
 
-### 지도 검색 버튼
+### 지도 검색하기
 
 ```json
 {
@@ -870,7 +870,7 @@ Content-Type: multipart/form-data
         "fallbackUrl": "https://www.google.co.kr/maps"
       }
     },
-    "displayText": "지도 보기"
+    "displayText": "지도 검색하기"
   }
 }
 ```
@@ -881,7 +881,7 @@ Content-Type: multipart/form-data
 | action.mapAction.showLocation.location.query | 검색 키워드 | 최대 200자 |
 | action.mapAction.showLocation.fallbackUrl | 해당 위치를 조회할 사이트 | |
 
-### 현재 위치 공유 버튼
+### 현재 위치 공유하기
 
 ```json
 {
@@ -891,7 +891,7 @@ Content-Type: multipart/form-data
         "currentLocation": true
       }
     },
-    "displayText": "현재위치공유하기"
+    "displayText": "현재 위치 공유하기"
   }
 }
 ```
@@ -901,7 +901,7 @@ Content-Type: multipart/form-data
 | action.displayText | 버튼 명 | 최대 17자 |
 | action.mapAction.requestLocationPush.currentLocation | 현재위치 공유 여부 | 버튼의 기능을 정상적으로 사용하기 위해 해당 값은 true 로 지정되어야 함 |
 
-### URL 연결 버튼
+### URL 연결하기
 
 ```json
 {
@@ -911,7 +911,7 @@ Content-Type: multipart/form-data
         "url": "http://www.test.com"
       }
     },
-    "displayText": "홈페이지로 이동"
+    "displayText": "페이지로 이동"
   }
 }
 ```
@@ -921,7 +921,7 @@ Content-Type: multipart/form-data
 | action.displayText | 버튼 명 | 최대 17자 |
 | action.urlAction.openUrl.url | 연결할 URL 주소 | |
 
-### 캘린더 버튼
+### 일정 등록하기
 
 ```json
 {
@@ -934,7 +934,7 @@ Content-Type: multipart/form-data
         "description": "기념일등록입니다."
       }
     },
-    "displayText": "일정등록하기"
+    "displayText": "일정 등록하기"
   }
 }
 ```
