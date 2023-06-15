@@ -1,6 +1,6 @@
 ## Notification > RCS Bizmessage > 릴리스 노트
 
-### 2023. 06.13
+### 2023. 06. 27
 
 #### 신규 서비스 출시
 * RCS Bizmessage 서비스는 RCS Bizmessage 발송 및 브랜드, 챗봇, 템플릿 관리 기능을 제공하는 서비스입니다. 
