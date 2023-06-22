@@ -196,7 +196,7 @@ Content-Type: application/json
 | card.title | String | X |  제목 | 최대 30자 |
 | card.description | String | X | 내용 | 슬라이드 X(최대:1300), CAROUSEL_MEDIUM(최대:60), CAROUSEL_SMALL(MAX:30) |
 | card.media | String | O | 첨부파일 ID | 첨부파일 업로드 시, 발급되는 ID 값 |
-| card.buttons | List | X | 버튼 | 최대 2개 |
+| buttons | List | X | 버튼 | 최대 2개 |
 | button.buttonType | String | X | 버튼 타입 | 대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
 | button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
 | isFallback | Boolean | X | 대체 발송 여부 | 기본값:false |
@@ -212,18 +212,18 @@ Content-Type: application/json
 	"cards": {
         "title":"testTitle",
         "description":"testBody",
-        "media":"fileId",
-        "buttons" : [
-            {
-	    		"buttonType" : "URL",
-		    	"buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
-    		},
-            {
-	    		"buttonType" : "URL",
-		    	"buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
-    		}
-	    ]
+        "media":"fileId"
+  },
+  "buttons" : [
+    {
+      "buttonType" : "URL",
+      "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
+    },
+    {
+      "buttonType" : "URL",
+      "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
     }
+  ]
 }
 ```
 
