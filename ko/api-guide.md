@@ -41,9 +41,9 @@ Content-Type: application/json
 * 요청 예시
 ```json
 {
-	"brandId":"BR.AGNtIngI0u",
-	"chatbotId":"15887967",
-	"recipientNumber":"01020060836",
+	"brandId":"sampleBrandId",
+	"chatbotId":"15881234",
+	"recipientNumber":"01012345678",
 	"isAd": false,
 	"body":"testBody",
 	"buttons" : [
@@ -121,9 +121,9 @@ Content-Type: application/json
 * 요청 예시
 ```json
 {
-	"brandId":"BR.AGNtIngI0u",
-	"chatbotId":"15887967",
-	"recipientNumber":"01020060836",
+	"brandId":"sampleBrandId",
+	"chatbotId":"15881234",
+	"recipientNumber":"01012341234",
 	"isAd": false,
     "title":"testTitle",
 	"body":"testBody",
@@ -204,26 +204,28 @@ Content-Type: application/json
 * 요청 예시
 ```json
 {
-	"brandId":"BR.AGNtIngI0u",
-	"chatbotId":"15887967",
-	"recipientNumber":"01020060836",
+	"brandId":"sampleBrandId",
+	"chatbotId":"15881234",
+	"recipientNumber":"01012341234",
 	"isAd": false,
-  "mmsType": "HORIZONTAL",
-	"cards": {
-        "title":"testTitle",
-        "description":"testBody",
-        "media":"fileId"
-  },
-  "buttons" : [
-    {
-      "buttonType" : "URL",
-      "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
-    },
-    {
-      "buttonType" : "URL",
-      "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
-    }
-  ]
+    "mmsType": "HORIZONTAL",
+	"cards": [
+        {
+          "title":"testTitle",
+          "description":"testBody",
+          "media":"fileId"
+        }
+    ],
+    "buttons" : [
+        {
+          "buttonType" : "URL",
+          "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
+        },
+        {
+          "buttonType" : "URL",
+          "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
+        }
+    ]
 }
 ```
 
@@ -290,13 +292,13 @@ Content-Type: application/json
 ```json
 {
 	"sendDateTime" : "2022-11-21 00:00:00",
-	"brandId":"BR.AGNtIngI0u",
-	"chatbotId":"15887967",
+	"brandId":"sampleBrandId",
+	"chatbotId":"15881234",
     "messagebaseId":"UBR.AGNtIngI0u-GG000F",
     "templateParameter" : {
         "key1":"value1"
-    }
-	"recipientNumber":"01020060836"
+    },
+	"recipientNumber":"01012341234"
 }
 ```
 
@@ -378,9 +380,9 @@ Content-Type: application/json
             "messageId": "20230503100623Uc3C0JDd0u0",
             "recipientSequence": 0,
             "messageType": "SMS",
-            "brandId": "BR.AGNtIngI0u",
-            "chatbotId": "15887967",
-            "recipientNumber": "01020060836",
+            "brandId": "sampleBrandId",
+            "chatbotId": "15881234",
+            "recipientNumber": "01012341234",
             "messagebaseId": "SS000000",
             "title": "",
             "body": "testBody",
@@ -472,9 +474,9 @@ Content-Type: application/json
             "messageId": "20230503100623Uc3C0JDd0u0",
             "recipientSequence": 0,
             "messageType": "SMS",
-            "brandId": "BR.AGNtIngI0u",
-            "chatbotId": "15887967",
-            "recipientNumber": "01020060836",
+            "brandId": "sampleBrandId",
+            "chatbotId": "15881234",
+            "recipientNumber": "01012341234",
             "messagebaseId": "SS000000",
             "title": "",
             "body": "testBody",
@@ -565,9 +567,9 @@ Content-Type: application/json
             "messageId": "20230503100623Uc3C0JDd0u0",
             "recipientSequence": 0,
             "messageType": "SMS",
-            "brandId": "BR.AGNtIngI0u",
-            "chatbotId": "15887967",
-            "recipientNumber": "01020060836",
+            "brandId": "sampleBrandId",
+            "chatbotId": "15881234",
+            "recipientNumber": "01012341234",
             "messagebaseId": "SS000000",
             "title": "",
             "body": "testBody",
@@ -658,9 +660,9 @@ Content-Type: application/json
             "messageId": "20230503100623Uc3C0JDd0u0",
             "recipientSequence": 0,
             "messageType": "SMS",
-            "brandId": "BR.AGNtIngI0u",
-            "chatbotId": "15887967",
-            "recipientNumber": "01020060836",
+            "brandId": "sampleBrandId",
+            "chatbotId": "15881234",
+            "recipientNumber": "01012341234",
             "messagebaseId": "SS000000",
             "title": "",
             "body": "testBody",
@@ -770,15 +772,15 @@ Content-Type: multipart/form-data
 
 ```json
 {
-  "action": {
-    "composeAction": {
-      "composeTextMessage": {
-        "phoneNumber": "01000000000",
-        "text": "전송할 메시지"
-      }
-    },
-    "displayText": "대화방 열기"
-  }
+    "action": {
+        "composeAction": {
+            "composeTextMessage": {
+                "phoneNumber": "01000000000",
+                "text": "전송할 메시지"
+            }
+        },
+        "displayText": "대화방 열기"
+    }
 }
 ```
 
@@ -793,14 +795,14 @@ Content-Type: multipart/form-data
 
 ```json
 {
-  "action": {
-    "clipboardAction": {
-      "copyToClipboard": {
-        "text": "복사할 메시지"
-      }
-    },
-    "displayText": "복사하기"
-  }
+    "action": {
+        "clipboardAction": {
+            "copyToClipboard": {
+                "text": "복사할 메시지"
+            }
+        },
+        "displayText": "복사하기"
+    }
 }
 ```
 
@@ -813,14 +815,14 @@ Content-Type: multipart/form-data
 
 ```json
 {
-  "action": {
-    "dialerAction": {
-      "dialPhoneNumber": {
-        "phoneNumber": "16446114"
-      }
-    },
-    "displayText": "전화 걸기"
-  }
+    "action": {
+        "dialerAction": {
+            "dialPhoneNumber": {
+                "phoneNumber": "16446114"
+            }
+        },
+        "displayText": "전화 걸기"
+    }
 }
 ```
 
@@ -833,19 +835,19 @@ Content-Type: multipart/form-data
 
 ```json
 {
-  "action": {
-    "mapAction": {
-      "showLocation": {
-        "location": {
-          "latitude": "37.400977",
-          "longitude": "127.104239",
-          "label": "NHN"
+    "action": {
+        "mapAction": {
+            "showLocation": {
+                "location": {
+                    "latitude": "37.400977",
+                    "longitude": "127.104239",
+                    "label": "NHN"
+                },
+                "fallbackUrl": "https://www.google.co.kr/maps"
+            }
         },
-        "fallbackUrl": "https://www.google.co.kr/maps"
-      }
-    },
-    "displayText": "지도 보여주기"
-  }
+        "displayText": "지도 보여주기"
+    }
 }
 ```
 
@@ -861,17 +863,17 @@ Content-Type: multipart/form-data
 
 ```json
 {
-  "action": {
-    "mapAction": {
-      "showLocation": {
-        "location": {
-          "query": "NHN"
+    "action": {
+        "mapAction": {
+            "showLocation": {
+                "location": {
+                    "query": "NHN"
+                },
+                "fallbackUrl": "https://www.google.co.kr/maps"
+            }
         },
-        "fallbackUrl": "https://www.google.co.kr/maps"
-      }
-    },
-    "displayText": "지도 검색하기"
-  }
+        "displayText": "지도 검색하기"
+    }
 }
 ```
 
@@ -885,14 +887,14 @@ Content-Type: multipart/form-data
 
 ```json
 {
-  "action": {
-    "mapAction": {
-      "requestLocationPush": {
-        "currentLocation": true
-      }
-    },
-    "displayText": "현재 위치 공유하기"
-  }
+    "action": {
+        "mapAction": {
+            "requestLocationPush": {
+                "currentLocation": true
+            }
+        },
+        "displayText": "현재 위치 공유하기"
+    }
 }
 ```
 
@@ -905,14 +907,14 @@ Content-Type: multipart/form-data
 
 ```json
 {
-  "action": {
-    "urlAction": {
-      "openUrl": {
-        "url": "http://www.test.com"
-      }
-    },
-    "displayText": "페이지로 이동"
-  }
+    "action": {
+        "urlAction": {
+            "openUrl": {
+                "url": "http://www.test.com"
+            }
+        },
+        "displayText": "페이지로 이동"
+    }
 }
 ```
 
@@ -925,17 +927,17 @@ Content-Type: multipart/form-data
 
 ```json
 {
-  "action": {
-    "calendarAction": {
-      "createCalendarEvent": {
-        "startTime": "2020-03-31T15:00:00.000Z",
-        "endTime": "2020-03-31T15:00:00.000Z",
-        "title": "일정 등록",
-        "description": "기념일등록입니다."
-      }
-    },
-    "displayText": "일정 등록하기"
-  }
+    "action": {
+        "calendarAction": {
+            "createCalendarEvent": {
+                "startTime": "2020-03-31T15:00:00.000Z",
+                "endTime": "2020-03-31T15:00:00.000Z",
+                "title": "일정 등록",
+                "description": "기념일등록입니다."
+            }
+        },
+        "displayText": "일정 등록하기"
+    }
 }
 ```
 
