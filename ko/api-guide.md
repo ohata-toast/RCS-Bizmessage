@@ -418,6 +418,7 @@ Content-Type: application/json
 | data | - | 메시지 정보 |
 | data.messageId | String | 메시지 ID |
 | data.recipientSeq | Integer | 수신자 순서 | 
+| data.messageType | String | 메시지 타입 |
 | data.brandId | String | 브랜드 ID|
 | data.chatbotId | String | 챗봇 ID | 
 | data.recipientNumber | String | 수신자 번호 |
@@ -473,7 +474,7 @@ Content-Type: application/json
         {
             "messageId": "20230503100623Uc3C0JDd0u0",
             "recipientSequence": 0,
-            "messageType": "SMS",
+            "messageType": "LMS",
             "brandId": "sampleBrandId",
             "chatbotId": "15881234",
             "recipientNumber": "01012341234",
@@ -512,6 +513,7 @@ Content-Type: application/json
 | data | - | 메시지 정보 |
 | data.messageId | String | 메시지 ID |
 | data.recipientSeq | Integer | 수신자 순서 | 
+| data.messageType | String | 메시지 타입 | 
 | data.brandId | String | 브랜드 ID|
 | data.chatbotId | String | 챗봇 ID | 
 | data.recipientNumber | String | 수신자 번호 |
@@ -566,7 +568,7 @@ Content-Type: application/json
         {
             "messageId": "20230503100623Uc3C0JDd0u0",
             "recipientSequence": 0,
-            "messageType": "SMS",
+            "messageType": "MMS",
             "brandId": "sampleBrandId",
             "chatbotId": "15881234",
             "recipientNumber": "01012341234",
@@ -605,6 +607,7 @@ Content-Type: application/json
 | data | - | 메시지 정보 |
 | data.messageId | String | 메시지 ID |
 | data.recipientSeq | Integer | 수신자 순서 | 
+| data.messageType | String | 메시지 타입 |
 | data.brandId | String | 브랜드 ID|
 | data.chatbotId | String | 챗봇 ID | 
 | data.recipientNumber | String | 수신자 번호 |
@@ -659,7 +662,7 @@ Content-Type: application/json
         {
             "messageId": "20230503100623Uc3C0JDd0u0",
             "recipientSequence": 0,
-            "messageType": "SMS",
+            "messageType": "TEMPLATE",
             "brandId": "sampleBrandId",
             "chatbotId": "15881234",
             "recipientNumber": "01012341234",
@@ -698,10 +701,11 @@ Content-Type: application/json
 | data | - | 메시지 정보 |
 | data.messageId | String | 메시지 ID |
 | data.recipientSeq | Integer | 수신자 순서 | 
+| data.messageType | String | 메시지 타입 |
 | data.brandId | String | 브랜드 ID|
 | data.chatbotId | String | 챗봇 ID | 
 | data.recipientNumber | String | 수신자 번호 |
-| data.messagebaseId | String | 메시지 타입 |
+| data.messagebaseId | String | 템플릿 ID |
 | data.title | String | 제목 |
 | data.body | String | 본문 |
 | data.messageStatus | String | 메시지 상태 |
