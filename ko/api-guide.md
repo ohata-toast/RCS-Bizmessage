@@ -386,7 +386,7 @@ Content-Type: application/json
             "messagebaseId": "SS000000",
             "title": "",
             "body": "testBody",
-            "messageStatus": "FAILED",
+            "messageStatus": "DELIVERED",
             "sendDateTime": "2023-05-03T10:06:23.000+09:00"
         }
     ],
@@ -480,7 +480,7 @@ Content-Type: application/json
             "messagebaseId": "SS000000",
             "title": "",
             "body": "testBody",
-            "messageStatus": "FAILED",
+            "messageStatus": "DELIVERED",
             "sendDateTime": "2023-05-03T10:06:23.000+09:00"
         }
     ],
@@ -573,7 +573,7 @@ Content-Type: application/json
             "messagebaseId": "SS000000",
             "title": "",
             "body": "testBody",
-            "messageStatus": "FAILED",
+            "messageStatus": "DELIVERED",
             "sendDateTime": "2023-05-03T10:06:23.000+09:00"
         }
     ],
@@ -666,7 +666,7 @@ Content-Type: application/json
             "messagebaseId": "SS000000",
             "title": "",
             "body": "testBody",
-            "messageStatus": "FAILED",
+            "messageStatus": "DELIVERED",
             "sendDateTime": "2023-05-03T10:06:23.000+09:00"
         }
     ],
