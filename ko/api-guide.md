@@ -213,17 +213,17 @@ Content-Type: application/json
         {
           "title":"testTitle",
           "description":"testBody",
-          "media":"fileId"
-        }
-    ],
-    "buttons" : [
-        {
-          "buttonType" : "URL",
-          "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
-        },
-        {
-          "buttonType" : "URL",
-          "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
+          "media":"fileId",
+          "buttons" : [
+            {
+              "buttonType" : "URL",
+              "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
+            },
+            {
+              "buttonType" : "URL",
+              "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
+            }
+          ]
         }
     ]
 }
