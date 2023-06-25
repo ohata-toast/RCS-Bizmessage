@@ -196,9 +196,9 @@ Content-Type: application/json
 | card.title | String | X |  제목 | 최대 30자 |
 | card.description | String | X | 내용 | 슬라이드 X(최대:1300), CAROUSEL_MEDIUM(최대:60), CAROUSEL_SMALL(MAX:30) |
 | card.media | String | O | 첨부파일 ID | 첨부파일 업로드 시, 발급되는 ID 값 |
-| buttons | List | X | 버튼 | 최대 2개 |
-| button.buttonType | String | X | 버튼 타입 | 대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
-| button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
+| card.buttons | List | X | 버튼 | 최대 2개 |
+| card.button.buttonType | String | X | 버튼 타입 | 대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
+| card.button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
 | isFallback | Boolean | X | 대체 발송 여부 | 기본값:false |
 
 * 요청 예시
@@ -948,7 +948,7 @@ Content-Type: multipart/form-data
 | 필드 | 설명 | 비고 |
 | --- | --- | --- |
 | action.displayText | 버튼 명 | 최대 17자 |
-| action.calendarAction.createCalendarEvent.startTime | 시작일 | |
-| action.calendarAction.createCalendarEvent.endTime | 종료일 | |
+| action.calendarAction.createCalendarEvent.startTime | 시작일 | 형식 : yyyy-MM-ddTHH:mm:ss.SSSZ (UTC 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
+| action.calendarAction.createCalendarEvent.endTime | 종료일 | 형식 : yyyy-MM-ddTHH:mm:ss.SSSZ (UTC 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
 | action.calendarAction.createCalendarEvent.title | 제목 | 최대 17자 |
 | action.calendarAction.createCalendarEvent.description | 내용 | 최대 500자 |
