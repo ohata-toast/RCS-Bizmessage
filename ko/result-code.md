@@ -24,6 +24,7 @@
 | -4031 | 첨부파일 만료 | Expired media. | | 
 | -4032 | 첨부파일 타입 오류 | Invalid media type. | | 
 | -4033 | 첨부파일 크기 초과 | Exceed max file size. | | 
+| -4034 | 첨부파일 형식 오류 | Invalid media format. | | 
 | -4040 | 080 수신거부번호 없음 | Not exist block service. | |
 | -4041 | 080 수신거부번호 상태 오류 | Invalid status block service. | |
 | -4042 | 080 수신거부 대상 | Blocked recipient number. | |
