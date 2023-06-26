@@ -948,7 +948,7 @@ Content-Type: multipart/form-data
 | 필드 | 설명 | 비고 |
 | --- | --- | --- |
 | action.displayText | 버튼 명 | 최대 17자 |
-| action.calendarAction.createCalendarEvent.startTime | 시작일 | 형식 : yyyy-MM-ddTHH:mm:ss.SSS+9:00Z (한국시 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
-| action.calendarAction.createCalendarEvent.endTime | 종료일 | 형식 : yyyy-MM-ddTHH:mm:ss.SSS+9:00Z (한국시 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
+| action.calendarAction.createCalendarEvent.startTime | 시작일 | 형식 : yyyy-MM-ddTHH:mm:ss+9:00Z (한국시 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
+| action.calendarAction.createCalendarEvent.endTime | 종료일 | 형식 : yyyy-MM-ddTHH:mm:ss+9:00Z (한국시 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
 | action.calendarAction.createCalendarEvent.title | 제목 | 최대 17자 |
 | action.calendarAction.createCalendarEvent.description | 내용 | 최대 500자 |
