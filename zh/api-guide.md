@@ -26,7 +26,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식 : yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
@@ -105,7 +105,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식 : yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
@@ -185,7 +185,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식 : yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
@@ -199,7 +199,7 @@ Content-Type: application/json
 | card.buttons | List | X | 버튼 | 최대 2개 |
 | card.button.buttonType | String | X | 버튼 타입 | 대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
 | card.button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
-| isFallback | Boolean | X | 대체 발송 여부 | 기본값:false |
+| isFallback | Boolean | X | 대체 발송 여부 | 기본값: false |
 
 * 요청 예시
 ```json
@@ -279,7 +279,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식 : yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | messagebaseId  | String | O | 템플릿 ID | |
@@ -356,11 +356,11 @@ Content-Type: application/json
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| limit | Integer | X | Limit | 기본값: 15 max : 1000 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| limit | Integer | X | Limit | 기본값: 15 max: 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
 * messageId 또는 startSendDateTime / endSendDateTime 또는 startReceiveDateTime / endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
@@ -452,15 +452,15 @@ Content-Type: application/json
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| limit | Integer | X | Limit | 기본값: 15 max : 1000 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| limit | Integer | X | Limit | 기본값: 15 max: 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
-* messageId 또는 startSendDateTime / endSendDateTime 또는 startReceiveDateTime / endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
-* 요청 시간과 수신 시간 날짜를 동시에 검색은 불가능합니다.
+* messageId 또는 startSendDateTime/endSendDateTime 또는 startReceiveDateTime/endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
+* 요청 시간과 수신 시간 날짜를 동시에 검색하는 것은 불가능합니다.
 
 [성공 예시]
 ```json
@@ -546,15 +546,15 @@ Content-Type: application/json
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| limit | Integer | X | Limit | 기본값: 15 max : 1000 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| limit | Integer | X | Limit | 기본값: 15 max: 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
-* messageId 또는 startSendDateTime / endSendDateTime 또는 startReceiveDateTime / endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
-* 요청 시간과 수신 시간 날짜를 동시에 검색은 불가능합니다.
+* messageId 또는 startSendDateTime/endSendDateTime 또는 startReceiveDateTime/endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
+* 요청 시간과 수신 시간 날짜를 동시에 검색하는 것은 불가능합니다.
 
 [성공 예시]
 ```json
@@ -640,15 +640,15 @@ Content-Type: application/json
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식 : yyyy-MM-dd HH:mm:ss <br>from ~ to 최대 31일 |
-| limit | Integer | X | Limit | 기본값: 15 max : 1000 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| limit | Integer | X | Limit | 기본값: 15 max: 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
-* messageId 또는 startSendDateTime / endSendDateTime 또는 startReceiveDateTime / endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
-* 요청 시간과 수신 시간 날짜를 동시에 검색은 불가능합니다.
+* messageId 또는 startSendDateTime/endSendDateTime 또는 startReceiveDateTime/endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
+* 요청 시간과 수신 시간 날짜를 동시에 검색하는 것은 불가능합니다.
 
 [성공 예시]
 ```json
@@ -728,8 +728,8 @@ Content-Type: multipart/form-data
 "X-SECRET-KEY" : String
 ```
 
-* 첨부파일 유효기간은 7일 입니다.
-* 파일 용량제한은 1MB입니다.
+* 첨부파일 유효기간은 7일입니다.
+* 파일 용량 제한은 1MB입니다.
 * 이미지 첨부는 'jpg', 'jpeg', 'png', 'gif', 'bmp' 확장자만 지원합니다.
 
 [Request Body]
@@ -861,7 +861,7 @@ Content-Type: multipart/form-data
 | action.mapAction.showLocation.location.latitude | 위도 | |
 | action.mapAction.showLocation.location.longitude | 경도 | |
 | action.mapAction.showLocation.location.label | 위치 이름 | 최대 200자 |
-| action.mapAction.showLocation.fallbackUrl | 액션 실패 시 호출 할 링크 | |
+| action.mapAction.showLocation.fallbackUrl | 액션 실패 시 호출할 링크 | |
 
 ### 지도 검색하기
 
@@ -905,7 +905,7 @@ Content-Type: multipart/form-data
 | 필드 | 설명 | 비고 |
 | --- | --- | --- |
 | action.displayText | 버튼 명 | 최대 17자 |
-| action.mapAction.requestLocationPush.currentLocation | 현재위치 공유 여부 | 버튼의 기능을 정상적으로 사용하기 위해 해당 값은 true 로 지정되어야 함 |
+| action.mapAction.requestLocationPush.currentLocation | 현재 위치 공유 여부 | 버튼의 기능을 정상적으로 사용하기 위해 해당 값은 true로 지정되어야 함 |
 
 ### URL 연결하기
 
@@ -948,7 +948,7 @@ Content-Type: multipart/form-data
 | 필드 | 설명 | 비고 |
 | --- | --- | --- |
 | action.displayText | 버튼 명 | 최대 17자 |
-| action.calendarAction.createCalendarEvent.startTime | 시작일 | 형식 : yyyy-MM-ddTHH:mm:ss+9:00Z (한국시 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
-| action.calendarAction.createCalendarEvent.endTime | 종료일 | 형식 : yyyy-MM-ddTHH:mm:ss+9:00Z (한국시 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
+| action.calendarAction.createCalendarEvent.startTime | 시작일 | 형식: yyyy-MM-ddTHH:mm:ss+9:00Z (한국시 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
+| action.calendarAction.createCalendarEvent.endTime | 종료일 | 형식: yyyy-MM-ddTHH:mm:ss+9:00Z (한국시 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
 | action.calendarAction.createCalendarEvent.title | 제목 | 최대 17자 |
 | action.calendarAction.createCalendarEvent.description | 내용 | 최대 500자 |
