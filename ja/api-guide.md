@@ -1,14 +1,14 @@
 ## Notification > RCS Bizmessage > API v1.0 Guide
 
-## v1.0 API 소개
-### [API 도메인]
+## v1.0 API紹介
+### [APIドメイン]
 ```
 https://rcs-bizmessage.api.nhncloudservice.com
 ```
 
-## 메시지 발송
+## メッセージ送信
 
-### SMS 타입 발송
+### SMSタイプ送信
 [Method, URI]
 
 ```
@@ -24,21 +24,21 @@ Content-Type: application/json
 
 [Request Body]
 
-| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
-| brandId | String | O | 브랜드 ID |  |
-| chatbotId | String | O | 발신 번호 |  |
-| recipientNumber | String | O | 수신 번호 |  |
-| isAd | Boolean | X | 광고 발송 여부 | 기본값: false |
-| unsubscribeNumber | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
-| body | String | O | 본문 | 최대 100자 |
-| buttons | List | X | 버튼 | 최대 1개 |
-| button.buttonType | String | X | 버튼 타입 | 대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
-| button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
-| isFallback | Boolean | X | 대체 발송 여부 | 기본값: false |
+| sendDateTime | String | X | 送信希望時間 | 形式: yyyy-MM-dd HH:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
+| brandId | String | O | ブランドID |  |
+| chatbotId | String | O | 発信番号 |  |
+| recipientNumber | String | O | 受信番号 |  |
+| isAd | Boolean | X | 広告送信か | デフォルト値: false |
+| unsubscribeNumber | String | X | 受信拒否番号 | 広告がTrueの場合、必須 |
+| body | String | O | 本文 | 最大100文字 |
+| buttons | List | X | ボタン | 最大1個 |
+| button.buttonType | String | X | ボタンタイプ | チャットルームを開く(COMPOSE)、コピーする(CLIPBOARD)、電話をかける(DIALER)、マップを表示する(MAP_SHOW)、マップ検索する(MAP_QUERY)、現在位置を共有する(MAP_SHARE)、URL接続する(URL)、予定を登録する(CALENDAR) |
+| button.buttonJson | String | X | ボタンJson | ボタンタイプに合ったフォーマット確認 |
+| isFallback | Boolean | X | 代替送信の有無 | デフォルト値: false |
 
-* 요청 예시
+* リクエスト例
 ```json
 {
 	"brandId":"sampleBrandId",
@@ -49,7 +49,7 @@ Content-Type: application/json
 	"buttons" : [
 		{
 			"buttonType" : "URL",
-			"buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
+			"buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"Webサイトに移動\"}}"
 		}
 	]
 }
@@ -57,7 +57,7 @@ Content-Type: application/json
 
 [Response Body]
 
-[성공 예시]
+[成功例]
 ```json
 {
     "header": {
@@ -68,7 +68,7 @@ Content-Type: application/json
     "messageId" : "20220914184500weq0u9pNu30"
 }
 ```
-[실패 예시]
+[失敗例]
 ```json
 {
     "header": {
@@ -80,14 +80,14 @@ Content-Type: application/json
 ```
 	
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| header.isSuccessful | Boolean | 성공 여부 |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
 
 
-### LMS 타입 발송
+### LMSタイプ送信
 [Method, URI]
 
 ```
@@ -103,22 +103,22 @@ Content-Type: application/json
 
 [Request Body]
 
-| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
-| brandId | String | O | 브랜드 ID |  |
-| chatbotId | String | O | 발신 번호 |  |
-| recipientNumber | String | O | 수신 번호 |  |
-| isAd | Boolean | X | 광고 발송 여부 | 기본값: false |
-| unsubscribeNumber | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
-| title | String | X | 제목 | 최대 30자 |
-| body | String | O | 본문 | 최대 1300자 |
-| buttons | List | X | 버튼 | 최대 3개 |
-| button.buttonType | String | X | 버튼 타입 | 대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
-| button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
-| isFallback | Boolean | X | 대체 발송 여부 | 기본값: false |
+| sendDateTime | String | X | 送信希望時間 | 形式: yyyy-MM-dd HH:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
+| brandId | String | O | ブランドID |  |
+| chatbotId | String | O | 発信番号 |  |
+| recipientNumber | String | O | 受信番号 |  |
+| isAd | Boolean | X | 広告送信か | デフォルト値: false |
+| unsubscribeNumber | String | X | 受信拒否番号 | 広告がTrueの場合、必須 |
+| title | String | X | タイトル | 最大30文字 |
+| body | String | O | 本文 | 最大1300文字 |
+| buttons | List | X | ボタン | 最大3個 |
+| button.buttonType | String | X | ボタンタイプ | チャットルームを開く(COMPOSE)、コピーする(CLIPBOARD)、電話をかける(DIALER)、マップを表示する(MAP_SHOW)、マップ検索する(MAP_QUERY)、現在位置を共有する(MAP_SHARE)、URL接続する(URL)、予定を登録する(CALENDAR) |
+| button.buttonJson | String | X | ボタンJson | ボタンタイプに合ったフォーマット確認 |
+| isFallback | Boolean | X | 代替送信の有無 | デフォルト値: false |
 
-* 요청 예시
+* リクエスト例
 ```json
 {
 	"brandId":"sampleBrandId",
@@ -130,7 +130,7 @@ Content-Type: application/json
 	"buttons" : [
 		{
 			"buttonType" : "URL",
-			"buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
+			"buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"Webサイトに移動\"}}"
 		}
 	]
 }
@@ -138,7 +138,7 @@ Content-Type: application/json
 
 [Response Body]
 
-[성공 예시]
+[成功例]
 ```json
 {
     "header": {
@@ -149,7 +149,7 @@ Content-Type: application/json
     "messageId" : "20220914184500weq0u9pNu30"
 }
 ```
-[실패 예시]
+[失敗例]
 ```json
 {
     "header": {
@@ -161,13 +161,13 @@ Content-Type: application/json
 ```
 	
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| header.isSuccessful | Boolean | 성공 여부 |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
 
-### MMS 타입 발송
+### MMSタイプ送信
 [Method, URI]
 
 ```
@@ -183,25 +183,25 @@ Content-Type: application/json
 
 [Request Body]
 
-| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
-| brandId | String | O | 브랜드 ID |  |
-| chatbotId | String | O | 발신 번호 |  |
-| recipientNumber | String | O | 수신 번호 |  |
-| isAd | Boolean | X | 광고 발송 여부 | 기본값: false |
-| unsubscribeNumber | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
-| mmsType | String | O | MMS 타입 | 가로형(HORIZONTAL), 세로형(VERTICAL), 슬라이드 중형(CAROUSEL_MEDIUM), 슬라이드 소형(CAROUSEL_SMALL) |
-| cards | List | O | 카드들 | HORIZONTAL(1), VERTICAL(1), CAROUSEL_MEDIUM(3 ~ 6), CAROUSEL_SMALL(3 ~ 6) |
-| card.title | String | X |  제목 | 최대 30자 |
-| card.description | String | X | 내용 | 슬라이드 X(최대:1300), CAROUSEL_MEDIUM(최대:60), CAROUSEL_SMALL(MAX:30) |
-| card.media | String | O | 첨부파일 ID | 첨부파일 업로드 시, 발급되는 ID 값 |
-| card.buttons | List | X | 버튼 | 최대 2개 |
-| card.button.buttonType | String | X | 버튼 타입 | 대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
-| card.button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
-| isFallback | Boolean | X | 대체 발송 여부 | 기본값: false |
+| sendDateTime | String | X | 送信希望時間 | 形式: yyyy-MM-dd HH:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
+| brandId | String | O | ブランドID |  |
+| chatbotId | String | O | 発信番号 |  |
+| recipientNumber | String | O | 受信番号 |  |
+| isAd | Boolean | X | 広告送信か | デフォルト値: false |
+| unsubscribeNumber | String | X | 受信拒否番号 | 広告がTrueの場合、必須 |
+| mmsType | String | O | MMSタイプ | 横型(HORIZONTAL)、縦型(VERTICAL)、スライド中型(CAROUSEL_MEDIUM)、スライド小型(CAROUSEL_SMALL) |
+| cards | List | O | カード | HORIZONTAL(1)、VERTICAL(1)、CAROUSEL_MEDIUM(3 ～ 6)、CAROUSEL_SMALL(3 ～ 6) |
+| card.title | String | X | タイトル | 最大30文字 |
+| card.description | String | X | 内容 | スライドX(最大:1300)、 CAROUSEL_MEDIUM(最大:60)、 CAROUSEL_SMALL(MAX:30) |
+| card.media | String | O | 添付ファイルID | 添付ファイルアップロード時に発行されるID値 |
+| card.buttons | List | X | ボタン | 最大2個 |
+| card.button.buttonType | String | X | ボタンタイプ | チャットルームを開く(COMPOSE)、コピーする(CLIPBOARD)、電話をかける(DIALER)、マップを表示する(MAP_SHOW)、マップ検索する(MAP_QUERY)、現在位置を共有する(MAP_SHARE)、URL接続する(URL)、予定を登録する(CALENDAR) |
+| card.button.buttonJson | String | X | ボタンJson | ボタンタイプに合ったフォーマット確認 |
+| isFallback | Boolean | X | 代替送信の有無 | デフォルト値: false |
 
-* 요청 예시
+* リクエスト例
 ```json
 {
 	"brandId":"sampleBrandId",
@@ -217,11 +217,11 @@ Content-Type: application/json
           "buttons" : [
             {
               "buttonType" : "URL",
-              "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
+              "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"Webサイトに移動\"}}"
             },
             {
               "buttonType" : "URL",
-              "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}"
+              "buttonJson" : "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"Webサイトに移動\"}}"
             }
           ]
         }
@@ -232,7 +232,7 @@ Content-Type: application/json
 
 [Response Body]
 
-[성공 예시]
+[成功例]
 ```json
 {
     "header": {
@@ -243,7 +243,7 @@ Content-Type: application/json
     "messageId" : "20220914184500weq0u9pNu30"
 }
 ```
-[실패 예시]
+[失敗例]
 ```json
 {
     "header": {
@@ -255,13 +255,13 @@ Content-Type: application/json
 ```
 	
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| header.isSuccessful | Boolean | 성공 여부 |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
 
-### Template 타입 발송
+### Templateタイプ送信
 [Method, URI]
 
 ```
@@ -277,18 +277,18 @@ Content-Type: application/json
 
 [Request Body]
 
-| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
-| brandId | String | O | 브랜드 ID |  |
-| chatbotId | String | O | 발신 번호 |  |
-| messagebaseId  | String | O | 템플릿 ID | |
-| recipientNumber | String | O | 수신 번호 |  |
-| body | String | X | 본문 | 최대 90자, Free 템플릿인 경우에만 해당 |
-| templateParameter | Map | X | 치환자 key, value |
-| isFallback | Boolean | X | 대체 발송 여부 |  |
+| sendDateTime | String | X | 送信希望時間 | 形式: yyyy-MM-dd HH:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
+| brandId | String | O | ブランドID |  |
+| chatbotId | String | O | 発信番号 |  |
+| messagebaseId  | String | O | テンプレートID | |
+| recipientNumber | String | O | 受信番号 |  |
+| body | String | X | 本文 | 最大90文字、 Freeテンプレートの場合にのみ該当 |
+| templateParameter | Map | X | 日本語識別子key, value |
+| isFallback | Boolean | X | 代替送信の有無 |  |
 
-* 요청 예시
+* リクエスト例
 ```json
 {
 	"sendDateTime" : "2022-11-21 00:00:00",
@@ -304,7 +304,7 @@ Content-Type: application/json
 
 [Response Body]
 
-[성공 예시]
+[成功例]
 ```json
 {
     "header": {
@@ -315,7 +315,7 @@ Content-Type: application/json
     "messageId" : "20220914184500weq0u9pNu30"
 }
 ```
-[실패 예시]
+[失敗例]
 ```json
 {
     "header": {
@@ -327,15 +327,15 @@ Content-Type: application/json
 ```
 	
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| header.isSuccessful | Boolean | 성공 여부 |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
 
-## 메시지 조회
+## メッセージ照会
 
-### SMS 메시지 조회 API
+### SMSメッセージ照会API
 [Method, URI]
 ```
 GET /rcs/v1.0/messages/sms
@@ -350,24 +350,24 @@ Content-Type: application/json
 
 [Query Parameter]
 
-| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| messageId | String | O(선택적 필수) | 메시지 ID | 요청 시 발급되는 메시지 ID |
-| brandId | String | X | 브랜드 ID |  |
-| chatbotId | String | X | 발신 번호 |  |
-| messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| limit | Integer | X | Limit | 기본값: 15 max: 1000 |
-| offset | Integer | X | offset | 기본값: 0 |
+| messageId | String | O(選択的必須) | メッセージID | リクエスト時に発行されるメッセージID |
+| brandId | String | X | ブランドID |  |
+| chatbotId | String | X | 発信番号 |  |
+| messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
+| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| limit | Integer | X | Limit | デフォルト値: 15 max: 1000 |
+| offset | Integer | X | offset | デフォルト値: 0 |
 
-* messageId 또는 startSendDateTime / endSendDateTime 또는 startReceiveDateTime / endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
-* 요청 시간과 수신 시간 날짜를 동시에 검색은 불가능합니다.
+* messageIdまたはstartSendDateTime / endSendDateTimeまたはstartReceiveDateTime / endReceiveDateTimeの中から1つを必ず入力する必要があります。
+* リクエスト時間と受信時間の日付を同時に検索することはできません。
 
 
-[성공 예시]
+[成功例]
 ```json
 {
     "header": {
@@ -399,7 +399,7 @@ Content-Type: application/json
 ```
 
 
-[실패 예시]
+[失敗例]
 ```json
 {
     "header": {
@@ -410,27 +410,27 @@ Content-Type: application/json
 }
 ```
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| data | - | 메시지 정보 |
-| data.messageId | String | 메시지 ID |
-| data.recipientSeq | Integer | 수신자 순서 | 
-| data.messageType | String | 메시지 타입 |
-| data.brandId | String | 브랜드 ID|
-| data.chatbotId | String | 챗봇 ID | 
-| data.recipientNumber | String | 수신자 번호 |
-| data.messagebaseId | String | 메시지 타입 |
-| data.title | String | 제목 |
-| data.body | String | 본문 |
-| data.messageStatus | String | 메시지 상태 |
-| sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
+| data | - | メッセージ情報 |
+| data.messageId | String | メッセージID |
+| data.recipientSeq | Integer | 受信者順序 | 
+| data.messageType | String | メッセージタイプ |
+| data.brandId | String | ブランドID|
+| data.chatbotId | String | チャットボットID | 
+| data.recipientNumber | String | 受信者番号 |
+| data.messagebaseId | String | メッセージタイプ |
+| data.title | String | タイトル |
+| data.body | String | 本文 |
+| data.messageStatus | String | メッセージ状態 |
+| sendDateTime | dateTime | リクエスト時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
+| receiveDateTime | dateTime | 受信時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
 
-### LMS 메시지 조회 API
+### LMSメッセージ照会API
 [Method, URI]
 
 ```
@@ -446,23 +446,23 @@ Content-Type: application/json
 
 [Query Parameter]
 
-| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| messageId | String | O(선택적 필수) | 메시지 ID | 요청 시 발급되는 메시지 ID |
-| brandId | String | X | 브랜드 ID |  |
-| chatbotId | String | X | 발신 번호 |  |
-| messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| limit | Integer | X | Limit | 기본값: 15 max: 1000 |
-| offset | Integer | X | offset | 기본값: 0 |
+| messageId | String | O(選択的必須) | メッセージID | リクエスト時に発行されるメッセージID |
+| brandId | String | X | ブランドID |  |
+| chatbotId | String | X | 発信番号 |  |
+| messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
+| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| limit | Integer | X | Limit | デフォルト値: 15 max: 1000 |
+| offset | Integer | X | offset | デフォルト値: 0 |
 
-* messageId 또는 startSendDateTime/endSendDateTime 또는 startReceiveDateTime/endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
-* 요청 시간과 수신 시간 날짜를 동시에 검색하는 것은 불가능합니다.
+* messageIdまたはstartSendDateTime/endSendDateTimeまたはstartReceiveDateTime/endReceiveDateTimeの中から1つを必ず入力する必要があります。
+* リクエスト時間と受信時間の日付を同時に検索することはできません。
 
-[성공 예시]
+[成功例]
 ```json
 {
     "header": {
@@ -494,7 +494,7 @@ Content-Type: application/json
 ```
 
 
-[실패 예시]
+[失敗例]
 ```json
 {
     "header": {
@@ -505,26 +505,26 @@ Content-Type: application/json
 }
 ```
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| data | - | 메시지 정보 |
-| data.messageId | String | 메시지 ID |
-| data.recipientSeq | Integer | 수신자 순서 | 
-| data.messageType | String | 메시지 타입 | 
-| data.brandId | String | 브랜드 ID|
-| data.chatbotId | String | 챗봇 ID | 
-| data.recipientNumber | String | 수신자 번호 |
-| data.messagebaseId | String | 메시지 타입 |
-| data.title | String | 제목 |
-| data.body | String | 본문 |
-| data.messageStatus | String | 메시지 상태 |
-| sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
+| data | - | メッセージ情報 |
+| data.messageId | String | メッセージID |
+| data.recipientSeq | Integer | 受信者順序 | 
+| data.messageType | String | メッセージタイプ | 
+| data.brandId | String | ブランドID|
+| data.chatbotId | String | チャットボットID | 
+| data.recipientNumber | String | 受信者番号 |
+| data.messagebaseId | String | メッセージタイプ |
+| data.title | String | タイトル |
+| data.body | String | 本文 |
+| data.messageStatus | String | メッセージ状態 |
+| sendDateTime | dateTime | リクエスト時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
+| receiveDateTime | dateTime | 受信時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
-### MMS 메시지 조회 API
+### MMSメッセージ照会API
 [Method, URI]
 
 ```
@@ -540,23 +540,23 @@ Content-Type: application/json
 
 [Query Parameter]
 
-| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| messageId | String | O(선택적 필수) | 메시지 ID | 요청 시 발급되는 메시지 ID |
-| brandId | String | X | 브랜드 ID |  |
-| chatbotId | String | X | 발신 번호 |  |
-| messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| limit | Integer | X | Limit | 기본값: 15 max: 1000 |
-| offset | Integer | X | offset | 기본값: 0 |
+| messageId | String | O(選択的必須) | メッセージID | リクエスト時に発行されるメッセージID |
+| brandId | String | X | ブランドID |  |
+| chatbotId | String | X | 発信番号 |  |
+| messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
+| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| limit | Integer | X | Limit | デフォルト値: 15 max: 1000 |
+| offset | Integer | X | offset | デフォルト値: 0 |
 
-* messageId 또는 startSendDateTime/endSendDateTime 또는 startReceiveDateTime/endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
-* 요청 시간과 수신 시간 날짜를 동시에 검색하는 것은 불가능합니다.
+* messageIdまたはstartSendDateTime/endSendDateTimeまたはstartReceiveDateTime/endReceiveDateTimeの中から1つを必ず入力する必要があります。
+* リクエスト時間と受信時間の日付を同時に検索することはできません。
 
-[성공 예시]
+[成功例]
 ```json
 {
     "header": {
@@ -588,7 +588,7 @@ Content-Type: application/json
 ```
 
 
-[실패 예시]
+[失敗例]
 ```json
 {
     "header": {
@@ -599,26 +599,26 @@ Content-Type: application/json
 }
 ```
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| data | - | 메시지 정보 |
-| data.messageId | String | 메시지 ID |
-| data.recipientSeq | Integer | 수신자 순서 | 
-| data.messageType | String | 메시지 타입 |
-| data.brandId | String | 브랜드 ID|
-| data.chatbotId | String | 챗봇 ID | 
-| data.recipientNumber | String | 수신자 번호 |
-| data.messagebaseId | String | 메시지 타입 |
-| data.title | String | 제목(첫번째 카드) |
-| data.body | String | 본문(첫번째 카드) |
-| data.messageStatus | String | 메시지 상태 |
-| sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
+| data | - | メッセージ情報 |
+| data.messageId | String | メッセージID |
+| data.recipientSeq | Integer | 受信者順序 | 
+| data.messageType | String | メッセージタイプ |
+| data.brandId | String | ブランドID|
+| data.chatbotId | String | チャットボットID | 
+| data.recipientNumber | String | 受信者番号 |
+| data.messagebaseId | String | メッセージタイプ |
+| data.title | String | タイトル(最初のカード) |
+| data.body | String | 本文(最初のカード) |
+| data.messageStatus | String | メッセージ状態 |
+| sendDateTime | dateTime | リクエスト時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
+| receiveDateTime | dateTime | 受信時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
-### TEMPLATE 메시지 조회 API
+### TEMPLATEメッセージ照会API
 [Method, URI]
 
 ```
@@ -634,23 +634,23 @@ Content-Type: application/json
 
 [Query Parameter]
 
-| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| messageId | String | O(선택적 필수) | 메시지 ID | 요청 시 발급되는 메시지 ID |
-| brandId | String | X | 브랜드 ID |  |
-| chatbotId | String | X | 발신 번호 |  |
-| messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| limit | Integer | X | Limit | 기본값: 15 max: 1000 |
-| offset | Integer | X | offset | 기본값: 0 |
+| messageId | String | O(選択的必須) | メッセージID | リクエスト時に発行されるメッセージID |
+| brandId | String | X | ブランドID |  |
+| chatbotId | String | X | 発信番号 |  |
+| messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
+| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| limit | Integer | X | Limit | デフォルト値: 15 max: 1000 |
+| offset | Integer | X | offset | デフォルト値: 0 |
 
-* messageId 또는 startSendDateTime/endSendDateTime 또는 startReceiveDateTime/endReceiveDateTime 중 1개를 필수로 입력해야 합니다.
-* 요청 시간과 수신 시간 날짜를 동시에 검색하는 것은 불가능합니다.
+* messageIdまたはstartSendDateTime/endSendDateTimeまたはstartReceiveDateTime/endReceiveDateTimeの中から1つを必ず入力する必要があります。
+* リクエスト時間と受信時間の日付を同時に検索することはできません。
 
-[성공 예시]
+[成功例]
 ```json
 {
     "header": {
@@ -682,7 +682,7 @@ Content-Type: application/json
 ```
 
 
-[실패 예시]
+[失敗例]
 ```json
 {
     "header": {
@@ -693,28 +693,28 @@ Content-Type: application/json
 }
 ```
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| data | - | 메시지 정보 |
-| data.messageId | String | 메시지 ID |
-| data.recipientSeq | Integer | 수신자 순서 | 
-| data.messageType | String | 메시지 타입 |
-| data.brandId | String | 브랜드 ID|
-| data.chatbotId | String | 챗봇 ID | 
-| data.recipientNumber | String | 수신자 번호 |
-| data.messagebaseId | String | 템플릿 ID |
-| data.title | String | 제목 |
-| data.body | String | 본문 |
-| data.messageStatus | String | 메시지 상태 |
-| sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
+| data | - | メッセージ情報 |
+| data.messageId | String | メッセージID |
+| data.recipientSeq | Integer | 受信者順序 | 
+| data.messageType | String | メッセージタイプ |
+| data.brandId | String | ブランドID|
+| data.chatbotId | String | チャットボットID | 
+| data.recipientNumber | String | 受信者番号 |
+| data.messagebaseId | String | テンプレートID |
+| data.title | String | タイトル |
+| data.body | String | 本文 |
+| data.messageStatus | String | メッセージ状態 |
+| sendDateTime | dateTime | リクエスト時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
+| receiveDateTime | dateTime | 受信時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
-## 리소스 API
+## リソースAPI
 
-### 첨부파일 업로드 API
+### 添付ファイルアップロードAPI
 [Method, URI]
 
 ```
@@ -728,20 +728,20 @@ Content-Type: multipart/form-data
 "X-SECRET-KEY" : String
 ```
 
-* 첨부파일 유효기간은 7일입니다.
-* 파일 용량 제한은 1MB입니다.
-* 이미지 첨부는 'jpg', 'jpeg', 'png', 'gif', 'bmp' 확장자만 지원합니다.
+* 添付ファイルの有効期間は7日です。
+* ファイル容量制限は1MBです。
+* 画像の添付は'jpg'、'jpeg'、'png'、'gif'、'bmp'拡張子のみサポートします。
 
 [Request Body]
 
-| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| uploadFile | MultipartFile | O | 첨부 파일 |  |
-| uploadUser | String | X | 업로드 사용자 명 |  |
+| uploadFile | MultipartFile | O | 添付ファイル |  |
+| uploadUser | String | X | アップロードユーザー名 |  |
 
 [Response Body]
 
-[성공 예시]
+[成功例]
 ```json
 {
     "header": {
@@ -752,7 +752,7 @@ Content-Type: multipart/form-data
 }
 ```
 
-[실패 예시]
+[失敗例]
 ```json
 {
     "header": {
@@ -763,16 +763,16 @@ Content-Type: multipart/form-data
 }
 ```
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| header.isSuccessful | Boolean | 성공 여부 |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
 
 
-## 버튼 유형
+## ボタンタイプ
 
-### 대화방 열기
+### チャットルームを開く
 
 ```json
 {
@@ -780,42 +780,42 @@ Content-Type: multipart/form-data
         "composeAction": {
             "composeTextMessage": {
                 "phoneNumber": "01000000000",
-                "text": "전송할 메시지"
+                "text": "転送するメッセージ"
             }
         },
-        "displayText": "대화방 열기"
+        "displayText": "チャットルームを開く"
     }
 }
 ```
 
 
-| 필드 | 설명 | 비고 |
+| フィールド | 説明 | 備考 |
 | --- | --- | --- |
-| action.displayText | 버튼 명 | 최대 17자 |
-| action.composeAction.composeTextMessage.phoneNumber | 메시지 수신 번호 | |
-| action.composeAction.composeTextMessage.text | 전송할 메시지 | 최대 100자 |
+| action.displayText | ボタン名 | 最大17文字 |
+| action.composeAction.composeTextMessage.phoneNumber | メッセージ受信番号 | |
+| action.composeAction.composeTextMessage.text | 転送するメッセージ | 最大100文字 |
 
-### 복사하기
+### コピーする
 
 ```json
 {
     "action": {
         "clipboardAction": {
             "copyToClipboard": {
-                "text": "복사할 메시지"
+                "text": "コピーするメッセージ"
             }
         },
-        "displayText": "복사하기"
+        "displayText": "コピーする"
     }
 }
 ```
 
-| 필드 | 설명 | 비고 |
+| フィールド | 説明 | 備考 |
 | --- | --- | --- |
-| action.displayText | 버튼 명 | 최대 17자 |
-| action.clipboardAction.copyToClipboard.text | 클립보드로 복사할 내용 | 최대 200자 |
+| action.displayText | ボタン名 | 最大17文字 |
+| action.clipboardAction.copyToClipboard.text | クリップボードにコピーする内容 | 最大200文字 |
 
-### 전화 걸기
+### 電話をかける
 
 ```json
 {
@@ -825,17 +825,17 @@ Content-Type: multipart/form-data
                 "phoneNumber": "16446114"
             }
         },
-        "displayText": "전화 걸기"
+        "displayText": "電話をかける"
     }
 }
 ```
 
-| 필드 | 설명 | 비고 |
+| フィールド | 説明 | 備考 |
 | --- | --- | --- |
-| action.displayText | 버튼 명 | 최대 17자 |
-| action.dialerAction.dialPhoneNumber.phoneNumber | 전화 번호 | |
+| action.displayText | ボタン名 | 最大17文字 |
+| action.dialerAction.dialPhoneNumber.phoneNumber | 電話番号 | |
 
-### 지도 보여주기
+### マップを表示する
 
 ```json
 {
@@ -850,20 +850,20 @@ Content-Type: multipart/form-data
                 "fallbackUrl": "https://www.google.co.kr/maps"
             }
         },
-        "displayText": "지도 보여주기"
+        "displayText": "マップを表示する"
     }
 }
 ```
 
-| 필드 | 설명 | 비고 |
+| フィールド | 説明 | 備考 |
 | --- | --- | --- |
-| action.displayText | 버튼 명 | 최대 17자 |
-| action.mapAction.showLocation.location.latitude | 위도 | |
-| action.mapAction.showLocation.location.longitude | 경도 | |
-| action.mapAction.showLocation.location.label | 위치 이름 | 최대 200자 |
-| action.mapAction.showLocation.fallbackUrl | 액션 실패 시 호출할 링크 | |
+| action.displayText | ボタン名 | 最大17文字 |
+| action.mapAction.showLocation.location.latitude | 緯度 | |
+| action.mapAction.showLocation.location.longitude | 経度 | |
+| action.mapAction.showLocation.location.label | 位置名 | 最大200文字 |
+| action.mapAction.showLocation.fallbackUrl | アクション失敗時に呼び出すリンク | |
 
-### 지도 검색하기
+### マップを検索する
 
 ```json
 {
@@ -876,18 +876,18 @@ Content-Type: multipart/form-data
                 "fallbackUrl": "https://www.google.co.kr/maps"
             }
         },
-        "displayText": "지도 검색하기"
+        "displayText": "マップを検索する"
     }
 }
 ```
 
-| 필드 | 설명 | 비고 |
+| フィールド | 説明 | 備考 |
 | --- | --- | --- |
-| action.displayText | 버튼 명 | 최대 17자 |
-| action.mapAction.showLocation.location.query | 검색 키워드 | 최대 200자 |
-| action.mapAction.showLocation.fallbackUrl | 해당 위치를 조회할 사이트 | |
+| action.displayText | ボタン名 | 最大17文字 |
+| action.mapAction.showLocation.location.query | 検索キーワード | 最大200文字 |
+| action.mapAction.showLocation.fallbackUrl | 該当位置を照会するサイト | |
 
-### 현재 위치 공유하기
+### 現在位置を共有する
 
 ```json
 {
@@ -897,17 +897,17 @@ Content-Type: multipart/form-data
                 "currentLocation": true
             }
         },
-        "displayText": "현재 위치 공유하기"
+        "displayText": "現在位置を共有する"
     }
 }
 ```
 
-| 필드 | 설명 | 비고 |
+| フィールド | 説明 | 備考 |
 | --- | --- | --- |
-| action.displayText | 버튼 명 | 최대 17자 |
-| action.mapAction.requestLocationPush.currentLocation | 현재 위치 공유 여부 | 버튼의 기능을 정상적으로 사용하기 위해 해당 값은 true로 지정되어야 함 |
+| action.displayText | ボタン名 | 最大17文字 |
+| action.mapAction.requestLocationPush.currentLocation | 現在位置共有の有無 | ボタンの機能を正常に使用するために当該値はtrueに指定する必要があります |
 
-### URL 연결하기
+### URL接続する
 
 ```json
 {
@@ -917,17 +917,17 @@ Content-Type: multipart/form-data
                 "url": "http://www.test.com"
             }
         },
-        "displayText": "페이지로 이동"
+        "displayText": "ページに移動"
     }
 }
 ```
 
-| 필드 | 설명 | 비고 |
+| フィールド | 説明 | 備考 |
 | --- | --- | --- |
-| action.displayText | 버튼 명 | 최대 17자 |
-| action.urlAction.openUrl.url | 연결할 URL 주소 | |
+| action.displayText | ボタン名 | 最大17文字 |
+| action.urlAction.openUrl.url | 接続するURLアドレス | |
 
-### 일정 등록하기
+### 予定を登録する
 
 ```json
 {
@@ -936,19 +936,19 @@ Content-Type: multipart/form-data
             "createCalendarEvent": {
                 "startTime": "2020-03-31T15:00:00.000Z",
                 "endTime": "2020-03-31T15:00:00.000Z",
-                "title": "일정 등록",
-                "description": "기념일등록입니다."
+                "title": "予定登録",
+                "description": "記念日登録です。"
             }
         },
-        "displayText": "일정 등록하기"
+        "displayText": "予定を登録する"
     }
 }
 ```
 
-| 필드 | 설명 | 비고 |
+| フィールド | 説明 | 備考 |
 | --- | --- | --- |
-| action.displayText | 버튼 명 | 최대 17자 |
-| action.calendarAction.createCalendarEvent.startTime | 시작일 | 형식: yyyy-MM-ddTHH:mm:ss+9:00Z (한국시 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
-| action.calendarAction.createCalendarEvent.endTime | 종료일 | 형식: yyyy-MM-ddTHH:mm:ss+9:00Z (한국시 기준)<br>형식에 맞지 않은 경우 1970년 1월 1일 08시 59분으로 설정 |
-| action.calendarAction.createCalendarEvent.title | 제목 | 최대 17자 |
-| action.calendarAction.createCalendarEvent.description | 내용 | 최대 500자 |
+| action.displayText | ボタン名 | 最大17文字 |
+| action.calendarAction.createCalendarEvent.startTime | 開始日 | 形式: yyyy-MM-ddTHH:mm:ss+9:00Z (韓国基準)<br>形式に合っていない場合は1970年1月1日08時59分に設定 |
+| action.calendarAction.createCalendarEvent.endTime | 終了日 | 形式: yyyy-MM-ddTHH:mm:ss+9:00Z (韓国基準)<br>形式に合っていない場合は1970年1月1日08時59分に設定 |
+| action.calendarAction.createCalendarEvent.title | タイトル | 最大17文字 |
+| action.calendarAction.createCalendarEvent.description | 内容 | 最大500文字 |
