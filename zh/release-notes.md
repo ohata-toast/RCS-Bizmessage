@@ -1,5 +1,11 @@
 ## Notification > RCS Bizmessage > 릴리스 노트
 
+### July 25, 2023
+#### Feature Updates
+* [Console] Improved the identity verification process
+    * Improved so that, when identity verification is rejected or requested again, users can change business registration certificates registered in the organization.
+    * Added the attachment field when verifying identities.
+
 ### 2023. 06. 27.
 
 #### 신규 서비스 출시
