@@ -428,7 +428,8 @@ Content-Type: application/json
 | data.messageStatus | String | 메시지 상태 |
 | data.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
 | data.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
-
+| data.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
+| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
 ### LMS 메시지 조회 API
 [Method, URI]
@@ -523,6 +524,8 @@ Content-Type: application/json
 | data.messageStatus | String | 메시지 상태 |
 | data.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
 | data.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| data.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
+| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
 ### MMS 메시지 조회 API
 [Method, URI]
@@ -617,6 +620,8 @@ Content-Type: application/json
 | data.messageStatus | String | 메시지 상태 |
 | data.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
 | data.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| data.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
+| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
 ### TEMPLATE 메시지 조회 API
 [Method, URI]
@@ -711,6 +716,8 @@ Content-Type: application/json
 | data.messageStatus | String | 메시지 상태 |
 | data.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
 | data.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| data.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
+| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
 ## 메시지 상세 조회
 ### SMS 메시지 상세 조회 API
@@ -805,9 +812,9 @@ Content-Type: application/json
 | message.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
 | message.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 | message.isFallback | Boolean | 대체 발송 여부 |
-| message.fallbackStatus | String | 대체 발송 여부 |
+| message.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
 | message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
-| message.fallbackResultCode | String | 대체 발송 결과 코드<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED) |
+| message.fallbackResultCode | String | 대체 발송 결과 코드 |
 | message.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
 ### LMS 메시지 상세 조회 API
@@ -904,9 +911,9 @@ Content-Type: application/json
 | message.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
 | message.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 | message.isFallback | Boolean | 대체 발송 여부 |
-| message.fallbackStatus | String | 대체 발송 여부 |
+| message.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
 | message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
-| message.fallbackResultCode | String | 대체 발송 결과 코드<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED) |
+| message.fallbackResultCode | String | 대체 발송 결과 코드 |
 | message.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
 ### MMS 메시지 상세 조회 API
@@ -946,11 +953,18 @@ Content-Type: application/json
         "messagebaseId": "SS000000",
         "isAd": false,
         "unsubscribeNumber": "",
-        "body": "testBody",
-        "buttons": [
+        "mmsType": "HORIZONTAL",
+        "cards": [
             {
-                "buttonType": "URL",
-                "buttonJson": "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}",
+                "title": "testTitle",
+                "description": "testBody",
+                "media": "",
+                "buttons": [
+                    {
+                        "buttonType": "URL",
+                        "buttonJson": "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}",
+                    }
+                ],
             }
         ],
         "messageStatus": "DELIVERED",
@@ -991,19 +1005,25 @@ Content-Type: application/json
 | message.chatbotId | String | 챗봇 ID | 
 | message.recipientNumber | String | 수신자 번호 |
 | message.messagebaseId | String | 템플릿 ID |
-| message.body | String | 본문 |
-| message.buttons | - | 버튼 정보 |
-| message.buttons.buttonType | String | 버튼 타입.<br>대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 위치 공유하기(MAP_SHARE), URL 연결하기(URL), 일정 등록하기(CALENDAR) |
-| message.buttons.buttonJson | String | 버튼 Json |
+| message.isAd | Boolean | 광고 여부 |
+| message.unsubscribeNumber | String | 수신 거부 번호 |
+| message.mmsType | String | MMS 타입<br>가로형(HORIZONTAL), 세로형(VERTICAL), 슬라이드 중형(CAROUSEL_MEDIUM), 슬라이드 소형(CAROUSEL_SMALL) |
+| message.cards | - | 카드들 |
+| message.cards.title | String | 제목 |
+| message.cards.description | String | 내용 |
+| message.cards.media | String | 첨부파일 ID |
+| message.cards.buttons | - | 버튼 |
+| message.cards.button.buttonType | String | 버튼 타입.<br>대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 
+| message.card.button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
 | message.messageStatus | String | 메시지 상태<br>준비(READY), 발송 중(IN_PROGRESS), 수신(DELIVERED), 실패(FAILED), 취소(CANCELED) |
 | message.resultCode | String | 결과 코드 |
 | message.telecom | String | 통신사 (skt, kt, lgu) |
 | message.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
 | message.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 | message.isFallback | Boolean | 대체 발송 여부 |
-| message.fallbackStatus | String | 대체 발송 여부 |
+| message.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
 | message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
-| message.fallbackResultCode | String | 대체 발송 결과 코드<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED) |
+| message.fallbackResultCode | String | 대체 발송 결과 코드 |
 | message.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
 ### TEMPLATE 메시지 상세 조회 API
@@ -1098,9 +1118,9 @@ Content-Type: application/json
 | message.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
 | message.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 | message.isFallback | Boolean | 대체 발송 여부 |
-| message.fallbackStatus | String | 대체 발송 여부 |
+| message.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
 | message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
-| message.fallbackResultCode | String | 대체 발송 결과 코드<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED) |
+| message.fallbackResultCode | String | 대체 발송 결과 코드 |
 | message.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
 
 ## 리소스 API
