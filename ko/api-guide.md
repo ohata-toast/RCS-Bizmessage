@@ -26,7 +26,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식: YYYY-MM-DD hh:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
@@ -105,7 +105,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식: YYYY-MM-DD hh:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
@@ -185,7 +185,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식: YYYY-MM-DD hh:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | recipientNumber | String | O | 수신 번호 |  |
@@ -279,7 +279,7 @@ Content-Type: application/json
 
 | 필드 | 타입 | 필수 여부 | 설명 | 비고 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 발송 희망 시간 | 형식: yyyy-MM-dd HH:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
+| sendDateTime | String | X | 발송 희망 시간 | 형식: YYYY-MM-DD hh:mm:ss <br>현재 이전 시간 불가, 기본값: 현재 시간 |
 | brandId | String | O | 브랜드 ID |  |
 | chatbotId | String | O | 발신 번호 |  |
 | messagebaseId  | String | O | 템플릿 ID | |
@@ -356,10 +356,10 @@ Content-Type: application/json
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
 | limit | Integer | X | Limit | 기본값: 15 max: 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
@@ -426,10 +426,10 @@ Content-Type: application/json
 | data.title | String | 제목 |
 | data.body | String | 본문 |
 | data.messageStatus | String | 메시지 상태 |
-| data.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| data.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| data.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| data.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | data.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
-| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ### LMS 메시지 조회 API
 [Method, URI]
@@ -453,10 +453,10 @@ Content-Type: application/json
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
 | limit | Integer | X | Limit | 기본값: 15 max: 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
@@ -522,10 +522,10 @@ Content-Type: application/json
 | data.title | String | 제목 |
 | data.body | String | 본문 |
 | data.messageStatus | String | 메시지 상태 |
-| data.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| data.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| data.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| data.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | data.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
-| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ### MMS 메시지 조회 API
 [Method, URI]
@@ -549,10 +549,10 @@ Content-Type: application/json
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
 | limit | Integer | X | Limit | 기본값: 15 max: 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
@@ -618,10 +618,10 @@ Content-Type: application/json
 | data.title | String | 제목(첫번째 카드) |
 | data.body | String | 본문(첫번째 카드) |
 | data.messageStatus | String | 메시지 상태 |
-| data.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| data.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| data.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| data.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | data.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
-| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ### TEMPLATE 메시지 조회 API
 [Method, URI]
@@ -645,10 +645,10 @@ Content-Type: application/json
 | brandId | String | X | 브랜드 ID |  |
 | chatbotId | String | X | 발신 번호 |  |
 | messageStatus | String | X | 메시지 상태 | READY, IN_PROGRESS, DELIVERED, FAILED, CANCELED |
-| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
-| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: yyyy-MM-dd HH:mm:ss <br>from~to 최대 31일 |
+| startSendDateTime | String | O(선택적 필수) | 요청 시간 from | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| endSendDateTime | String | O(선택적 필수) | 요청 시간 to | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| startReceiveDateTime | String | O(선택적 필수) | 수신 시간 from | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
+| endReceiveDateTime | String | O(선택적 필수) | 수신 시간 to | 형식: YYYY-MM-DD hh:mm:ss <br>from~to 최대 31일 |
 | limit | Integer | X | Limit | 기본값: 15 max: 1000 |
 | offset | Integer | X | offset | 기본값: 0 |
 
@@ -714,10 +714,10 @@ Content-Type: application/json
 | data.title | String | 제목 |
 | data.body | String | 본문 |
 | data.messageStatus | String | 메시지 상태 |
-| data.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| data.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| data.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| data.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | data.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
-| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| data.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ## 메시지 상세 조회
 ### SMS 메시지 상세 조회 API
@@ -809,13 +809,13 @@ Content-Type: application/json
 | message.messageStatus | String | 메시지 상태<br>준비(READY), 발송 중(IN_PROGRESS), 수신(DELIVERED), 실패(FAILED), 취소(CANCELED) |
 | message.resultCode | String | 결과 코드 |
 | message.telecom | String | 통신사 (skt, kt, lgu) |
-| message.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| message.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | message.isFallback | Boolean | 대체 발송 여부 |
 | message.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
 | message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
 | message.fallbackResultCode | String | 대체 발송 결과 코드 |
-| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ### LMS 메시지 상세 조회 API
 [Method, URI]
@@ -908,13 +908,13 @@ Content-Type: application/json
 | message.messageStatus | String | 메시지 상태<br>준비(READY), 발송 중(IN_PROGRESS), 수신(DELIVERED), 실패(FAILED), 취소(CANCELED) |
 | message.resultCode | String | 결과 코드 |
 | message.telecom | String | 통신사 (skt, kt, lgu) |
-| message.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| message.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | message.isFallback | Boolean | 대체 발송 여부 |
 | message.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
 | message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
 | message.fallbackResultCode | String | 대체 발송 결과 코드 |
-| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ### MMS 메시지 상세 조회 API
 [Method, URI]
@@ -1018,13 +1018,13 @@ Content-Type: application/json
 | message.messageStatus | String | 메시지 상태<br>준비(READY), 발송 중(IN_PROGRESS), 수신(DELIVERED), 실패(FAILED), 취소(CANCELED) |
 | message.resultCode | String | 결과 코드 |
 | message.telecom | String | 통신사 (skt, kt, lgu) |
-| message.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| message.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | message.isFallback | Boolean | 대체 발송 여부 |
 | message.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
 | message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
 | message.fallbackResultCode | String | 대체 발송 결과 코드 |
-| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ### TEMPLATE 메시지 상세 조회 API
 [Method, URI]
@@ -1115,13 +1115,13 @@ Content-Type: application/json
 | message.messageStatus | String | 메시지 상태<br>준비(READY), 발송 중(IN_PROGRESS), 수신(DELIVERED), 실패(FAILED), 취소(CANCELED) |
 | message.resultCode | String | 결과 코드 |
 | message.telecom | String | 통신사 (skt, kt, lgu) |
-| message.sendDateTime | dateTime | 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| message.receiveDateTime | dateTime | 수신 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | message.isFallback | Boolean | 대체 발송 여부 |
 | message.fallbackStatus | String | 대체 발송 상태<br>대체 발송 대상 아님(NONE), 대체 발송 중(IN_PROGRESS), 대체 발송 완료(COMPLETE), 대체 발송 실패(SEND_FAILED)  |
 | message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
 | message.fallbackResultCode | String | 대체 발송 결과 코드 |
-| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ## 리소스 API
 

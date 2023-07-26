@@ -26,7 +26,7 @@ Content-Type: application/json
 
 | フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 送信希望時間 | 形式: yyyy-MM-dd HH:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
+| sendDateTime | String | X | 送信希望時間 | 形式: YYYY-MM-DD hh:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
 | brandId | String | O | ブランドID |  |
 | chatbotId | String | O | 発信番号 |  |
 | recipientNumber | String | O | 受信番号 |  |
@@ -105,7 +105,7 @@ Content-Type: application/json
 
 | フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 送信希望時間 | 形式: yyyy-MM-dd HH:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
+| sendDateTime | String | X | 送信希望時間 | 形式: YYYY-MM-DD hh:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
 | brandId | String | O | ブランドID |  |
 | chatbotId | String | O | 発信番号 |  |
 | recipientNumber | String | O | 受信番号 |  |
@@ -185,7 +185,7 @@ Content-Type: application/json
 
 | フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 送信希望時間 | 形式: yyyy-MM-dd HH:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
+| sendDateTime | String | X | 送信希望時間 | 形式: YYYY-MM-DD hh:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
 | brandId | String | O | ブランドID |  |
 | chatbotId | String | O | 発信番号 |  |
 | recipientNumber | String | O | 受信番号 |  |
@@ -279,7 +279,7 @@ Content-Type: application/json
 
 | フィールド | タイプ | 必須かどうか | 説明 | 備考 |
 | --- | --- | --- | --- | --- |
-| sendDateTime | String | X | 送信希望時間 | 形式: yyyy-MM-dd HH:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
+| sendDateTime | String | X | 送信希望時間 | 形式: YYYY-MM-DD hh:mm:ss <br>以前の時間不可、デフォルト値:現在時間 |
 | brandId | String | O | ブランドID |  |
 | chatbotId | String | O | 発信番号 |  |
 | messagebaseId  | String | O | テンプレートID | |
@@ -356,10 +356,10 @@ Content-Type: application/json
 | brandId | String | X | ブランドID |  |
 | chatbotId | String | X | 発信番号 |  |
 | messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
-| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | limit | Integer | X | Limit | デフォルト値: 15 max: 1000 |
 | offset | Integer | X | offset | デフォルト値: 0 |
 
@@ -426,8 +426,8 @@ Content-Type: application/json
 | data.title | String | タイトル |
 | data.body | String | 本文 |
 | data.messageStatus | String | メッセージ状態 |
-| sendDateTime | dateTime | リクエスト時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| receiveDateTime | dateTime | 受信時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 
 ### LMSメッセージ照会API
@@ -452,10 +452,10 @@ Content-Type: application/json
 | brandId | String | X | ブランドID |  |
 | chatbotId | String | X | 発信番号 |  |
 | messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
-| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | limit | Integer | X | Limit | デフォルト値: 15 max: 1000 |
 | offset | Integer | X | offset | デフォルト値: 0 |
 
@@ -521,8 +521,8 @@ Content-Type: application/json
 | data.title | String | タイトル |
 | data.body | String | 本文 |
 | data.messageStatus | String | メッセージ状態 |
-| sendDateTime | dateTime | リクエスト時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| receiveDateTime | dateTime | 受信時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ### MMSメッセージ照会API
 [Method, URI]
@@ -546,10 +546,10 @@ Content-Type: application/json
 | brandId | String | X | ブランドID |  |
 | chatbotId | String | X | 発信番号 |  |
 | messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
-| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | limit | Integer | X | Limit | デフォルト値: 15 max: 1000 |
 | offset | Integer | X | offset | デフォルト値: 0 |
 
@@ -615,8 +615,8 @@ Content-Type: application/json
 | data.title | String | タイトル(最初のカード) |
 | data.body | String | 本文(最初のカード) |
 | data.messageStatus | String | メッセージ状態 |
-| sendDateTime | dateTime | リクエスト時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| receiveDateTime | dateTime | 受信時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ### TEMPLATEメッセージ照会API
 [Method, URI]
@@ -640,10 +640,10 @@ Content-Type: application/json
 | brandId | String | X | ブランドID |  |
 | chatbotId | String | X | 発信番号 |  |
 | messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
-| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
-| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: yyyy-MM-dd HH:mm:ss <br>from～to最大31日 |
+| startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
+| endReceiveDateTime | String | O(選択的必須) | 受信時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | limit | Integer | X | Limit | デフォルト値: 15 max: 1000 |
 | offset | Integer | X | offset | デフォルト値: 0 |
 
@@ -709,8 +709,8 @@ Content-Type: application/json
 | data.title | String | タイトル |
 | data.body | String | 本文 |
 | data.messageStatus | String | メッセージ状態 |
-| sendDateTime | dateTime | リクエスト時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) | 
-| receiveDateTime | dateTime | 受信時間(yyyy-MM-ddThh:mm:ss.SSS+09:00) |
+| sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ## リソースAPI
 
