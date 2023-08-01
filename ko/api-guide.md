@@ -804,11 +804,11 @@ Content-Type: application/json
 | message.messagebaseId | String | 템플릿 ID |
 | message.body | String | 본문 |
 | message.buttons | - | 버튼 정보 |
-| message.buttons.buttonType | String | 버튼 타입.<br><ul><li>대화방 열기(COMPOSE)</li><li>복사하기(CLIPBOARD)</li><li>전화 걸기(DIALER)</li><li>지도 보여주기(MAP_SHOW)</li><li>지도 검색하기(MAP_QUERY)</li><li>현재 위치 공유하기(MAP_SHARE)</li><li>URL 연결하기(URL)</li><li>일정 등록하기(CALENDAR)</li><ul> |
+| message.buttons.buttonType | String | 버튼 타입<br><ul><li>대화방 열기(COMPOSE)</li><li>복사하기(CLIPBOARD)</li><li>전화 걸기(DIALER)</li><li>지도 보여주기(MAP_SHOW)</li><li>지도 검색하기(MAP_QUERY)</li><li>현재 위치 공유하기(MAP_SHARE)</li><li>URL 연결하기(URL)</li><li>일정 등록하기(CALENDAR)</li><ul> |
 | message.buttons.buttonJson | String | 버튼 Json |
 | message.messageStatus | String | 메시지 상태<br><ul><li>준비(READY)</li><li>발송 중(IN_PROGRESS)</li><li>수신(DELIVERED)</li><li>실패(FAILED)</li><li>취소(CANCELED)</li></ul> |
 | message.resultCode | String | 결과 코드 |
-| message.telecom | String | 통신사 (skt, kt, lgu) |
+| message.telecom | String | 통신사(skt, kt, lgu) |
 | message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
 | message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | message.isFallback | Boolean | 대체 발송 여부 |
@@ -903,11 +903,11 @@ Content-Type: application/json
 | message.title | String | 제목 |
 | message.body | String | 본문 |
 | message.buttons | - | 버튼 정보 |
-| message.buttons.buttonType | String | 버튼 타입.<br><ul><li>대화방 열기(COMPOSE)</li><li>복사하기(CLIPBOARD)</li><li>전화 걸기(DIALER)</li><li>지도 보여주기(MAP_SHOW)</li><li>지도 검색하기(MAP_QUERY)</li><li>현재 위치 공유하기(MAP_SHARE)</li><li>URL 연결하기(URL)</li><li>일정 등록하기(CALENDAR)</li><ul> |
+| message.buttons.buttonType | String | 버튼 타입<br><ul><li>대화방 열기(COMPOSE)</li><li>복사하기(CLIPBOARD)</li><li>전화 걸기(DIALER)</li><li>지도 보여주기(MAP_SHOW)</li><li>지도 검색하기(MAP_QUERY)</li><li>현재 위치 공유하기(MAP_SHARE)</li><li>URL 연결하기(URL)</li><li>일정 등록하기(CALENDAR)</li><ul> |
 | message.buttons.buttonJson | String | 버튼 Json |
 | message.messageStatus | String | 메시지 상태<br><ul><li>준비(READY)</li><li>발송 중(IN_PROGRESS)</li><li>수신(DELIVERED)</li><li>실패(FAILED)</li><li>취소(CANCELED)</li></ul> |
 | message.resultCode | String | 결과 코드 |
-| message.telecom | String | 통신사 (skt, kt, lgu) |
+| message.telecom | String | 통신사(skt, kt, lgu) |
 | message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
 | message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | message.isFallback | Boolean | 대체 발송 여부 |
@@ -1013,11 +1013,11 @@ Content-Type: application/json
 | message.cards.description | String | 내용 |
 | message.cards.media | String | 첨부파일 ID |
 | message.cards.buttons | - | 버튼 |
-| message.cards.button.buttonType | String | 버튼 타입.<br>대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 
+| message.cards.button.buttonType | String | 버튼 타입<br>대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 
 | message.card.button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
 | message.messageStatus | String | 메시지 상태<br><ul><li>준비(READY)</li><li>발송 중(IN_PROGRESS)</li><li>수신(DELIVERED)</li><li>실패(FAILED)</li><li>취소(CANCELED)</li></ul> |
 | message.resultCode | String | 결과 코드 |
-| message.telecom | String | 통신사 (skt, kt, lgu) |
+| message.telecom | String | 통신사(skt, kt, lgu) |
 | message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
 | message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | message.isFallback | Boolean | 대체 발송 여부 |
@@ -1110,11 +1110,11 @@ Content-Type: application/json
 | message.messagebaseId | String | 템플릿 ID |
 | message.body | String | 본문 |
 | message.buttons | - | 버튼 정보 |
-| message.buttons.buttonType | String | 버튼 타입.<br><ul><li>대화방 열기(COMPOSE)</li><li>복사하기(CLIPBOARD)</li><li>전화 걸기(DIALER)</li><li>지도 보여주기(MAP_SHOW)</li><li>지도 검색하기(MAP_QUERY)</li><li>현재 위치 공유하기(MAP_SHARE)</li><li>URL 연결하기(URL)</li><li>일정 등록하기(CALENDAR)</li><ul> |
+| message.buttons.buttonType | String | 버튼 타입<br><ul><li>대화방 열기(COMPOSE)</li><li>복사하기(CLIPBOARD)</li><li>전화 걸기(DIALER)</li><li>지도 보여주기(MAP_SHOW)</li><li>지도 검색하기(MAP_QUERY)</li><li>현재 위치 공유하기(MAP_SHARE)</li><li>URL 연결하기(URL)</li><li>일정 등록하기(CALENDAR)</li><ul> |
 | message.buttons.buttonJson | String | 버튼 Json |
 | message.messageStatus | String | 메시지 상태<br><ul><li>준비(READY)</li><li>발송 중(IN_PROGRESS)</li><li>수신(DELIVERED)</li><li>실패(FAILED)</li><li>취소(CANCELED)</li></ul> |
 | message.resultCode | String | 결과 코드 |
-| message.telecom | String | 통신사 (skt, kt, lgu) |
+| message.telecom | String | 통신사(skt, kt, lgu) |
 | message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
 | message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 | message.isFallback | Boolean | 대체 발송 여부 |
