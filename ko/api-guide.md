@@ -387,7 +387,10 @@ Content-Type: application/json
             "title": "",
             "body": "testBody",
             "messageStatus": "DELIVERED",
-            "sendDateTime": "2023-05-03T10:06:23.000+09:00"
+            "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+            "receiveDateTime" : "2023-05-03T10:07:23.000+09:00",
+            "fallbackStatus" : "NONE",
+            "fallbackDateTime" : ""
         }
     ],
     "pagination": {
@@ -483,7 +486,10 @@ Content-Type: application/json
             "title": "",
             "body": "testBody",
             "messageStatus": "DELIVERED",
-            "sendDateTime": "2023-05-03T10:06:23.000+09:00"
+            "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+            "receiveDateTime" : "2023-05-03T10:07:23.000+09:00",
+            "fallbackStatus" : "NONE",
+            "fallbackDateTime" : ""
         }
     ],
     "pagination": {
@@ -579,7 +585,10 @@ Content-Type: application/json
             "title": "",
             "body": "testBody",
             "messageStatus": "DELIVERED",
-            "sendDateTime": "2023-05-03T10:06:23.000+09:00"
+            "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+            "receiveDateTime" : "2023-05-03T10:07:23.000+09:00",
+            "fallbackStatus" : "NONE",
+            "fallbackDateTime" : ""
         }
     ],
     "pagination": {
@@ -675,7 +684,10 @@ Content-Type: application/json
             "title": "",
             "body": "testBody",
             "messageStatus": "DELIVERED",
-            "sendDateTime": "2023-05-03T10:06:23.000+09:00"
+            "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+            "receiveDateTime" : "2023-05-03T10:07:23.000+09:00",
+            "fallbackStatus" : "NONE",
+            "fallbackDateTime" : ""
         }
     ],
     "pagination": {
