@@ -34,7 +34,7 @@ Content-Type: application/json
 | unsubscribeNumber | String | X | 受信拒否番号 | 広告がTrueの場合、必須 |
 | body | String | O | 本文 | 最大100文字 |
 | buttons | List | X | ボタン | 最大1個 |
-| button.buttonType | String | X | ボタンタイプ | チャットルームを開く(COMPOSE)、コピーする(CLIPBOARD)、電話をかける(DIALER)、マップを表示する(MAP_SHOW)、マップ検索する(MAP_QUERY)、現在位置を共有する(MAP_SHARE)、URL接続する(URL)、予定を登録する(CALENDAR) |
+| button.buttonType | String | X | ボタンタイプ | <ul><li>チャットルームを開く(COMPOSE)</li><li>コピーする(CLIPBOARD)</li><li>電話をかける(DIALER)</li><li>マップを表示する(MAP_SHOW)</li><li>マップ検索する(MAP_QUERY)</li><li>現在位置を共有する(MAP_SHARE)</li><li>URL接続する(URL)</li><li>予定を登録する(CALENDAR)</li><ul> |
 | button.buttonJson | String | X | ボタンJson | ボタンタイプに合ったフォーマット確認 |
 | isFallback | Boolean | X | 代替送信の有無 | デフォルト値: false |
 
@@ -114,7 +114,7 @@ Content-Type: application/json
 | title | String | X | タイトル | 最大30文字 |
 | body | String | O | 本文 | 最大1300文字 |
 | buttons | List | X | ボタン | 最大3個 |
-| button.buttonType | String | X | ボタンタイプ | チャットルームを開く(COMPOSE)、コピーする(CLIPBOARD)、電話をかける(DIALER)、マップを表示する(MAP_SHOW)、マップ検索する(MAP_QUERY)、現在位置を共有する(MAP_SHARE)、URL接続する(URL)、予定を登録する(CALENDAR) |
+| button.buttonType | String | X | ボタンタイプ | <ul><li>チャットルームを開く(COMPOSE)</li><li>コピーする(CLIPBOARD)</li><li>電話をかける(DIALER)</li><li>マップを表示する(MAP_SHOW)</li><li>マップ検索する(MAP_QUERY)</li><li>現在位置を共有する(MAP_SHARE)</li><li>URL接続する(URL)</li><li>予定を登録する(CALENDAR)</li><ul> |
 | button.buttonJson | String | X | ボタンJson | ボタンタイプに合ったフォーマット確認 |
 | isFallback | Boolean | X | 代替送信の有無 | デフォルト値: false |
 
@@ -169,7 +169,7 @@ Content-Type: application/json
 
 ### MMSタイプ送信
 [Method, URI]
-
+f
 ```
 POST /rcs/v1.0/messages/mms
 Content-Type: application/json
@@ -191,13 +191,13 @@ Content-Type: application/json
 | recipientNumber | String | O | 受信番号 |  |
 | isAd | Boolean | X | 広告送信か | デフォルト値: false |
 | unsubscribeNumber | String | X | 受信拒否番号 | 広告がTrueの場合、必須 |
-| mmsType | String | O | MMSタイプ | 横型(HORIZONTAL)、縦型(VERTICAL)、スライド中型(CAROUSEL_MEDIUM)、スライド小型(CAROUSEL_SMALL) |
+| mmsType | String | O | MMSタイプ | <ul><li>横型(HORIZONTAL)</li><li>縦型(VERTICAL)</li><li>スライド中型(CAROUSEL_MEDIUM)</li><li>スライド小型(CAROUSEL_SMALL)</li></ul> |
 | cards | List | O | カード | HORIZONTAL(1)、VERTICAL(1)、CAROUSEL_MEDIUM(3 ～ 6)、CAROUSEL_SMALL(3 ～ 6) |
 | card.title | String | X | タイトル | 最大30文字 |
 | card.description | String | X | 内容 | スライドX(最大:1300)、 CAROUSEL_MEDIUM(最大:60)、 CAROUSEL_SMALL(MAX:30) |
 | card.media | String | O | 添付ファイルID | 添付ファイルアップロード時に発行されるID値 |
 | card.buttons | List | X | ボタン | 最大2個 |
-| card.button.buttonType | String | X | ボタンタイプ | チャットルームを開く(COMPOSE)、コピーする(CLIPBOARD)、電話をかける(DIALER)、マップを表示する(MAP_SHOW)、マップ検索する(MAP_QUERY)、現在位置を共有する(MAP_SHARE)、URL接続する(URL)、予定を登録する(CALENDAR) |
+| card.button.buttonType | String | X | ボタンタイプ | <ul><li>チャットルームを開く(COMPOSE)</li><li>コピーする(CLIPBOARD)</li><li>電話をかける(DIALER)</li><li>マップを表示する(MAP_SHOW)</li><li>マップ検索する(MAP_QUERY)</li><li>現在位置を共有する(MAP_SHARE)</li><li>URL接続する(URL)</li><li>予定を登録する(CALENDAR)</li><ul> |
 | card.button.buttonJson | String | X | ボタンJson | ボタンタイプに合ったフォーマット確認 |
 | isFallback | Boolean | X | 代替送信の有無 | デフォルト値: false |
 
@@ -355,7 +355,7 @@ Content-Type: application/json
 | messageId | String | O(選択的必須) | メッセージID | リクエスト時に発行されるメッセージID |
 | brandId | String | X | ブランドID |  |
 | chatbotId | String | X | 発信番号 |  |
-| messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
+| messageStatus | String | X | メッセージ状態 | <ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
 | startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
@@ -425,10 +425,11 @@ Content-Type: application/json
 | data.messagebaseId | String | メッセージタイプ |
 | data.title | String | タイトル |
 | data.body | String | 本文 |
-| data.messageStatus | String | メッセージ状態 |
-| sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
-| receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
-
+| data.messageStatus | String | メッセージ状態<br><ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
+| data.sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| data.receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| data.fallbackStatus | String | 代替送信ステータス<br><ul><li>代替送信対象ではない(NONE)</li><li>代替送信中(IN_PROGRESS)</li><li>代替送信完了(COMPLETE)</li><li>代替送信失敗(SEND_FAILED)</li></ul>  |
+| data.fallbackDateTime | dateTime | 代替送信リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ### LMSメッセージ照会API
 [Method, URI]
@@ -451,7 +452,7 @@ Content-Type: application/json
 | messageId | String | O(選択的必須) | メッセージID | リクエスト時に発行されるメッセージID |
 | brandId | String | X | ブランドID |  |
 | chatbotId | String | X | 発信番号 |  |
-| messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
+| messageStatus | String | X | メッセージ状態 | <ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
 | startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
@@ -520,9 +521,11 @@ Content-Type: application/json
 | data.messagebaseId | String | メッセージタイプ |
 | data.title | String | タイトル |
 | data.body | String | 本文 |
-| data.messageStatus | String | メッセージ状態 |
-| sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
-| receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| data.messageStatus | String | メッセージ状態<br><ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
+| data.sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| data.receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| data.fallbackStatus | String | 代替送信ステータス<br><ul><li>代替送信対象ではない(NONE)</li><li>代替送信中(IN_PROGRESS)</li><li>代替送信完了(COMPLETE)</li><li>代替送信失敗(SEND_FAILED)</li></ul>  |
+| data.fallbackDateTime | dateTime | 代替送信リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ### MMSメッセージ照会API
 [Method, URI]
@@ -545,7 +548,7 @@ Content-Type: application/json
 | messageId | String | O(選択的必須) | メッセージID | リクエスト時に発行されるメッセージID |
 | brandId | String | X | ブランドID |  |
 | chatbotId | String | X | 発信番号 |  |
-| messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
+| messageStatus | String | X | メッセージ状態 | <ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
 | startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
@@ -614,9 +617,11 @@ Content-Type: application/json
 | data.messagebaseId | String | メッセージタイプ |
 | data.title | String | タイトル(最初のカード) |
 | data.body | String | 本文(最初のカード) |
-| data.messageStatus | String | メッセージ状態 |
-| sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
-| receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| data.messageStatus | String | メッセージ状態<br><ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
+| data.sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| data.receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| data.fallbackStatus | String | 代替送信ステータス<br><ul><li>代替送信対象ではない(NONE)</li><li>代替送信中(IN_PROGRESS)</li><li>代替送信完了(COMPLETE)</li><li>代替送信失敗(SEND_FAILED)</li></ul>  |
+| data.fallbackDateTime | dateTime | 代替送信リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ### TEMPLATEメッセージ照会API
 [Method, URI]
@@ -639,7 +644,7 @@ Content-Type: application/json
 | messageId | String | O(選択的必須) | メッセージID | リクエスト時に発行されるメッセージID |
 | brandId | String | X | ブランドID |  |
 | chatbotId | String | X | 発信番号 |  |
-| messageStatus | String | X | メッセージ状態 | READY、IN_PROGRESS、DELIVERED、FAILED、CANCELED |
+| messageStatus | String | X | メッセージ状態 | <ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
 | startSendDateTime | String | O(選択的必須) | リクエスト時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | endSendDateTime | String | O(選択的必須) | リクエスト時間to | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
 | startReceiveDateTime | String | O(選択的必須) | 受信時間from | 形式: YYYY-MM-DD hh:mm:ss <br>from～to最大31日 |
@@ -708,9 +713,415 @@ Content-Type: application/json
 | data.messagebaseId | String | テンプレートID |
 | data.title | String | タイトル |
 | data.body | String | 本文 |
-| data.messageStatus | String | メッセージ状態 |
-| sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
-| receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| data.messageStatus | String | メッセージ状態<br><ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
+| data.sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| data.receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| data.fallbackStatus | String | 代替送信ステータス<br><ul><li>代替送信対象ではない(NONE)</li><li>代替送信中(IN_PROGRESS)</li><li>代替送信完了(COMPLETE)</li><li>代替送信失敗(SEND_FAILED)</li></ul>  |
+| data.fallbackDateTime | dateTime | 代替送信リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+
+## メッセージ詳細照会
+### SMSメッセージ詳細照会API
+[Method, URI]
+
+```
+GET /rcs/v1.0/messages/sms/{messageId}
+Content-Type: application/json
+```
+
+[Header]
+```
+"X-TC-APP-KEY" : String
+"X-SECRET-KEY" : String
+```
+[Path Parameter]
+
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
+| --- | --- | --- | --- | --- |
+| messageId | String | O | メッセージID | リクエスト時に発行されるメッセージID |
+
+[成功例]
+```json
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "success",
+        "isSuccessful": true
+    },
+    "messageRecipient": {
+        "messageId": "20230503100623Uc3C0JDd0u0",
+        "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+        "messageType": "TEMPLATE",
+        "brandId": "sampleBrandId",
+        "chatbotId": "15881234",
+        "recipientNumber": "01012341234",
+        "messagebaseId": "SS000000",
+        "isAd": false,
+        "unsubscribeNumber": "",
+        "body": "testBody",
+        "buttons": [
+            {
+                "buttonType": "URL",
+                "buttonJson": "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"Webサイトに移動\"}}",
+            }
+        ],
+        "messageStatus": "DELIVERED",
+        "resultCode": 2000,
+        "telecom": "kt",
+        "receiveDateTime": "2023-05-03T10:06:23.000+09:00",
+        "resultDateTime": "2023-05-03T10:06:23.000+09:00",
+        "isFallback": false,
+        "fallbackStatus": "NONE",
+        "fallbackRequestId": "",
+        "fallbackResultCode": "",
+        "fallbackDateTime": ""
+    }
+}
+```
+
+
+[失敗例]
+```json
+{
+    "header": {
+        "resultCode": 500,
+        "resultMessage": "Internal Error. It is not handled. Please report this. 'https://toast.com/support/inquiry.",
+        "isSuccessful": false
+    }
+}
+```
+
+| フィールド | タイプ | 説明 |
+| --- | --- | --- |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
+| message | - | メッセージ詳細情報 |
+| message.messageId | String | メッセージID |
+| message.messageType | String | メッセージタイプ |
+| message.brandId | String | ブランドID|
+| message.chatbotId | String | チャットボットID | 
+| message.recipientNumber | String | 受信者番号 |
+| message.messagebaseId | String | テンプレートID |
+| message.body | String | 本文 |
+| message.buttons | - | ボタン情報 |
+| message.buttons.buttonType | String | ボタンタイプ<br><ul><li>チャットルームを開く(COMPOSE)</li><li>コピーする(CLIPBOARD)</li><li>電話をかける(DIALER)</li><li>マップを表示する(MAP_SHOW)</li><li>マップ検索する(MAP_QUERY)</li><li>現在位置を共有する(MAP_SHARE)</li><li>URL接続する(URL)</li><li>予定を登録する(CALENDAR)</li><ul> |
+| message.buttons.buttonJson | String | ボタンJson |
+| message.messageStatus | String | メッセージ状態<br><ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
+| message.resultCode | String | 結果コード |
+| message.telecom | String | サービスプロバイダー(skt, kt, lgu) |
+| message.sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.isFallback | Boolean | 代替送信かどうか |
+| message.fallbackStatus | String | 代替送信ステータス<br><ul><li>代替送信対象ではない(NONE)</li><li>代替送信中(IN_PROGRESS)</li><li>代替送信完了(COMPLETE)</li><li>代替送信失敗(SEND_FAILED)</li></ul>  |
+| message.fallbackRequestId | String | 代替送信SMSリクエストID |
+| message.fallbackResultCode | String | 代替送信結果コード |
+| message.fallbackDateTime | dateTime | 代替送信リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+
+### LMSメッセージ詳細照会API
+[Method, URI]
+
+```
+GET /rcs/v1.0/messages/lms/{messageId}
+Content-Type: application/json
+```
+
+[Header]
+```
+"X-TC-APP-KEY" : String
+"X-SECRET-KEY" : String
+```
+[Path Parameter]
+
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
+| --- | --- | --- | --- | --- |
+| messageId | String | O | メッセージID | リクエスト時に発行されるメッセージID |
+
+[成功例]
+```json
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "success",
+        "isSuccessful": true
+    },
+    "messageRecipient": {
+        "messageId": "20230503100623Uc3C0JDd0u0",
+        "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+        "messageType": "TEMPLATE",
+        "brandId": "sampleBrandId",
+        "chatbotId": "15881234",
+        "recipientNumber": "01012341234",
+        "messagebaseId": "SS000000",
+        "isAd": false,
+        "unsubscribeNumber": "",
+        "title": "testTitle",
+        "body": "testBody",
+        "buttons": [
+            {
+                "buttonType": "URL",
+                "buttonJson": "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"Webサイトに移動\"}}",
+            }
+        ],
+        "messageStatus": "DELIVERED",
+        "resultCode": 2000,
+        "telecom": "kt",
+        "receiveDateTime": "2023-05-03T10:06:23.000+09:00",
+        "resultDateTime": "2023-05-03T10:06:23.000+09:00",
+        "isFallback": false,
+        "fallbackStatus": "NONE",
+        "fallbackRequestId": "",
+        "fallbackResultCode": "",
+        "fallbackDateTime": ""
+    }
+}
+```
+
+
+[失敗例]
+```json
+{
+    "header": {
+        "resultCode": 500,
+        "resultMessage": "Internal Error. It is not handled. Please report this. 'https://toast.com/support/inquiry.",
+        "isSuccessful": false
+    }
+}
+```
+
+| フィールド | タイプ | 説明 |
+| --- | --- | --- |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
+| message | - | メッセージ詳細情報 |
+| message.messageId | String | メッセージID |
+| message.messageType | String | メッセージタイプ |
+| message.brandId | String | ブランドID|
+| message.chatbotId | String | チャットボットID | 
+| message.recipientNumber | String | 受信者番号 |
+| message.messagebaseId | String | テンプレートID |
+| message.title | String | タイトル |
+| message.body | String | 本文 |
+| message.buttons | - | ボタン情報 |
+| message.buttons.buttonType | String | ボタンタイプ<br><ul><li>チャットルームを開く(COMPOSE)</li><li>コピーする(CLIPBOARD)</li><li>電話をかける(DIALER)</li><li>マップを表示する(MAP_SHOW)</li><li>マップ検索する(MAP_QUERY)</li><li>現在位置を共有する(MAP_SHARE)</li><li>URL接続する(URL)</li><li>予定を登録する(CALENDAR)</li><ul> |
+| message.buttons.buttonJson | String | ボタンJson |
+| message.messageStatus | String | メッセージ状態<br><ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
+| message.resultCode | String | 結果コード |
+| message.telecom | String | サービスプロバイダー(skt, kt, lgu) |
+| message.sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.isFallback | Boolean | 代替送信かどうか |
+| message.fallbackStatus | String | 代替送信ステータス<br><ul><li>代替送信対象ではない(NONE)</li><li>代替送信中(IN_PROGRESS)</li><li>代替送信完了(COMPLETE)</li><li>代替送信失敗(SEND_FAILED)</li></ul>  |
+| message.fallbackRequestId | String | 代替送信SMSリクエストID |
+| message.fallbackResultCode | String | 代替送信結果コード |
+| message.fallbackDateTime | dateTime | 代替送信リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+
+### MMSメッセージ詳細照会API
+[Method, URI]
+
+```
+GET /rcs/v1.0/messages/mms/{messageId}
+Content-Type: application/json
+```
+
+[Header]
+```
+"X-TC-APP-KEY" : String
+"X-SECRET-KEY" : String
+```
+[Path Parameter]
+
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
+| --- | --- | --- | --- | --- |
+| messageId | String | O | メッセージID | リクエスト時に発行されるメッセージID |
+
+[成功例]
+```json
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "success",
+        "isSuccessful": true
+    },
+    "messageRecipient": {
+        "messageId": "20230503100623Uc3C0JDd0u0",
+        "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+        "messageType": "TEMPLATE",
+        "brandId": "sampleBrandId",
+        "chatbotId": "15881234",
+        "recipientNumber": "01012341234",
+        "messagebaseId": "SS000000",
+        "isAd": false,
+        "unsubscribeNumber": "",
+        "mmsType": "HORIZONTAL",
+        "cards": [
+            {
+                "title": "testTitle",
+                "description": "testBody",
+                "media": "",
+                "buttons": [
+                    {
+                        "buttonType": "URL",
+                        "buttonJson": "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"Webサイトに移動\"}}",
+                    }
+                ],
+            }
+        ],
+        "messageStatus": "DELIVERED",
+        "resultCode": 2000,
+        "telecom": "kt",
+        "receiveDateTime": "2023-05-03T10:06:23.000+09:00",
+        "resultDateTime": "2023-05-03T10:06:23.000+09:00",
+        "isFallback": false,
+        "fallbackStatus": "NONE",
+        "fallbackRequestId": "",
+        "fallbackResultCode": "",
+        "fallbackDateTime": ""
+    }
+}
+```
+
+
+[失敗例]
+```json
+{
+    "header": {
+        "resultCode": 500,
+        "resultMessage": "Internal Error. It is not handled. Please report this. 'https://toast.com/support/inquiry.",
+        "isSuccessful": false
+    }
+}
+```
+
+| フィールド | タイプ | 説明 |
+| --- | --- | --- |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
+| message | - | メッセージ詳細情報 |
+| message.messageId | String | メッセージID |
+| message.messageType | String | メッセージタイプ |
+| message.brandId | String | ブランドID|
+| message.chatbotId | String | チャットボットID | 
+| message.recipientNumber | String | 受信者番号 |
+| message.messagebaseId | String | テンプレートID |
+| message.isAd | Boolean | 広告かどうか |
+| message.unsubscribeNumber | String | 受信拒否番号 |
+| message.mmsType | String | MMSタイプ<br><ul><li>横型(HORIZONTAL)</li><li>縦型(VERTICAL)</li><li>スライド中型(CAROUSEL_MEDIUM)</li><li>スライド小型(CAROUSEL_SMALL)</li></ul> |
+| message.cards | - | カード |
+| message.cards.title | String | タイトル |
+| message.cards.description | String | 内容 |
+| message.cards.media | String | 添付ファイルID |
+| message.cards.buttons | - | ボタン |
+| message.cards.button.buttonType | String | ボタンタイプ<br>チャットルームを開く(COMPOSE)、コピーする(CLIPBOARD)、電話をかける(DIALER)、マップを表示する(MAP_SHOW)、マップを検索する(MAP_QUERY)、現在 
+| message.card.button.buttonJson | String | X | ボタンJson | ボタンタイプに合ったフォーマット確認 |
+| message.messageStatus | String | メッセージ状態<br><ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
+| message.resultCode | String | 結果コード |
+| message.telecom | String | サービスプロバイダー(skt, kt, lgu) |
+| message.sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.isFallback | Boolean | 代替送信かどうか |
+| message.fallbackStatus | String | 代替送信ステータス<br><ul><li>代替送信対象ではない(NONE)</li><li>代替送信中(IN_PROGRESS)</li><li>代替送信完了(COMPLETE)</li><li>代替送信失敗(SEND_FAILED)</li></ul>  |
+| message.fallbackRequestId | String | 代替送信SMSリクエストID |
+| message.fallbackResultCode | String | 代替送信結果コード |
+| message.fallbackDateTime | dateTime | 代替送信リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+
+### TEMPLATEメッセージ詳細照会API
+[Method, URI]
+
+```
+GET /rcs/v1.0/messages/template/{messageId}
+Content-Type: application/json
+```
+
+[Header]
+```
+"X-TC-APP-KEY" : String
+"X-SECRET-KEY" : String
+```
+[Path Parameter]
+
+| フィールド | タイプ | 必須かどうか | 説明 | 備考 |
+| --- | --- | --- | --- | --- |
+| messageId | String | O | メッセージID | リクエスト時に発行されるメッセージID |
+
+[成功例]
+```json
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "success",
+        "isSuccessful": true
+    },
+    "messageRecipient": {
+        "messageId": "20230503100623Uc3C0JDd0u0",
+        "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+        "messageType": "TEMPLATE",
+        "brandId": "sampleBrandId",
+        "chatbotId": "15881234",
+        "recipientNumber": "01012341234",
+        "messagebaseId": "SS000000",
+        "isAd": false,
+        "unsubscribeNumber": "",
+        "body": "testBody",
+        "buttons": [
+            {
+                "buttonType": "URL",
+                "buttonJson": "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"Webサイトに移動\"}}",
+            }
+        ],
+        "messageStatus": "DELIVERED",
+        "resultCode": 2000,
+        "telecom": "kt",
+        "receiveDateTime": "2023-05-03T10:06:23.000+09:00",
+        "resultDateTime": "2023-05-03T10:06:23.000+09:00",
+        "isFallback": false,
+        "fallbackStatus": "NONE",
+        "fallbackRequestId": "",
+        "fallbackResultCode": "",
+        "fallbackDateTime": ""
+    }
+}
+```
+
+
+[失敗例]
+```json
+{
+    "header": {
+        "resultCode": 500,
+        "resultMessage": "Internal Error. It is not handled. Please report this. 'https://toast.com/support/inquiry.",
+        "isSuccessful": false
+    }
+}
+```
+
+| フィールド | タイプ | 説明 |
+| --- | --- | --- |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| header.isSuccessful | Boolean | 成否 |
+| message | - | メッセージ詳細情報 |
+| message.messageId | String | メッセージID |
+| message.messageType | String | メッセージタイプ |
+| message.brandId | String | ブランドID|
+| message.chatbotId | String | チャットボットID | 
+| message.recipientNumber | String | 受信者番号 |
+| message.messagebaseId | String | テンプレートID |
+| message.body | String | 本文 |
+| message.buttons | - | ボタン情報 |
+| message.buttons.buttonType | String | ボタンタイプ<br><ul><li>チャットルームを開く(COMPOSE)</li><li>コピーする(CLIPBOARD)</li><li>電話をかける(DIALER)</li><li>マップを表示する(MAP_SHOW)</li><li>マップ検索する(MAP_QUERY)</li><li>現在位置を共有する(MAP_SHARE)</li><li>URL接続する(URL)</li><li>予定を登録する(CALENDAR)</li><ul> |
+| message.buttons.buttonJson | String | ボタンJson |
+| message.messageStatus | String | メッセージ状態<br><ul><li>準備(READY)</li><li>送信中(IN_PROGRESS)</li><li>受信(DELIVERED)</li><li>失敗(FAILED)</li><li>キャンセル(CANCELED)</li></ul> |
+| message.resultCode | String | 結果コード |
+| message.telecom | String | サービスプロバイダー(skt, kt, lgu) |
+| message.sendDateTime | dateTime | リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 受信時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.isFallback | Boolean | 代替送信かどうか |
+| message.fallbackStatus | String | 代替送信ステータス<br><ul><li>代替送信対象ではない(NONE)</li><li>代替送信中(IN_PROGRESS)</li><li>代替送信完了(COMPLETE)</li><li>代替送信失敗(SEND_FAILED)</li></ul>  |
+| message.fallbackRequestId | String | 代替送信SMSリクエストID |
+| message.fallbackResultCode | String | 代替送信結果コード |
+| message.fallbackDateTime | dateTime | 代替送信リクエスト時間(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
 ## リソースAPI
 
