@@ -3,7 +3,7 @@
 ### API結果コード
 | 結果コード | 説明 | APIレスポンスメッセージ | 備考 |
 | --- | --- | --- | --- |
-| 0 | 成功 | Success | |
+| 0 | 成功 | success | |
 | 400 | ユーザーエラー | Client exception | |
 | -3000 | ボタン有効性検査失敗 | Invalid button parameter. |  |
 | -3001 | 080受信拒否番号なし | Unsubscribe number is required when send ad. | |

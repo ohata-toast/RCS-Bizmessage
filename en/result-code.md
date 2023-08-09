@@ -3,7 +3,7 @@
 ### API Result Code
 | Result Code | Description | API Response Message | Note |
 | --- | --- | --- | --- |
-| 0 | Success | Success | |
+| 0 | Success | success | |
 | 400 | User error | Client exception | |
 | -3000 | Button validation failed | Invalid button parameter. |  |
 | -3001 | 080 deny-to-receive number not exist | Unsubscribe number is required when sending ad. | |

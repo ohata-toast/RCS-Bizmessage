@@ -3,7 +3,7 @@
 ### API 결과 코드
 | 결과 코드 | 설명 | API 응답 메시지 | 비고 |
 | --- | --- | --- | --- |
-| 0 | 성공 | Success | |
+| 0 | 성공 | success | |
 | 400 | 사용자 오류 | Client exception | |
 | -3000 | 버튼 유효성 검사 실패 | Invalid button parameter. |  |
 | -3001 | 080 수신거부 번호 없음 | Unsubscribe number is required when send ad. | |
