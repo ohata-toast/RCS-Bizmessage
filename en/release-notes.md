@@ -1,14 +1,6 @@
 ## Notification > RCS Bizmessage > Release Notes
 
 ### August 17,  2023
-#### Added Features
-* [Console] Added the detailed query page
-    * Added a screen where you can check the details of the message by clicking the **Request ID** in the list after looking up the message in the **Send Result** tab.
-    * When searching in detail, you can search the entire message title/body and check the detailed reason for the delivery result.
-* [API] Added Query Details API
-    * Added the API to query detailed information of a specific message for all message types (SMS/LMS/MMS/Template).
-    * For more information, refer to [[API Guide(./api-guide/#_3)]].
-
 #### Feature Updates
 * [Console] Added a field to the queried list page
     * Added the **Alternative Delivery Status** and **Alternative Delivery Time** fields when querying message lists from the **Send Result** tab.
