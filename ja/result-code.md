@@ -3,11 +3,11 @@
 ### API結果コード
 | 結果コード | 説明 | APIレスポンスメッセージ | 備考 |
 | --- | --- | --- | --- |
-| 0 | 成功 | success | |
+| 0 | 成功 | Success | |
 | 400 | ユーザーエラー | Client exception | |
 | -3000 | ボタン有効性検査失敗 | Invalid button parameter. |  |
 | -3001 | 080受信拒否番号なし | Unsubscribe number is required when send ad. | |
-| -3002 | 送信リクエスト時間エラー | sendDateTime cannot be set before now. | |
+| -3002 | 送信リクエスト時間エラー | SendDateTime cannot be set before now. | |
 | -3030 | MMS横型、縦型カード数エラー | Horizontal and vertical type can enroll only one card. | | 
 | -3031 | MMS横型、縦型タイトル長さ超過 | Over horizontal and vertical type title length 30. | | 
 | -3032 | MMS横型、縦型内容長さ超過 | Over horizontal and vertical type body length 1300. | | 
@@ -37,8 +37,8 @@
 | -6000 | SMSプロジェクト照会失敗 | Fail to call CAB read project API. | |
 | -6001 | SMSプロジェクト有効化失敗 | Fail to call CAB enable project SMS API. | |
 | -7000 | 送信照会タイプエラー | Invalid search type on url path. (sms, lms, mms, template) | |
-| -7001 | 照会必須パラメータエラー | send date time or receive date time or message id is required. | |
-| -7002 | 照会期間条件エラー | send date time and receive date time cannot be requested once. | 送信リクエスト時間条件、受信時間条件は一緒に使用不可 |
+| -7001 | 照会必須パラメータエラー | Send date time or receive date time or message id is required. | |
+| -7002 | 照会期間条件エラー | Send date time and receive date time cannot be requested once. | 送信リクエスト時間条件、受信時間条件は一緒に使用不可 |
 | -7003 | 照会期間条件超過 | Invalid date time search parameter. | 最大31日まで指定可能 |
 | -7004 | メッセージ状態条件エラー | Invalid message status parameter. | |
 | -8000 | 代替送信リクエスト失敗 | Fail to call SMS send API. | |

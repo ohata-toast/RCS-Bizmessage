@@ -3,11 +3,11 @@
 ### API Result Code
 | Result Code | Description | API Response Message | Note |
 | --- | --- | --- | --- |
-| 0 | Success | success | |
+| 0 | Success | Success | |
 | 400 | User error | Client exception | |
 | -3000 | Button validation failed | Invalid button parameter. |  |
 | -3001 | 080 deny-to-receive number not exist | Unsubscribe number is required when sending ad. | |
-| -3002 | Send request time error | sendDateTime cannot be set to a past time. | |
+| -3002 | Send request time error | SendDateTime cannot be set to a past time. | |
 | -3030 | MMS horizontal, vertical card count error | Horizontal and vertical type can enroll only one card. | | 
 | -3031 | MMS horizontal, vertical title length exceeded | Exceeded horizontal and vertical type title length of 30. | | 
 | -3032 | MMS horizontal and vertical content length exceeded | Exceeded horizontal and vertical type body length of 1300. | | 
@@ -37,8 +37,8 @@
 | -6000 | Failed to query SMS project | Failed to call CAB read project API. | |
 | -6001 | Failed to enable SMS project | Failed to call CAB enable project SMS API. | |
 | -7000 | Sending inquiry type error | Invalid search type on url path. (sms, lms, mms, template) | |
-| -7001 | Required parameter error | send date time or receive date time or message id is required. | |
-| -7002 | Query period condition error | send date time and receive date time cannot be requested once. | Send request time condition and receive time condition cannot be used together |
+| -7001 | Required parameter error | Send date time or receive date time or message id is required. | |
+| -7002 | Query period condition error | Send date time and receive date time cannot be requested once. | Send request time condition and receive time condition cannot be used together |
 | -7003 | Inquiry period condition exceeded | Invalid date time search parameter. | Can be specified up to 31 days |
 | -7004 | Message status condition error | Invalid message status parameter. | |
 | -8000 | Failed to request alternative sending | Fail to call SMS send API. | |
