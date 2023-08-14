@@ -5,27 +5,27 @@
 | --- | --- | --- | --- |
 | 0 | 성공 | success | |
 | 400 | 사용자 오류 | Client exception | |
-| -3000 | 버튼 유효성 검사 실패 | Invalid button parameter. |  |
-| -3001 | 080 수신거부 번호 없음 | Unsubscribe number is required when send ad. | |
-| -3002 | 발송 요청 시간 오류 | SendDateTime cannot be set before now. | |
-| -3030 | MMS 가로형, 세로형 카드 수 오류 | Horizontal and vertical type can enroll only one card. | | 
-| -3031 | MMS 가로형, 세로형 제목 길이 초과 | Over horizontal and vertical type title length 30. | | 
-| -3032 | MMS 가로형, 세로형 내용 길이 초과 | Over horizontal and vertical type body length 1300. | | 
-| -3033 | MMS 슬라이드형 카드 수 오류 | Carousel type can enroll more than 3, less than 6. | | 
-| -3034 | MMS 슬라이드형 제목 길이 초과 | Over Carousel type body length 30 per card. | | 
-| -3035 | MMS 슬라이드형 내용 길이 초과 | Over Carousel type body length 60 per card. | | 
-| -4000 | 브랜드 없음 | Not exist brand. | | 
+| -3000 | 버튼 유효성 검사 실패 | Client Error. Invalid button parameter. |  |
+| -3001 | 080 수신거부 번호 없음 | Client Error. Unsubscribe number is required when send ad. | |
+| -3002 | 발송 요청 시간 오류 | Client Error. SendDateTime cannot be set before now. | |
+| -3030 | MMS 가로형, 세로형 카드 수 오류 | Client Error. Horizontal and vertical type can enroll only one card. | | 
+| -3031 | MMS 가로형, 세로형 제목 길이 초과 | Client Error. Over horizontal and vertical type title length 30. | | 
+| -3032 | MMS 가로형, 세로형 내용 길이 초과 | Client Error. Over horizontal and vertical type body length 1300. | | 
+| -3033 | MMS 슬라이드형 카드 수 오류 | Client Error. Carousel type can enroll more than 3, less than 6. | | 
+| -3034 | MMS 슬라이드형 제목 길이 초과 | Client Error. Over Carousel type body length 30 per card. | | 
+| -3035 | MMS 슬라이드형 내용 길이 초과 | Client Error. Over Carousel type body length 60 per card. | | 
+| -4000 | 브랜드 없음 | Client Error. Not exist brand. | | 
 | -4001 | 브랜드 상태 오류 | Invalid status brand. | | 
-| -4010 | 대화방(발신 번호) 없음 | Not exist chatbot. | | 
+| -4010 | 대화방(발신 번호) 없음 | Client Error. Not exist chatbot. | | 
 | -4011 | 대화방(발신 번호) 상태 오류 | Invalid status chatbot. | | 
-| -4020 | 템플릿 없음 | Not exist template. | | 
+| -4020 | 템플릿 없음 | Client Error. Not exist template. | | 
 | -4021 | 템플릿 상태 오류 | Invalid status template. | | 
 | -4022 | 지원하지 않은 템플릿 | Unsupported template. | |
-| -4030 | 첨부파일 없음 | Not exist media. | | 
+| -4030 | 첨부파일 없음 | Client Error. Not exist media. | | 
 | -4031 | 첨부파일 만료 | Expired media. | | 
-| -4032 | 첨부파일 타입 오류 | Invalid media type. | | 
-| -4033 | 첨부파일 크기 초과 | Exceed max file size. | | 
-| -4034 | 첨부파일 형식 오류 | Invalid media format. | | 
+| -4032 | 첨부파일 타입 오류 | Client Error. Invalid media type. | | 
+| -4033 | 첨부파일 크기 초과 | Client Error. Exceed max file size. | | 
+| -4034 | 첨부파일 형식 오류 | Client Error. Invalid media format. | | 
 | -4040 | 080 수신거부 번호 없음 | Not exist block service. | |
 | -4041 | 080 수신거부 번호 상태 오류 | Invalid status block service. | |
 | -4042 | 080 수신거부 대상 | Blocked recipient number. | |
@@ -36,11 +36,11 @@
 | -5002 | SMS 발신 번호 조회 실패 | Fail to call SMS send number API. | |
 | -6000 | SMS 프로젝트 조회 실패 | Fail to call CAB read project API. | |
 | -6001 | SMS 프로젝트 활성화 실패 | Fail to call CAB enable project SMS API. | |
-| -7000 | 발송 조회 타입 오류 | Invalid search type on url path. (sms, lms, mms, template) | |
-| -7001 | 조회 필수 파라미터 오류 | Send date time or receive date time or message id is required. | |
-| -7002 | 조회 기간 조건 오류 | Send date time and receive date time cannot be requested once. | 발송 요청 시간 조건, 수신 시간 조건은 함께 사용 불가 |
-| -7003 | 조회 기간 조건 초과 | Invalid date time search parameter. | 최대 31일까지 지정 가능 |
-| -7004 | 메시지 상태 조건 오류 | Invalid message status parameter. | |
+| -7000 | 발송 조회 타입 오류 | Client Error. Invalid search type on url path. (sms, lms, mms, template) | |
+| -7001 | 조회 필수 파라미터 오류 | Client Error. Send date time or receive date time or message id is required. | |
+| -7002 | 조회 기간 조건 오류 | Client Error. Send date time and receive date time cannot be requested once. | 발송 요청 시간 조건, 수신 시간 조건은 함께 사용 불가 |
+| -7003 | 조회 기간 조건 초과 | Client Error. Invalid date time search parameter. | 최대 31일까지 지정 가능 |
+| -7004 | 메시지 상태 조건 오류 | Client Error. Invalid message status parameter. | |
 | -8000 | 대체 발송 요청 실패 | Fail to call SMS send API. | |
 | -9999 | 내부 에러 | System error. Please inquire at support@toast.com. | |
 

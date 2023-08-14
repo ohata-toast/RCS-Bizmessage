@@ -5,27 +5,27 @@
 | --- | --- | --- | --- |
 | 0 | Success | success | |
 | 400 | User error | Client exception | |
-| -3000 | Button validation failed | Invalid button parameter. |  |
-| -3001 | 080 deny-to-receive number not exist | Unsubscribe number is required when sending ad. | |
-| -3002 | Send request time error | SendDateTime cannot be set to a past time. | |
-| -3030 | MMS horizontal, vertical card count error | Horizontal and vertical type can enroll only one card. | | 
-| -3031 | MMS horizontal, vertical title length exceeded | Exceeded horizontal and vertical type title length of 30. | | 
-| -3032 | MMS horizontal and vertical content length exceeded | Exceeded horizontal and vertical type body length of 1300. | | 
-| -3033 | MMS slide card count error | Carousel type can enroll more than 3 and less than 6. | | 
-| -3034 | MMS carousel title length exceeded | Exceeded carousel type body length of 30 per card. | | 
-| -3035 | MMS carousel content length exceeded | Exceeded carousel type body length of 60 per card. | | 
-| -4000 | Brand not exist | Not exist brand. | | 
+| -3000 | Button validation failed | Client Error. Invalid button parameter. |  |
+| -3001 | 080 deny-to-receive number not exist | Client Error. Unsubscribe number is required when sending ad. | |
+| -3002 | Send request time error | Client Error. SendDateTime cannot be set to a past time. | |
+| -3030 | MMS horizontal, vertical card count error | Client Error. Horizontal and vertical type can enroll only one card. | | 
+| -3031 | MMS horizontal, vertical title length exceeded | Client Error. Exceeded horizontal and vertical type title length of 30. | | 
+| -3032 | MMS horizontal and vertical content length exceeded | Client Error. Exceeded horizontal and vertical type body length of 1300. | | 
+| -3033 | MMS slide card count error | Client Error. Carousel type can enroll more than 3 and less than 6. | | 
+| -3034 | MMS carousel title length exceeded | Client Error. Exceeded carousel type body length of 30 per card. | | 
+| -3035 | MMS carousel content length exceeded | Client Error. Exceeded carousel type body length of 60 per card. | | 
+| -4000 | Brand not exist | Client Error. Not exist brand. | | 
 | -4001 | Brand status error | Invalid brand status. | | 
-| -4010 | No chat room (sender number) | Not exist chatbot. | | 
+| -4010 | No chat room (sender number) | Client Error. Not exist chatbot. | | 
 | -4011 | Chat room (sender number) status error | Invalid status chatbot. | | 
-| -4020 | No template | Not exist template. | | 
+| -4020 | No template | Client Error. Not exist template. | | 
 | -4021 | Template status error | Invalid template status. | | 
 | -4022 | Template not supported | Unsupported template. | |
-| -4030 | No attachments | Not exist attachments. | | 
+| -4030 | No attachments | Client Error. Not exist attachments. | | 
 | -4031 | Attachment expired | Expired attachments. | | 
-| -4032 | Attachment type error | Invalid attachment type. | | 
-| -4033 | Exceeded attachment size | Exceed max file size. | | 
-| -4034 | Attachment format error | Invalid attachment format. | | 
+| -4032 | Attachment type error | Client Error. Invalid attachment type. | | 
+| -4033 | Exceeded attachment size | Client Error. Exceed max file size. | | 
+| -4034 | Attachment format error | Client Error. Invalid attachment format. | | 
 | -4040 | 080 deny-to-receive number not exist | Not exist deny-to-receive number. | |
 | -4041 | Error in 080 deny-to-receive number status | Invalid 080 deny-to-receive number status. | |
 | -4042 | 080 deny-to-receive number | Deny-to-receive number. | |
@@ -36,11 +36,11 @@
 | -5002 | Failed to query SMS sender number | Failed to call SMS send number API. | |
 | -6000 | Failed to query SMS project | Failed to call CAB read project API. | |
 | -6001 | Failed to enable SMS project | Failed to call CAB enable project SMS API. | |
-| -7000 | Sending inquiry type error | Invalid search type on url path. (sms, lms, mms, template) | |
-| -7001 | Required parameter error | Send date time or receive date time or message id is required. | |
-| -7002 | Query period condition error | Send date time and receive date time cannot be requested once. | Send request time condition and receive time condition cannot be used together |
-| -7003 | Inquiry period condition exceeded | Invalid date time search parameter. | Can be specified up to 31 days |
-| -7004 | Message status condition error | Invalid message status parameter. | |
+| -7000 | Sending inquiry type error | Client Error. Invalid search type on url path. (sms, lms, mms, template) | |
+| -7001 | Required parameter error | Client Error. Send date time or receive date time or message id is required. | |
+| -7002 | Query period condition error | Client Error. Send date time and receive date time cannot be requested once. | Send request time condition and receive time condition cannot be used together |
+| -7003 | Inquiry period condition exceeded | Client Error. Invalid date time search parameter. | Can be specified up to 31 days |
+| -7004 | Message status condition error | Client Error. Invalid message status parameter. | |
 | -8000 | Failed to request alternative sending | Fail to call SMS send API. | |
 | -9999 | Internal error | System error. Please inquire at support@toast.com. | |
 
