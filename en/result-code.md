@@ -12,8 +12,8 @@
 | -3031 | MMS horizontal, vertical title length exceeded | Client Error. Exceeded horizontal and vertical type title length of 30. | | 
 | -3032 | MMS horizontal and vertical content length exceeded | Client Error. Exceeded horizontal and vertical type body length of 1300. | | 
 | -3033 | MMS slide card count error | Client Error. Carousel type can enroll more than 3 and less than 6. | | 
-| -3034 | MMS carousel title length exceeded | Client Error. Exceeded carousel type body length of 30 per card. | | 
-| -3035 | MMS carousel content length exceeded | Client Error. Exceeded carousel type body length of 60 per card. | | 
+| -3034 | MMS carousel small content length exceeded | Client Error. Exceeded carousel small type body length of 30 per card. | | 
+| -3035 | MMS carousel medium content length exceeded | Client Error. Exceeded carousel medium type body length of 60 per card. | | 
 | -4000 | Brand not exist | Client Error. Not exist brand. | | 
 | -4001 | Brand status error | Invalid brand status. | | 
 | -4010 | No chat room (sender number) | Client Error. Not exist chatbot. | | 

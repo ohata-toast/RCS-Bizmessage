@@ -12,8 +12,8 @@
 | -3031 | MMS横型、縦型タイトル長さ超過 | Client Error. Over horizontal and vertical type title length 30. | | 
 | -3032 | MMS横型、縦型内容長さ超過 | Client Error. Over horizontal and vertical type body length 1300. | | 
 | -3033 | MMSスライド型カード数エラー | Client Error. Carousel type can enroll more than 3, less than 6. | | 
-| -3034 | MMSスライド型タイトル長さ超過 | Client Error. Over Carousel type body length 30 per card. | | 
-| -3035 | MMSスライド型内容長さ超過 | Client Error. Over Carousel type body length 60 per card. | | 
+| -3034 | MMSスライド小型内容長さ超過 | Client Error. Over Carousel small type body length 30 per card. | | 
+| -3035 | MMSスライド中型内容長さ超過 | Client Error. Over Carousel medium type body length 60 per card. | | 
 | -4000 | ブランドなし | Client Error. Not exist brand. | | 
 | -4001 | ブランド状態エラー | Invalid status brand. | | 
 | -4010 | チャットルーム(発信番号)なし | Client Error. Not exist chatbot. | | 

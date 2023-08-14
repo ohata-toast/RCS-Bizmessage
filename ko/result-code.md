@@ -12,8 +12,8 @@
 | -3031 | MMS 가로형, 세로형 제목 길이 초과 | Client Error. Over horizontal and vertical type title length 30. | | 
 | -3032 | MMS 가로형, 세로형 내용 길이 초과 | Client Error. Over horizontal and vertical type body length 1300. | | 
 | -3033 | MMS 슬라이드형 카드 수 오류 | Client Error. Carousel type can enroll more than 3, less than 6. | | 
-| -3034 | MMS 슬라이드형 제목 길이 초과 | Client Error. Over Carousel type body length 30 per card. | | 
-| -3035 | MMS 슬라이드형 내용 길이 초과 | Client Error. Over Carousel type body length 60 per card. | | 
+| -3034 | MMS 슬라이드형 소형 내용 길이 초과 | Client Error. Over Carousel small type body length 30 per card. | | 
+| -3035 | MMS 슬라이드형 중형 내용 길이 초과 | Client Error. Over Carousel medium type body length 60 per card. | | 
 | -4000 | 브랜드 없음 | Client Error. Not exist brand. | | 
 | -4001 | 브랜드 상태 오류 | Invalid status brand. | | 
 | -4010 | 대화방(발신 번호) 없음 | Client Error. Not exist chatbot. | | 
