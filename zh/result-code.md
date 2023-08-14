@@ -9,7 +9,7 @@
 | -3001 | 080 deny-to-receive number not exist | Client Error. Unsubscribe number is required when sending ad. | |
 | -3002 | Send request time error | Client Error. SendDateTime cannot be set to a past time. | |
 | -3030 | MMS horizontal, vertical card count error | Client Error. Horizontal and vertical type can enroll only one card. | | 
-| -3031 | MMS horizontal, vertical title length exceeded | Client Error. Exceeded horizontal and vertical type title length of 30. | | 
+| -3031 | MMS title length exceeded | Client Error. Over mms type title length 30. | | 
 | -3032 | MMS horizontal and vertical content length exceeded | Client Error. Exceeded horizontal and vertical type body length of 1300. | | 
 | -3033 | MMS slide card count error | Client Error. Carousel type can enroll more than 3 and less than 6. | | 
 | -3034 | MMS carousel small content length exceeded | Client Error. Exceeded carousel small type body length of 30 per card. | | 

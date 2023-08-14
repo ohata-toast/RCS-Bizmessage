@@ -9,7 +9,7 @@
 | -3001 | 080 수신거부 번호 없음 | Client Error. Unsubscribe number is required when send ad. | |
 | -3002 | 발송 요청 시간 오류 | Client Error. SendDateTime cannot be set before now. | |
 | -3030 | MMS 가로형, 세로형 카드 수 오류 | Client Error. Horizontal and vertical type can enroll only one card. | | 
-| -3031 | MMS 가로형, 세로형 제목 길이 초과 | Client Error. Over horizontal and vertical type title length 30. | | 
+| -3031 | MMS 제목 길이 초과 | Client Error. Over mms type title length 30. | | 
 | -3032 | MMS 가로형, 세로형 내용 길이 초과 | Client Error. Over horizontal and vertical type body length 1300. | | 
 | -3033 | MMS 슬라이드형 카드 수 오류 | Client Error. Carousel type can enroll more than 3, less than 6. | | 
 | -3034 | MMS 슬라이드형 소형 내용 길이 초과 | Client Error. Over Carousel small type body length 30 per card. | | 
