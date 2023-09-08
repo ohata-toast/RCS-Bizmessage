@@ -762,7 +762,7 @@ Content-Type: application/json
     "messageRecipient": {
         "messageId": "20230503100623Uc3C0JDd0u0",
         "sendDateTime": "2023-05-03T10:06:23.000+09:00",
-        "messageType": "TEMPLATE",
+        "messageType": "SMS",
         "brandId": "sampleBrandId",
         "chatbotId": "15881234",
         "recipientNumber": "01012341234",
@@ -859,11 +859,11 @@ Content-Type: application/json
     "messageRecipient": {
         "messageId": "20230503100623Uc3C0JDd0u0",
         "sendDateTime": "2023-05-03T10:06:23.000+09:00",
-        "messageType": "TEMPLATE",
+        "messageType": "LMS",
         "brandId": "sampleBrandId",
         "chatbotId": "15881234",
         "recipientNumber": "01012341234",
-        "messagebaseId": "SS000000",
+        "messagebaseId": "SL000000",
         "isAd": false,
         "unsubscribeNumber": "",
         "title": "testTitle",
@@ -958,11 +958,11 @@ Content-Type: application/json
     "messageRecipient": {
         "messageId": "20230503100623Uc3C0JDd0u0",
         "sendDateTime": "2023-05-03T10:06:23.000+09:00",
-        "messageType": "TEMPLATE",
+        "messageType": "MMS",
         "brandId": "sampleBrandId",
         "chatbotId": "15881234",
         "recipientNumber": "01012341234",
-        "messagebaseId": "SS000000",
+        "messagebaseId": "SMwThM00",
         "isAd": false,
         "unsubscribeNumber": "",
         "mmsType": "HORIZONTAL",
@@ -970,7 +970,7 @@ Content-Type: application/json
             {
                 "title": "testTitle",
                 "description": "testBody",
-                "media": "",
+                "media": "file.xx.xx.xxxxxxxxxxxxx",
                 "buttons": [
                     {
                         "buttonType": "URL",
@@ -1072,7 +1072,7 @@ Content-Type: application/json
         "brandId": "sampleBrandId",
         "chatbotId": "15881234",
         "recipientNumber": "01012341234",
-        "messagebaseId": "SS000000",
+        "messagebaseId": "UBR.xxxxxxxxxxxxx",
         "isAd": false,
         "unsubscribeNumber": "",
         "body": "testBody",
