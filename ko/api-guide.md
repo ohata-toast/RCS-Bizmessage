@@ -731,6 +731,414 @@ Content-Type: application/json
 | data.fallbackStatus | String | 대체 발송 상태<br><ul><li>대체 발송 대상 아님(NONE)</li><li>대체 발송 중(IN_PROGRESS)</li><li>대체 발송 완료(COMPLETE)</li><li>대체 발송 실패(SEND_FAILED)</li></ul>  |
 | data.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
 
+## 메시지 상세 조회
+### SMS 메시지 상세 조회 API
+[Method, URI]
+
+```
+GET /rcs/v1.0/messages/sms/{messageId}
+Content-Type: application/json
+```
+
+[Header]
+```
+"X-TC-APP-KEY" : String
+"X-SECRET-KEY" : String
+```
+[Path Parameter]
+
+| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| --- | --- | --- | --- | --- |
+| messageId | String | O | 메시지 ID | 요청 시 발급되는 메시지 ID |
+
+[성공 예시]
+```json
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "success",
+        "isSuccessful": true
+    },
+    "messageRecipient": {
+        "messageId": "20230503100623Uc3C0JDd0u0",
+        "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+        "messageType": "SMS",
+        "brandId": "sampleBrandId",
+        "chatbotId": "15881234",
+        "recipientNumber": "01012341234",
+        "messagebaseId": "SS000000",
+        "isAd": false,
+        "unsubscribeNumber": "",
+        "body": "testBody",
+        "buttons": [
+            {
+                "buttonType": "URL",
+                "buttonJson": "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}",
+            }
+        ],
+        "messageStatus": "DELIVERED",
+        "resultCode": 2000,
+        "telecom": "kt",
+        "receiveDateTime": "2023-05-03T10:06:23.000+09:00",
+        "resultDateTime": "2023-05-03T10:06:23.000+09:00",
+        "isFallback": false,
+        "fallbackStatus": "NONE",
+        "fallbackRequestId": "",
+        "fallbackResultCode": "",
+        "fallbackDateTime": ""
+    }
+}
+```
+
+
+[실패 예시]
+```json
+{
+    "header": {
+        "resultCode": 500,
+        "resultMessage": "Internal Error. It is not handled. Please report this. 'https://toast.com/support/inquiry.",
+        "isSuccessful": false
+    }
+}
+```
+
+| 필드 | 타입 | 설명 |
+| --- | --- | --- |
+| header.resultCode | Integer | 결과 코드 |
+| header.resultMessage | String | 결과 메시지 |
+| header.isSuccessful | Boolean | 성공 여부 |
+| message | - | 메시지 상세 정보 |
+| message.messageId | String | 메시지 ID |
+| message.messageType | String | 메시지 타입 |
+| message.brandId | String | 브랜드 ID|
+| message.chatbotId | String | 챗봇 ID | 
+| message.recipientNumber | String | 수신자 번호 |
+| message.messagebaseId | String | 템플릿 ID |
+| message.body | String | 본문 |
+| message.buttons | - | 버튼 정보 |
+| message.buttons.buttonType | String | 버튼 타입<br><ul><li>대화방 열기(COMPOSE)</li><li>복사하기(CLIPBOARD)</li><li>전화 걸기(DIALER)</li><li>지도 보여주기(MAP_SHOW)</li><li>지도 검색하기(MAP_QUERY)</li><li>현재 위치 공유하기(MAP_SHARE)</li><li>URL 연결하기(URL)</li><li>일정 등록하기(CALENDAR)</li><ul> |
+| message.buttons.buttonJson | String | 버튼 Json |
+| message.messageStatus | String | 메시지 상태<br><ul><li>준비(READY)</li><li>발송 중(IN_PROGRESS)</li><li>수신(DELIVERED)</li><li>실패(FAILED)</li><li>취소(CANCELED)</li></ul> |
+| message.resultCode | String | 결과 코드 |
+| message.telecom | String | 통신사(skt, kt, lgu) |
+| message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.resultDateTime | dateTime | 결과 저장 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.isFallback | Boolean | 대체 발송 여부 |
+| message.fallbackStatus | String | 대체 발송 상태<br><ul><li>대체 발송 대상 아님(NONE)</li><li>대체 발송 중(IN_PROGRESS)</li><li>대체 발송 완료(COMPLETE)</li><li>대체 발송 실패(SEND_FAILED)</li></ul>  |
+| message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
+| message.fallbackResultCode | String | 대체 발송 결과 코드 |
+| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+
+### LMS 메시지 상세 조회 API
+[Method, URI]
+
+```
+GET /rcs/v1.0/messages/lms/{messageId}
+Content-Type: application/json
+```
+
+[Header]
+```
+"X-TC-APP-KEY" : String
+"X-SECRET-KEY" : String
+```
+[Path Parameter]
+
+| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| --- | --- | --- | --- | --- |
+| messageId | String | O | 메시지 ID | 요청 시 발급되는 메시지 ID |
+
+[성공 예시]
+```json
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "success",
+        "isSuccessful": true
+    },
+    "messageRecipient": {
+        "messageId": "20230503100623Uc3C0JDd0u0",
+        "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+        "messageType": "LMS",
+        "brandId": "sampleBrandId",
+        "chatbotId": "15881234",
+        "recipientNumber": "01012341234",
+        "messagebaseId": "SL000000",
+        "isAd": false,
+        "unsubscribeNumber": "",
+        "title": "testTitle",
+        "body": "testBody",
+        "buttons": [
+            {
+                "buttonType": "URL",
+                "buttonJson": "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}",
+            }
+        ],
+        "messageStatus": "DELIVERED",
+        "resultCode": 2000,
+        "telecom": "kt",
+        "receiveDateTime": "2023-05-03T10:06:23.000+09:00",
+        "resultDateTime": "2023-05-03T10:06:23.000+09:00",
+        "isFallback": false,
+        "fallbackStatus": "NONE",
+        "fallbackRequestId": "",
+        "fallbackResultCode": "",
+        "fallbackDateTime": ""
+    }
+}
+```
+
+
+[실패 예시]
+```json
+{
+    "header": {
+        "resultCode": 500,
+        "resultMessage": "Internal Error. It is not handled. Please report this. 'https://toast.com/support/inquiry.",
+        "isSuccessful": false
+    }
+}
+```
+
+| 필드 | 타입 | 설명 |
+| --- | --- | --- |
+| header.resultCode | Integer | 결과 코드 |
+| header.resultMessage | String | 결과 메시지 |
+| header.isSuccessful | Boolean | 성공 여부 |
+| message | - | 메시지 상세 정보 |
+| message.messageId | String | 메시지 ID |
+| message.messageType | String | 메시지 타입 |
+| message.brandId | String | 브랜드 ID|
+| message.chatbotId | String | 챗봇 ID | 
+| message.recipientNumber | String | 수신자 번호 |
+| message.messagebaseId | String | 템플릿 ID |
+| message.title | String | 제목 |
+| message.body | String | 본문 |
+| message.buttons | - | 버튼 정보 |
+| message.buttons.buttonType | String | 버튼 타입<br><ul><li>대화방 열기(COMPOSE)</li><li>복사하기(CLIPBOARD)</li><li>전화 걸기(DIALER)</li><li>지도 보여주기(MAP_SHOW)</li><li>지도 검색하기(MAP_QUERY)</li><li>현재 위치 공유하기(MAP_SHARE)</li><li>URL 연결하기(URL)</li><li>일정 등록하기(CALENDAR)</li><ul> |
+| message.buttons.buttonJson | String | 버튼 Json |
+| message.messageStatus | String | 메시지 상태<br><ul><li>준비(READY)</li><li>발송 중(IN_PROGRESS)</li><li>수신(DELIVERED)</li><li>실패(FAILED)</li><li>취소(CANCELED)</li></ul> |
+| message.resultCode | String | 결과 코드 |
+| message.telecom | String | 통신사(skt, kt, lgu) |
+| message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.resultDateTime | dateTime | 결과 저장 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.isFallback | Boolean | 대체 발송 여부 |
+| message.fallbackStatus | String | 대체 발송 상태<br><ul><li>대체 발송 대상 아님(NONE)</li><li>대체 발송 중(IN_PROGRESS)</li><li>대체 발송 완료(COMPLETE)</li><li>대체 발송 실패(SEND_FAILED)</li></ul>  |
+| message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
+| message.fallbackResultCode | String | 대체 발송 결과 코드 |
+| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+
+### MMS 메시지 상세 조회 API
+[Method, URI]
+
+```
+GET /rcs/v1.0/messages/mms/{messageId}
+Content-Type: application/json
+```
+
+[Header]
+```
+"X-TC-APP-KEY" : String
+"X-SECRET-KEY" : String
+```
+[Path Parameter]
+
+| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| --- | --- | --- | --- | --- |
+| messageId | String | O | 메시지 ID | 요청 시 발급되는 메시지 ID |
+
+[성공 예시]
+```json
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "success",
+        "isSuccessful": true
+    },
+    "messageRecipient": {
+        "messageId": "20230503100623Uc3C0JDd0u0",
+        "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+        "messageType": "MMS",
+        "brandId": "sampleBrandId",
+        "chatbotId": "15881234",
+        "recipientNumber": "01012341234",
+        "messagebaseId": "SMwThM00",
+        "isAd": false,
+        "unsubscribeNumber": "",
+        "mmsType": "HORIZONTAL",
+        "cards": [
+            {
+                "title": "testTitle",
+                "description": "testBody",
+                "media":  "file.xx.xx.xxxxxxxxxxxxx",
+                "buttons": [
+                    {
+                        "buttonType": "URL",
+                        "buttonJson": "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}",
+                    }
+                ],
+            }
+        ],
+        "messageStatus": "DELIVERED",
+        "resultCode": 2000,
+        "telecom": "kt",
+        "receiveDateTime": "2023-05-03T10:06:23.000+09:00",
+        "resultDateTime": "2023-05-03T10:06:23.000+09:00",
+        "isFallback": false,
+        "fallbackStatus": "NONE",
+        "fallbackRequestId": "",
+        "fallbackResultCode": "",
+        "fallbackDateTime": ""
+    }
+}
+```
+
+
+[실패 예시]
+```json
+{
+    "header": {
+        "resultCode": 500,
+        "resultMessage": "Internal Error. It is not handled. Please report this. 'https://toast.com/support/inquiry.",
+        "isSuccessful": false
+    }
+}
+```
+
+| 필드 | 타입 | 설명 |
+| --- | --- | --- |
+| header.resultCode | Integer | 결과 코드 |
+| header.resultMessage | String | 결과 메시지 |
+| header.isSuccessful | Boolean | 성공 여부 |
+| message | - | 메시지 상세 정보 |
+| message.messageId | String | 메시지 ID |
+| message.messageType | String | 메시지 타입 |
+| message.brandId | String | 브랜드 ID|
+| message.chatbotId | String | 챗봇 ID | 
+| message.recipientNumber | String | 수신자 번호 |
+| message.messagebaseId | String | 템플릿 ID |
+| message.isAd | Boolean | 광고 여부 |
+| message.unsubscribeNumber | String | 수신 거부 번호 |
+| message.mmsType | String | MMS 타입<br><ul><li>가로형(HORIZONTAL)</li><li>세로형(VERTICAL)</li><li>슬라이드 중형(CAROUSEL_MEDIUM)</li><li>슬라이드 소형(CAROUSEL_SMALL)</li></ul> |
+| message.cards | - | 카드들 |
+| message.cards.title | String | 제목 |
+| message.cards.description | String | 내용 |
+| message.cards.media | String | 첨부파일 ID |
+| message.cards.buttons | - | 버튼 |
+| message.cards.button.buttonType | String | 버튼 타입<br>대화방 열기(COMPOSE), 복사하기(CLIPBOARD), 전화 걸기(DIALER), 지도 보여주기(MAP_SHOW), 지도 검색하기(MAP_QUERY), 현재 
+| message.card.button.buttonJson | String | X | 버튼 Json | 버튼 타입에 맞는 포맷 확인 |
+| message.messageStatus | String | 메시지 상태<br><ul><li>준비(READY)</li><li>발송 중(IN_PROGRESS)</li><li>수신(DELIVERED)</li><li>실패(FAILED)</li><li>취소(CANCELED)</li></ul> |
+| message.resultCode | String | 결과 코드 |
+| message.telecom | String | 통신사(skt, kt, lgu) |
+| message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.resultDateTime | dateTime | 결과 저장 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.isFallback | Boolean | 대체 발송 여부 |
+| message.fallbackStatus | String | 대체 발송 상태<br><ul><li>대체 발송 대상 아님(NONE)</li><li>대체 발송 중(IN_PROGRESS)</li><li>대체 발송 완료(COMPLETE)</li><li>대체 발송 실패(SEND_FAILED)</li></ul>  |
+| message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
+| message.fallbackResultCode | String | 대체 발송 결과 코드 |
+| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+
+### TEMPLATE 메시지 상세 조회 API
+[Method, URI]
+
+```
+GET /rcs/v1.0/messages/template/{messageId}
+Content-Type: application/json
+```
+
+[Header]
+```
+"X-TC-APP-KEY" : String
+"X-SECRET-KEY" : String
+```
+[Path Parameter]
+
+| 필드 | 타입 | 필수 여부 | 설명 | 비고 |
+| --- | --- | --- | --- | --- |
+| messageId | String | O | 메시지 ID | 요청 시 발급되는 메시지 ID |
+
+[성공 예시]
+```json
+{
+    "header": {
+        "resultCode": 0,
+        "resultMessage": "success",
+        "isSuccessful": true
+    },
+    "messageRecipient": {
+        "messageId": "20230503100623Uc3C0JDd0u0",
+        "sendDateTime": "2023-05-03T10:06:23.000+09:00",
+        "messageType": "TEMPLATE",
+        "brandId": "sampleBrandId",
+        "chatbotId": "15881234",
+        "recipientNumber": "01012341234",
+        "messagebaseId": "UBR.xxxxxxxxxxxxx",
+        "isAd": false,
+        "unsubscribeNumber": "",
+        "body": "testBody",
+        "buttons": [
+            {
+                "buttonType": "URL",
+                "buttonJson": "{ \"action\": { \"urlAction\":{\"openUrl\":{\"url\":\"http://www.test.com\"} },\"displayText\":\"홈페이지로 이동\"}}",
+            }
+        ],
+        "messageStatus": "DELIVERED",
+        "resultCode": 2000,
+        "telecom": "kt",
+        "receiveDateTime": "2023-05-03T10:06:23.000+09:00",
+        "resultDateTime": "2023-05-03T10:06:23.000+09:00",
+        "isFallback": false,
+        "fallbackStatus": "NONE",
+        "fallbackRequestId": "",
+        "fallbackResultCode": "",
+        "fallbackDateTime": ""
+    }
+}
+```
+
+
+[실패 예시]
+```json
+{
+    "header": {
+        "resultCode": 500,
+        "resultMessage": "Internal Error. It is not handled. Please report this. 'https://toast.com/support/inquiry.",
+        "isSuccessful": false
+    }
+}
+```
+
+| 필드 | 타입 | 설명 |
+| --- | --- | --- |
+| header.resultCode | Integer | 결과 코드 |
+| header.resultMessage | String | 결과 메시지 |
+| header.isSuccessful | Boolean | 성공 여부 |
+| message | - | 메시지 상세 정보 |
+| message.messageId | String | 메시지 ID |
+| message.messageType | String | 메시지 타입 |
+| message.brandId | String | 브랜드 ID|
+| message.chatbotId | String | 챗봇 ID | 
+| message.recipientNumber | String | 수신자 번호 |
+| message.messagebaseId | String | 템플릿 ID |
+| message.body | String | 본문 |
+| message.buttons | - | 버튼 정보 |
+| message.buttons.buttonType | String | 버튼 타입<br><ul><li>대화방 열기(COMPOSE)</li><li>복사하기(CLIPBOARD)</li><li>전화 걸기(DIALER)</li><li>지도 보여주기(MAP_SHOW)</li><li>지도 검색하기(MAP_QUERY)</li><li>현재 위치 공유하기(MAP_SHARE)</li><li>URL 연결하기(URL)</li><li>일정 등록하기(CALENDAR)</li><ul> |
+| message.buttons.buttonJson | String | 버튼 Json |
+| message.messageStatus | String | 메시지 상태<br><ul><li>준비(READY)</li><li>발송 중(IN_PROGRESS)</li><li>수신(DELIVERED)</li><li>실패(FAILED)</li><li>취소(CANCELED)</li></ul> |
+| message.resultCode | String | 결과 코드 |
+| message.telecom | String | 통신사(skt, kt, lgu) |
+| message.sendDateTime | dateTime | 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) | 
+| message.receiveDateTime | dateTime | 수신 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.resultDateTime | dateTime | 결과 저장 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+| message.isFallback | Boolean | 대체 발송 여부 |
+| message.fallbackStatus | String | 대체 발송 상태<br><ul><li>대체 발송 대상 아님(NONE)</li><li>대체 발송 중(IN_PROGRESS)</li><li>대체 발송 완료(COMPLETE)</li><li>대체 발송 실패(SEND_FAILED)</li></ul>  |
+| message.fallbackRequestId | String | 대체 발송 SMS 요청 ID |
+| message.fallbackResultCode | String | 대체 발송 결과 코드 |
+| message.fallbackDateTime | dateTime | 대체 발송 요청 시간(YYYY-MM-DDThh:mm:ss.SSS±hh:mm) |
+
 
 ## 리소스 API
 
