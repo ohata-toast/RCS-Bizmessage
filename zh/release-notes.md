@@ -4,7 +4,7 @@
 #### Added Features
 * [API] Added Query Details API
     * Added the API to query detailed information of a specific message for all message types (SMS/LMS/MMS/Template).
-    * For more information, refer to [[API Guide(./api-guide/#_3)]].
+    * For more information, refer to [[API Guide](./api-guide/#_3)].
 
 ### August 17, 2023
 #### Feature Updates
