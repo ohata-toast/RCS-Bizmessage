@@ -30,6 +30,7 @@
 | -4041 | 080 수신거부 번호 상태 오류 | Invalid status block service. | |
 | -4042 | 080 수신거부 대상 | Blocked recipient number. | |
 | -4050 | 대체 발신 번호 없음 | Not exist send number. | | 
+| -4060 | 대체 발신 미지원 타입 | Fallback unsupported type. | | 
 | -4051 | 대체 발신 번호 상태 오류 | Invalid status send number. | |
 | -5000 | 080 수신거부 번호 조회 실패 | Fail to call SMS block service API. | |
 | -5001 | 080 수신거부 대상 조회 실패 | Fail to call SMS block recipient API. | |
