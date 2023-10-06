@@ -302,6 +302,8 @@ Content-Type: application/json
 }
 ```
 
+* 이미지 템플릿의 경우 대체 발송을 지원하지 않습니다.
+
 [Response Body]
 
 [성공 예시]
