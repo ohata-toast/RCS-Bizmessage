@@ -31,6 +31,7 @@
 | -4042 | 080受信拒否対象 | Blocked recipient number. | |
 | -4050 | 代替発信番号なし | Not exist send number. | | 
 | -4051 | 代替発信番号状態エラー | Invalid status send number. | |
+| -4060 | 代替発信未サポートタイプ | Fallback unsupported type. | | 
 | -5000 | 080受信拒否番号照会失敗 | Fail to call SMS block service API. | |
 | -5001 | 080受信拒否対象照会失敗 | Fail to call SMS block recipient API. | |
 | -5002 | SMS発信番号照会失敗 | Fail to call SMS send number API. | |
