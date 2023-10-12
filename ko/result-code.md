@@ -21,6 +21,7 @@
 | -4020 | 템플릿 없음 | Client Error. Not exist template. | | 
 | -4021 | 템플릿 상태 오류 | Invalid status template. | | 
 | -4022 | 지원하지 않은 템플릿 | Unsupported template. | |
+| -4023 | 광고 발송이 허용되지 않은 템플릿 | Ad not allowed template. | |
 | -4030 | 첨부파일 없음 | Client Error. Not exist media. | | 
 | -4031 | 첨부파일 만료 | Expired media. | | 
 | -4032 | 첨부파일 타입 오류 | Client Error. Invalid media type. | | 
