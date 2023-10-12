@@ -284,6 +284,8 @@ Content-Type: application/json
 | chatbotId | String | O | 발신 번호 |  |
 | messagebaseId  | String | O | 템플릿 ID | |
 | recipientNumber | String | O | 수신 번호 |  |
+| isAd | Boolean | X | 광고 발송 여부 | 기본값: false, 이미지 템플릿의 경우에만 광고 발송 가능 |
+| unsubscribeNumber | String | X | 수신거부 번호 | 광고 여부 true인 경우, 필수 |
 | body | String | X | 본문 | 최대 90자, Free 템플릿인 경우에만 해당 |
 | templateParameter | Map | X | 치환자 key, value |
 | isFallback | Boolean | X | 대체 발송 여부 |  |
@@ -298,6 +300,8 @@ Content-Type: application/json
     "templateParameter" : {
         "key1":"value1"
     },
+    "isAd": true,
+    "unsubscribeNumber": "0801234567",
 	"recipientNumber":"01012341234"
 }
 ```
