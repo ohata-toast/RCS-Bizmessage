@@ -21,6 +21,7 @@ To use the RCS Bizmessage service, you can use it after completing identity veri
 | Business Executives and Employees | Mobile Phone Identification | Business Registration Certificate, Certificate of Employment |
 
 ### Identity verification process
+![RCS_01_20231004](https://static.toastoven.net/prod_rcs/en/RCS_01_20231004.png)
 1. Select the **Settings** tab.
 2. Click **Mobile Verification and Add Required Documents** to begin the process.
 3. Agree after checking the consent to collect and use personal information.
@@ -47,6 +48,8 @@ To use the RCS Bizmessage service, you have to register your brand after signing
 * An RCS manager will approve your brand, which can take 2-3 business days.
 * You can find related guides by clicking **Brand Guide**at the top of the Create a brand page.
 
+![RCS_02_20231004](https://static.toastoven.net/prod_rcs/en/RCS_02_20231004.png)
+
 ### Set up a brand agency
 After completing the RCS brand approval, set the agency to 'NHN Cloud'.
 
@@ -62,6 +65,8 @@ After setting the agency to 'NHN Cloud', link the brand in the Notification RCS 
   * Only approved brands identified in the list can be used for sending.
   * The date and time of approval means the date and time approved by the RCS Biz Center, and the date and time of linking means the date and time when the brand is linked to NHN Cloud's RCS Bizmessage service.
 
+![RCS_03_20231004](https://static.toastoven.net/prod_rcs/en/RCS_03_20231004.png)
+
 ### Retrieve Chat Room (sender number)
 You must register a chat room (sender number) in the RCS Biz Center.
 
@@ -69,6 +74,8 @@ You must register a chat room (sender number) in the RCS Biz Center.
 * Once the brand linkage is complete, you can look up the list of chat rooms (sender numbers) registered with the brand.
 * If you select the brand you want from the drop box, you can look up the list of chat rooms (sender numbers) registered with that brand.
 * Only sender numbers with an ‘Approved’ status are available.
+
+![RCS_04_20231004](https://static.toastoven.net/prod_rcs/en/RCS_04_20231004.png)
 
 ### Register Templates
 Request to register/approve an RCS text template. Templates can only be informational messages.
@@ -86,12 +93,15 @@ You have to register the template in the RCS Biz Center.
 * If you select the brand you want from the drop box, you can retrieve the list of templates registered with that brand.
 * If you made changes to the template in RCS Biz Center, click **Brand Management** > **Link Brand**to update it.
 
+![RCS_05_20231004](https://static.toastoven.net/prod_rcs/en/RCS_05_20231004.png)
+
 ## Send
 
 * To send an RCS Bizmessage, you must first proceed with the brand linkage in the [Manage RCS Bizmessage] menu.
 * After the brand linkage, you can send a message by selecting a brand and a chat room (sender number).
 
 ### Send Regular SMS
+![RCS_06_20231004](https://static.toastoven.net/prod_rcs/en/RCS_06_20231004.png)
 1. Select Sending brand.
 2. Select a chat room (sender number).
 3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.
@@ -102,6 +112,7 @@ You have to register the template in the RCS Biz Center.
 8. Click **Send**.
 
 ### Send General LMS
+![RCS_07_20231004](https://static.toastoven.net/prod_rcs/en/RCS_07_20231004.png)
 1. Select Sending brand.
 2. Select a chat room (sender number).
 3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.
@@ -112,6 +123,7 @@ You have to register the template in the RCS Biz Center.
 8. Click **Send**.
 
 ### Send MMS
+![RCS_08_20231004](https://static.toastoven.net/prod_rcs/en/RCS_08_20231004.png)
 1. Select Sending brand.
 2. Select a chat room (sender number).
 3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.
@@ -121,6 +133,7 @@ You have to register the template in the RCS Biz Center.
 7. Add titles (maximum 30 characters), content (maximum 1300 characters), images (maximum one) and buttons (maximum two per card).
 8. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
 9. Click **Send**.
+
 ### Send MMS (Card Type)
 1. Select Sending brand.
 2. Select a chat room (sender number).
@@ -134,6 +147,7 @@ You have to register the template in the RCS Biz Center.
 10. Click **Send**.
 
 ### Send Template
+![RCS_09_20231004](https://static.toastoven.net/prod_rcs/en/RCS_09_20231004.png)
 1. Select Sending brand.
 2. Select a chat room (sender number).
 3. Select the send type as **Template**.
@@ -187,6 +201,8 @@ Register an event
     * You can use either the date and time of sending or the date and time of receipt as a condition.
     * The time condition is available maximum one month.
 
+![RCS_10_20231004](https://static.toastoven.net/prod_rcs/en/RCS_10_20231004.png)
+
 ### Send Result Status
 * Total
 * Prepare to send: The request has been made, but the sending has not been processed yet.
@@ -217,4 +233,4 @@ Register an event
 ### Retrieve 080 Deny-to-receive number
 * When sending advertising information, you <span style="color:red">must include a free unsubscribe process</span> so that recipients can unsubscribe or withdraw their consent to receive it without charge.
 * You can look up the 080 Deny-to-receive number registered with the SMS service and send messages.
-* You can see how to register for a 080 Deny-to-receive number in [Settings for 080 Deny-to-receive number](https://docs.nhncloud.com/ko/Notification/SMS/ko/console-guide/#080).
+* You can see how to register for a 080 Deny-to-receive number in [Settings for 080 Deny-to-receive number](./console-guide/#080).
