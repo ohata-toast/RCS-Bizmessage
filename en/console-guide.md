@@ -161,34 +161,41 @@ You have to register the template in the RCS Biz Center.
 ### Button Type
 You can utilize the button feature at the bottom of the message.
 
-Open Chat Room
+#### Open Chat Room
+
 * Send the message you set to the phone number you set.
 * Enter a name for the button, and then enter the phone number to send the message to.
 * Enter the message content to send.
 
-Copy
+#### Copy
+
 * The value you set is copied.
 * Enter a name for the button, and then enter a value that will be copied when the button is clicked.
 
-Make a Call
+#### Make a Call
+
 * Make a call to the phone number you set.
 * Enter a name for the button, and then enter a phone number to call when the button is clicked.
 
-Show map/search map
+#### Show map/search map
+
 * Show the location you set on the map app.
 * Enter a name for the button, then enter the latitude and longitude of the location.
 * Enter a location name and map URL (URLs including ht<span>tps://</span>)
 
-Share your current location
+#### Share your current location
+
 * The recipient sends a message to the sender with the recipient's current location.
 * Enter a name for the button.
 
-Link URLs
+#### Link URLs
+
 * Connect to a web link.
 * Enter a name for the button, and then enter a link to open when the button is clicked.
 * Must enter 'http://', 'https://'를 when entering a link.
 
-Register an event
+#### Register an event
+
 * Register the event in the recipient's calendar app.
 * Enter a name for the button and select a start and end date for the schedule.
 * Enter the schedule title and schedule content.
