@@ -8,8 +8,8 @@ To use the RCS Bizmessage service, you can use it after completing identity veri
 
 * The identity verification process has been applied to the RCS Bizmessage service to comply with the Telecommunications Business Act.
 * To use the RCS Bizmessage service, the identity verification process is required. Identity verification basically requires mobile phone identification and additional document screening according to the member type.
-  * Without identity verification, all features other than the **Identity verification tab** will be disabled.
-  * The RCS Bizmessage service is not available to individual members.
+* Without identity verification, all features other than the **Identity verification tab** will be disabled.
+* The RCS Bizmessage service is not available to individual members.
 * The name and mobile phone number entered at the time of membership must match the information entered at the time of identity verification to be approved for identity verification.
 * Proof of employment can only be <span style="color:red;font-weight:bold">documents with the date of issuance and a stamp.<span style="color:red;font-weight:bold"><br/>
   Make sure you <span style="color:red;font-weight:bold">mask (hide) the last 6 digits of your resident registration number<span style="color:red;font-weight:bold"> in your employment certificate. Example) 000000-0\*\*\*\*\*\*
@@ -62,8 +62,8 @@ After setting the agency to 'NHN Cloud', link the brand in the Notification RCS 
 * Clicking on **+ Link Brand** button also links brands and sub-resources (chat rooms, templates).
 * If there are any changes after the interlock, press the **Link Brand** button to proceed with the synchronization.
 * You can check the brand information registered with the RCS Biz Center in the brand list.
-  * Only approved brands identified in the list can be used for sending.
-  * The date and time of approval means the date and time approved by the RCS Biz Center, and the date and time of linking means the date and time when the brand is linked to NHN Cloud's RCS Bizmessage service.
+    * Only approved brands identified in the list can be used for sending.
+    * The date and time of approval means the date and time approved by the RCS Biz Center, and the date and time of linking means the date and time when the brand is linked to NHN Cloud's RCS Bizmessage service.
 
 ![RCS_03_20231004](https://static.toastoven.net/prod_rcs/en/RCS_03_20231004.png)
 
@@ -104,91 +104,98 @@ You have to register the template in the RCS Biz Center.
 ![RCS_06_20231004](https://static.toastoven.net/prod_rcs/en/RCS_06_20231004.png)
 1. Select Sending brand.
 2. Select a chat room (sender number).
-3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.
-4. Go to the **Manage Sending** menu to set up SMS usage.
-5. Select the sending type as **SMS**.
-6. Add message content (maximum 100 characters) and buttons (maximum one).
-7. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
-8. Click **Send**.
+3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.<br/>
+Go to the **Manage Sending** menu to set up SMS usage.
+4. Select the sending type as **SMS**.
+5. Add message content (maximum 100 characters) and buttons (maximum one).
+6. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
+7. Click **Send**.
 
 ### Send General LMS
 ![RCS_07_20231004](https://static.toastoven.net/prod_rcs/en/RCS_07_20231004.png)
 1. Select Sending brand.
 2. Select a chat room (sender number).
-3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.
-4. Go to **Manage Sending**to set up SMS usage.
-5. Select the sending type as **LMS**.
-6. Add message titles (maximum 30 characters), content (maximum 1300 characters) and buttons (maximum 3 characters).
-7. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
-8. Click **Send**.
+3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.<br/>
+Go to **Manage Sending**to set up SMS usage.
+4. Select the sending type as **LMS**.
+5. Add message titles (maximum 30 characters), content (maximum 1300 characters) and buttons (maximum 3 characters).
+6. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
+7. Click **Send**.
 
 ### Send MMS
 ![RCS_08_20231004](https://static.toastoven.net/prod_rcs/en/RCS_08_20231004.png)
 1. Select Sending brand.
 2. Select a chat room (sender number).
-3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.
-4. Go to **Manage Sending**to set up SMS usage.
-5. Select the send type as **MMS**.
-6. Under Select Details, select **Horizontal or Vertical**.
-7. Add titles (maximum 30 characters), content (maximum 1300 characters), images (maximum one) and buttons (maximum two per card).
-8. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
-9. Click **Send**.
+3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.<br/>
+Go to **Manage Sending**to set up SMS usage.
+4. Select the send type as **MMS**.
+5. Under Select Details, select **Horizontal or Vertical**.
+6. Add titles (maximum 30 characters), content (maximum 1300 characters), images (maximum one) and buttons (maximum two per card).
+7. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
+8. Click **Send**.
 
 ### Send MMS (Card Type)
 1. Select Sending brand.
 2. Select a chat room (sender number).
-3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.
-4. Go to **Manage Sending**to set up SMS usage.
-5. Select the send type as **MMS**.
-6. Under Select Details, select a slide type and slide size.
-7. Set the number of slides in the message (minimum 3 and maximum 6).
-8. Enter a title (maximum 30 characters), content (maximum 30 characters), images (maximum one) and buttons (maximum two) for each card.
-9. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
-10. Click **Send**.
+3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.<br/>
+Go to **Manage Sending**to set up SMS usage.
+4. Select the send type as **MMS**.
+5. Under Select Details, select a slide type and slide size.
+6. Set the number of slides in the message (minimum 3 and maximum 6).
+7. Enter a title (maximum 30 characters), content (maximum 30 characters), images (maximum one) and buttons (maximum two) for each card.
+8. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
+9. Click **Send**.
 
 ### Send Template
 ![RCS_09_20231004](https://static.toastoven.net/prod_rcs/en/RCS_09_20231004.png)
 1. Select Sending brand.
 2. Select a chat room (sender number).
 3. Select the send type as **Template**.
-4. Select the template you want to send.
-5. Templates are registered in advance in RCS Biz Center.
-6. If it is a free template, create a message (maximum 90 characters) to send.
-7. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
-8. For each receiver, enter the appropriate value for the template replacement.
-9. Click **Send**.
+4. Select the template you want to send.<br/>
+Templates are registered in advance in RCS Biz Center.
+5. If it is a free template, create a message (maximum 90 characters) to send.
+6. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
+7. For each receiver, enter the appropriate value for the template replacement.
+8. Click **Send**.
 
 ### Button Type
 You can utilize the button feature at the bottom of the message.
 
 #### Open Chat Room
+
 * Send the message you set to the phone number you set.
 * Enter a name for the button, and then enter the phone number to send the message to.
 * Enter the message content to send.
 
 #### Copy
+
 * The value you set is copied.
 * Enter a name for the button, and then enter a value that will be copied when the button is clicked.
 
 #### Make a Call
+
 * Make a call to the phone number you set.
 * Enter a name for the button, and then enter a phone number to call when the button is clicked.
 
 #### Show map/search map
+
 * Show the location you set on the map app.
 * Enter a name for the button, then enter the latitude and longitude of the location.
 * Enter a location name and map URL (URLs including ht<span>tps://</span>)
 
 #### Share your current location
+
 * The recipient sends a message to the sender with the recipient's current location.
 * Enter a name for the button.
 
 #### Link URLs
+
 * Connect to a web link.
 * Enter a name for the button, and then enter a link to open when the button is clicked.
 * Must enter 'http://', 'https://'를 when entering a link.
 
 #### Register an event
+
 * Register the event in the recipient's calendar app.
 * Enter a name for the button and select a start and end date for the schedule.
 * Enter the schedule title and schedule content.
