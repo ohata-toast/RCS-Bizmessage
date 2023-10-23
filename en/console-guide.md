@@ -101,39 +101,33 @@ You have to register the template in the RCS Biz Center.
 * After the brand linkage, you can send a message by selecting a brand and a chat room (sender number).
 
 ### Send Regular SMS
-
 ![RCS_06_20231004](https://static.toastoven.net/prod_rcs/en/RCS_06_20231004.png)
-
 1. Select Sending brand.
 2. Select a chat room (sender number).
 3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.
-Go to the **Manage Sending** menu to set up SMS usage.
+  Go to the **Manage Sending** menu to set up SMS usage.
 4. Select the sending type as **SMS**.
 5. Add message content (maximum 100 characters) and buttons (maximum one).
 6. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
 7. Click **Send**.
 
 ### Send General LMS
-
 ![RCS_07_20231004](https://static.toastoven.net/prod_rcs/en/RCS_07_20231004.png)
-
 1. Select Sending brand.
 2. Select a chat room (sender number).
 3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.
-Go to **Manage Sending**to set up SMS usage.
+  Go to **Manage Sending**to set up SMS usage.
 4. Select the sending type as **LMS**.
 5. Add message titles (maximum 30 characters), content (maximum 1300 characters) and buttons (maximum 3 characters).
 6. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
 7. Click **Send**.
 
 ### Send MMS
-
 ![RCS_08_20231004](https://static.toastoven.net/prod_rcs/en/RCS_08_20231004.png)
-
 1. Select Sending brand.
 2. Select a chat room (sender number).
 3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.
-Go to **Manage Sending**to set up SMS usage.
+  Go to **Manage Sending**to set up SMS usage.
 4. Select the send type as **MMS**.
 5. Under Select Details, select **Horizontal or Vertical**.
 6. Add titles (maximum 30 characters), content (maximum 1300 characters), images (maximum one) and buttons (maximum two per card).
@@ -141,13 +135,11 @@ Go to **Manage Sending**to set up SMS usage.
 8. Click **Send**.
 
 ### Send MMS (Card Type)
-
-<div></div>
-
+<span></span>
 1. Select Sending brand.
 2. Select a chat room (sender number).
 3. Select whether the outgoing content is an ad or not. If this is an ad, you have to select the 080 Deny-to- receive number.
-Go to **Manage Sending**to set up SMS usage.
+  Go to **Manage Sending**to set up SMS usage.
 4. Select the send type as **MMS**.
 5. Under Select Details, select a slide type and slide size.
 6. Set the number of slides in the message (minimum 3 and maximum 6).
@@ -156,14 +148,12 @@ Go to **Manage Sending**to set up SMS usage.
 9. Click **Send**.
 
 ### Send Template
-
 ![RCS_09_20231004](https://static.toastoven.net/prod_rcs/en/RCS_09_20231004.png)
-
 1. Select Sending brand.
 2. Select a chat room (sender number).
 3. Select the send type as **Template**.
 4. Select the template you want to send.
-Templates are registered in advance in RCS Biz Center.
+  Templates are registered in advance in RCS Biz Center.
 5. If it is a free template, create a message (maximum 90 characters) to send.
 6. Under Receiver Settings, enter the receiver number you want to send and click **Add** (maximum 50 people).
 7. For each receiver, enter the appropriate value for the template replacement.
