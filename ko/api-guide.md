@@ -169,7 +169,7 @@ Content-Type: application/json
 
 ### MMS 타입 발송
 [Method, URI]
-f
+
 ```
 POST /rcs/v1.0/messages/mms
 Content-Type: application/json
