@@ -21,6 +21,7 @@
 | -4020 | 템플릿 없음 | Client Error. Not exist template. | | 
 | -4021 | 템플릿 상태 오류 | Invalid status template. | | 
 | -4022 | 지원하지 않은 템플릿 | Unsupported template. | |
+| -4023 | 광고 발송이 허용되지 않은 템플릿 | Ad not allowed template. | |
 | -4030 | 첨부파일 없음 | Client Error. Not exist media. | | 
 | -4031 | 첨부파일 만료 | Expired media. | | 
 | -4032 | 첨부파일 타입 오류 | Client Error. Invalid media type. | | 
@@ -31,6 +32,7 @@
 | -4042 | 080 수신거부 대상 | Blocked recipient number. | |
 | -4050 | 대체 발신 번호 없음 | Not exist send number. | | 
 | -4051 | 대체 발신 번호 상태 오류 | Invalid status send number. | |
+| -4060 | 대체 발신 미지원 타입 | Fallback unsupported type. | | 
 | -5000 | 080 수신거부 번호 조회 실패 | Fail to call SMS block service API. | |
 | -5001 | 080 수신거부 대상 조회 실패 | Fail to call SMS block recipient API. | |
 | -5002 | SMS 발신 번호 조회 실패 | Fail to call SMS send number API. | |
