@@ -169,7 +169,7 @@ Content-Type: application/json
 
 ### Send LMS Type
 [Method, URI]
-f
+
 ```
 POST /rcs/v1.0/messages/mms
 Content-Type: application/json
@@ -190,7 +190,7 @@ Content-Type: application/json
 | chatbotId | String | O | Sender number |  |
 | recipientNumber | String | O | Recipient number |  |
 | isAd | Boolean | X | Ad sending or not | Default: false |
-| unsubscribeNumber | String | X | Deny-to-receive number | Required If ad is true |
+| unsubscribeNumber | String | X | Deny-to-receive number | Required when ad is true |
 | mmsType | String | O | MMS type | <ul><li>Horizontal</li><li>Vertical</li><li>Slide Medium (CAROUSEL_MEDIUM)</li><li>Slide Small (CAROUSEL_SMALL)</li></ul> |
 | cards | List | O | Cards | HORIZONTAL(1), VERTICAL(1), CAROUSEL_MEDIUM(3 ~ 6), CAROUSEL_SMALL(3 ~ 6) |
 | card.title | String | X |  Title | Max. 30 characters |
@@ -284,6 +284,8 @@ Content-Type: application/json
 | chatbotId | String | O | Sender number |  |
 | messagebaseId  | String | O | Template ID | |
 | recipientNumber | String | O | Recipient number |  |
+| isAd | Boolean | X | Send ads or not | Default: false, ads can only be sent for image templates |
+| unsubscribeNumber | String | X | Unsubscribe number | Required when isAd is true |
 | body | String | X | Body | Up to 90 characters, only for free templates |
 | templateParameter | Map | X | Substituent key, value |
 | isFallback | Boolean | X | Alternative sending or not |  |
@@ -298,7 +300,9 @@ Content-Type: application/json
     "templateParameter" : {
         "key1":"value1"
     },
-	"recipientNumber":"01012341234"
+    "isAd": true,
+    "unsubscribeNumber": "0801234567",
+	    "recipientNumber":"01012341234"
 }
 ```
 

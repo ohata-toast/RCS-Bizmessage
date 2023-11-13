@@ -7,3 +7,13 @@ The customer who assumes the position of consignor may enter into a consignment 
 [Example]
 - Consignee: NHN Cloud Corp.
 - Consignment Description: Providing RCS Bizmessage service
+
+### Unsupported Sending Type
+- MMS: Image & title highlighted, image highlighted, social media, thumbnail
+- TEMPLATE: Image template (item details), LMS template
+
+### Alternative Sending Unsupported Type
+- TEMPLATE: Image template
+
+### Advertising Message Unsupported Type
+- TEMPLATE: Text template

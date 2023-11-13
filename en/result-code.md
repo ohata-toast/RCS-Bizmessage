@@ -21,6 +21,7 @@
 | -4020 | No template | Client Error. Not exist template. | | 
 | -4021 | Template status error | Invalid template status. | | 
 | -4022 | Template not supported | Unsupported template. | |
+| -4023 | Ad not allowed template.  | |
 | -4030 | No attachments | Client Error. Not exist attachments. | | 
 | -4031 | Attachment expired | Expired attachments. | | 
 | -4032 | Attachment type error | Client Error. Invalid attachment type. | | 
@@ -31,6 +32,7 @@
 | -4042 | 080 deny-to-receive number | Deny-to-receive number. | |
 | -4050 | No alternative sending number | Not exist send number. | | 
 | -4051 | Error in alternative sending number status | Invalid send number status. | |
+| -4060 | Fallback unsupported type. | | 
 | -5000 | Failed to query 080 deny-to-receive number | Failed to call SMS block service API. | |
 | -5001 | Failed to query 080 deny-to-receive target | Failed to call SMS block recipient API. | |
 | -5002 | Failed to query SMS sender number | Failed to call SMS send number API. | |
