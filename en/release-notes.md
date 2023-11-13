@@ -1,6 +1,6 @@
 ## Notification > RCS Bizmessage > Release Notes
 
-### October 17, 2023.
+### November 14, 2023.
 #### Added Features
 * [API] Added image template sending
   * Added a feature to send with image templates (image & title highlighted, image highlighted, social media, and thumbnail).
