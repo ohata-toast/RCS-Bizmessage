@@ -21,7 +21,7 @@
 | -4020 | No template | Client Error. Not exist template. | | 
 | -4021 | Template status error | Invalid template status. | | 
 | -4022 | Template not supported | Unsupported template. | |
-| -4023 | Ad not allowed template.  | Ad not allowed template. |
+| -4023 | Ad not allowed template.  | Ad not allowed template. | |
 | -4024 | Missing template parameter input | Missing template parameter input. | |
 | -4030 | No attachments | Client Error. Not exist attachments. | | 
 | -4031 | Attachment expired | Expired attachments. | | 
