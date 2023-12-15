@@ -21,6 +21,8 @@
 | -4020 | テンプレートなし | Client Error. Not exist template. | | 
 | -4021 | テンプレート状態エラー | Invalid status template. | | 
 | -4022 | サポートしていないテンプレート | Unsupported template. | |
+| -4023 | 広告送信が許可されていないテンプレート | Ad not allowed template. | |
+| -4024 | テンプレートパラメータ入力値漏れ | Missing template parameter input. | |
 | -4030 | 添付ファイルなし | Client Error. Not exist media. | | 
 | -4031 | 添付ファイル期限切れ | Expired media. | | 
 | -4032 | 添付ファイルタイプエラー | Client Error. Invalid media type. | | 
