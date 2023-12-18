@@ -1,5 +1,11 @@
 ## Notification > RCS Bizmessage > Release Notes
 
+### December 19, 2023
+#### Feature Updates
+* [API] Added error messages when required template parameters are omitted
+    * Added error codes when required template parameters are omitted.
+    * For more information, see the result code **4024** from [[Result Code](./result-code/#_1)].
+
 ### November 14, 2023.
 #### Added Features
 * [API] Added image template sending
