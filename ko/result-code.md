@@ -2,9 +2,9 @@
 
 ### API 결과 코드
 | 결과 코드 | 설명 | API 응답 메시지 | 비고 |
-| --- | --- | --- | --- |
-| 0 | 성공 | success | |
-| 400 | 사용자 오류 | Client exception | |
+|-------| --- | --- | --- |
+| 0     | 성공 | success | |
+| 400   | 사용자 오류 | Client exception | |
 | -3000 | 버튼 유효성 검사 실패 | Client Error. Invalid button parameter. |  |
 | -3001 | 080 수신거부 번호 없음 | Client Error. Unsubscribe number is required when send ad. | |
 | -3002 | 발송 요청 시간 오류 | Client Error. SendDateTime cannot be set before now. | |
@@ -44,6 +44,7 @@
 | -7003 | 조회 기간 조건 초과 | Client Error. Invalid date time search parameter. | 최대 31일까지 지정 가능 |
 | -7004 | 메시지 상태 조건 오류 | Client Error. Invalid message status parameter. | |
 | -8000 | 대체 발송 요청 실패 | Fail to call SMS send API. | |
+| -9000 | 야간 광고 발송 제한됨 | Night ad delivery is limited | |
 | -9999 | 내부 에러 | System error. Please inquire at support@toast.com. | |
 
 ### 수신 결과 코드
