@@ -2,9 +2,9 @@
 
 ### API 결과 코드
 | 결과 코드 | 설명 | API 응답 메시지 | 비고 |
-|-------| --- | --- | --- |
-| 0     | 성공 | success | |
-| 400   | 사용자 오류 | Client exception | |
+| --- | --- | --- | --- |
+| 0 | 성공 | success | |
+| 400 | 사용자 오류 | Client exception | |
 | -3000 | 버튼 유효성 검사 실패 | Client Error. Invalid button parameter. |  |
 | -3001 | 080 수신거부 번호 없음 | Client Error. Unsubscribe number is required when send ad. | |
 | -3002 | 발송 요청 시간 오류 | Client Error. SendDateTime cannot be set before now. | |
