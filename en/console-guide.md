@@ -243,3 +243,7 @@ You can utilize the button feature at the bottom of the message.
 * When sending advertising information, you <span style="color:red">must include a free unsubscribe process</span> so that recipients can unsubscribe or withdraw their consent to receive it without charge.
 * You can look up the 080 Deny-to-receive number registered with the SMS service and send messages.
 * You can see how to register for a 080 Deny-to-receive number in [Settings for 080 Deny-to-receive number](./console-guide/#080).
+
+### Set up Advertising Message
+* You can set up whether to enable night ad delivery restriction and restriction times.
+* If you click Save, the settings for night ad delivery restriction are updated. 

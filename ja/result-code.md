@@ -44,6 +44,7 @@
 | -7003 | 照会期間条件超過 | Client Error. Invalid date time search parameter. | 最大31日まで指定可能 |
 | -7004 | メッセージ状態条件エラー | Client Error. Invalid message status parameter. | |
 | -8000 | 代替送信リクエスト失敗 | Fail to call SMS send API. | |
+| -9000 | 夜間広告送信が制限されている | Night ad delivery is limited. | |
 | -9999 | 内部エラー | System error. Please inquire at support@toast.com. | |
 
 ### 受信結果コード

@@ -1,5 +1,10 @@
 ## Notification > RCS Bizmessage > Release Notes
 
+### January 23, 2024
+#### Added Features
+* [Console] Added night ad delivery restriction
+  * Added the feature to enable night ad delivery restriction and set up restriction times
+
 ### December 19, 2023
 #### Feature Updates
 * [API] Added error messages when required template parameters are omitted
