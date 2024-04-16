@@ -8,6 +8,7 @@
 | -3000 | 버튼 유효성 검사 실패 | Client Error. Invalid button parameter. |  |
 | -3001 | 080 수신거부 번호 없음 | Client Error. Unsubscribe number is required when send ad. | |
 | -3002 | 발송 요청 시간 오류 | Client Error. SendDateTime cannot be set before now. | |
+| -3003 | 예약 가능 최대 일자 초과 | Client Error. SendDateTime cannot be set to a point in time after 60 days. | |
 | -3030 | MMS 가로형, 세로형 카드 수 오류 | Client Error. Horizontal and vertical type can enroll only one card. | | 
 | -3031 | MMS 제목 길이 초과 | Client Error. Over mms type title length 30. | | 
 | -3032 | MMS 가로형, 세로형 내용 길이 초과 | Client Error. Over horizontal and vertical type body length 1300. | | 
