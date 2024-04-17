@@ -44,6 +44,7 @@
 | -7002 | 조회 기간 조건 오류 | Client Error. Send date time and receive date time cannot be requested once. | 발송 요청 시간 조건, 수신 시간 조건은 함께 사용 불가 |
 | -7003 | 조회 기간 조건 초과 | Client Error. Invalid date time search parameter. | 최대 31일까지 지정 가능 |
 | -7004 | 메시지 상태 조건 오류 | Client Error. Invalid message status parameter. | |
+| -7005 | 메시지 ID 없음 | Client Error. Not Exist Message ID. | |
 | -8000 | 대체 발송 요청 실패 | Fail to call SMS send API. | |
 | -9000 | 야간 광고 발송 제한됨 | Night ad delivery is limited. | |
 | -9999 | 내부 에러 | System error. Please inquire at support@toast.com. | |
