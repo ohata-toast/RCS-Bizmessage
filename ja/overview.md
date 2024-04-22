@@ -1,6 +1,20 @@
+<style>
+    .custom-table thead {
+        background-color: #FAFAFA;
+    }
+
+    .custom-table tbody tr {
+        background-color: white;
+    }
+
+    .custom-table td {
+        vertical-align: middle;
+    }
+</style>
+
 ## Notification > RCS Bizmessage > 概要
 
-RCS BizmessageサービスはRCS Bizmessage送信およびブランド、チャットボット、テンプレート管理機能を提供するサービスです。 RCS Bizmessageサービスを利用してユーザーはメッセージ送信からブランド管理を通じて企業と顧客間の接続のためのブランド情報を提供することができ、さまざまなタイプのメッセージを送信できます。
+RCS Bizmessageサービスを通じて、ユーザーは様々なタイプのメッセージを送信し、企業と顧客間の接続のためのブランド情報を管理し、提供できます。
 簡単な連携のためのREST APIを提供します。
 
 ## 主な機能
@@ -12,9 +26,73 @@ RCS BizmessageサービスはRCS Bizmessage送信およびブランド、チャ�
 * 代替送信
     * RCS Bizmessageを受信できない端末の場合、既存SMSサービスで代替送信する機能を提供します。
 * 簡単な連動
-    * 本人認証手続きで認証された事業者登録情報を通じてRCS Biz centerに登録したブランド、チャットボット、テンプレート情報を連動できます。
+    * 本人認証手続きを通じて認証された事業者登録情報でRCS Biz Centerに登録したブランド、テンプレート情報を連動させることができます。
     * 顧客のアプリケーションで使用できるRCS Bizmessage送信機能と照会REST APIを提供します。
 
+## RCS送信サポートタイプ
+
+<table class="custom-table" style="text-align: center">
+  <thead>
+    <tr>
+      <th>区分</th>
+      <th colspan="3">一般</th>
+      <th colspan="2">テンプレート</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>商品名</td>
+      <td>RCS SMS</td>
+      <td>RCS LMS</td>
+      <td>RCS MMS</td>
+      <td>テキストテンプレート</td>
+      <td>イメージテンプレート</td>
+    </tr>
+    <tr>
+      <td>用途</td>
+      <td>情報/広告</td>
+      <td>情報/広告</td>
+      <td>情報/広告</td>
+      <td>情報</td>
+      <td>情報/広告</td>
+    </tr>
+    <tr>
+      <td>事前承認</td>
+      <td>不要</td>
+      <td>不要</td>
+      <td>不要</td>
+      <td>承認必要</td>
+      <td>承認必要</td>
+    </tr>
+    <tr>
+      <td>最大文字</td>
+      <td>100文字</td>
+      <td>1,300文字</td>
+      <td>1,300文字<br/>+1MBメディア(カード毎)</td>
+      <td>90文字</td>
+      <td>500文字<br/>+ 1MBメディア(カード毎)</td>
+    </tr>
+    <tr>
+      <td>最大ボタン</td>
+      <td>1個</td>
+      <td>6個</td>
+      <td>2個(カード毎)</td>
+      <td>1個</td>
+      <td>2個(カード毎)</td>
+    </tr>
+    <tr>
+      <td>
+
+[サポートフォーマット](./service-policy)
+</td>
+      <td>1個</td>
+      <td>1個</td>
+      <td>4個</td>
+      <td>4個</td>
+      <td>4個</td>
+    </tr>
+  </tbody>
+</table>
 
 ## サービス対象
 
