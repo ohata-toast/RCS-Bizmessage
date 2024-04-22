@@ -44,6 +44,7 @@
 | -7002 | Query period condition error | Client Error. Send date time and receive date time cannot be requested once. | Send request time condition and receive time condition cannot be used together |
 | -7003 | Inquiry period condition exceeded | Client Error. Invalid date time search parameter. | Can be specified up to 31 days |
 | -7004 | Message status condition error | Client Error. Invalid message status parameter. | |
+| -7005 | No message ID found | Client Error. Not Exist Message ID. | |
 | -8000 | Failed to request alternative sending | Fail to call SMS send API. | |
 | -9000 | Night advertising message delivery restricted | Night ad delivery is limited. | |
 | -9999 | Internal error | System error. Please inquire at support@toast.com. | |

@@ -1,9 +1,20 @@
 ## Notification > RCS Bizmessage > Release Notes
 
+### April 23, 2024
+#### Feature Updates
+* [API] Changed the update timing for resultCode from the retrieve details API response
+    * Changed resultCode from updating to 2000 immediately after sending completion to update after reflecting the received results.
+* [API] Changed the maximum value for the desired send time setting
+    * Changed the configurable desired send time to up to 60 days later.
+* [API] Enhanced validation of search conditions for the retrieve list API
+    * Enhanced validation to ensure that only the correct messageId is received when a messageId is included in a search condition.
+* [Console] Enhanced search condition validation on the retrieve list screen
+    * Enhanced validation to ensure that only the correct messageId is received when the request ID field is included in the search condition.
+
 ### January 23, 2024
 #### Added Features
 * [Console] Added night ad delivery restriction
-  * Added the feature to enable night ad delivery restriction and set up restriction times
+    * Added the feature to enable night ad delivery restriction and set up restriction times
 
 ### December 19, 2023
 #### Feature Updates
