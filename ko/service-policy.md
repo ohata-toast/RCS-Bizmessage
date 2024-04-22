@@ -4,7 +4,7 @@
     }
     
     .custom-table tbody tr {
-        background-color: white;!important;
+        background-color: white!important;
     }
     
     .custom-table td {

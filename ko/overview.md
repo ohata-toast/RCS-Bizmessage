@@ -4,7 +4,7 @@
     }
     
     .custom-table tbody tr {
-        background-color: white;!important;
+        background-color: white!important;
     }
     
     .custom-table td {
@@ -81,11 +81,7 @@ RCS Bizmessage 서비스를 통해 사용자는 다양한 유형의 메시지를
       <td>2개(카드당)</td>
     </tr>
     <tr>
-<td>
-
-[지원 포맷](./service-policy)
-
-</td>
+      <td><a href="/ko/Notification/RCS%20Bizmessage/ko/service-policy/">지원포맷</a></td>
       <td>1개</td>
       <td>1개</td>
       <td>4개</td>
