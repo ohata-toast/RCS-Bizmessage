@@ -8,6 +8,7 @@
 | -3000 | Button validation failed | Client Error. Invalid button parameter. |  |
 | -3001 | 080 deny-to-receive number not exist | Client Error. Unsubscribe number is required when sending ad. | |
 | -3002 | Send request time error | Client Error. SendDateTime cannot be set to a past time. | |
+| -3003 | Exceeded the maximum number of days for reservation | Client Error. SendDateTime cannot be set to a point in time after 60 days. | |
 | -3030 | MMS horizontal, vertical card count error | Client Error. Horizontal and vertical type can enroll only one card. | | 
 | -3031 | MMS title length exceeded | Client Error. Over mms type title length 30. | | 
 | -3032 | MMS horizontal and vertical content length exceeded | Client Error. Exceeded horizontal and vertical type body length of 1300. | | 
@@ -43,6 +44,7 @@
 | -7002 | Query period condition error | Client Error. Send date time and receive date time cannot be requested once. | Send request time condition and receive time condition cannot be used together |
 | -7003 | Inquiry period condition exceeded | Client Error. Invalid date time search parameter. | Can be specified up to 31 days |
 | -7004 | Message status condition error | Client Error. Invalid message status parameter. | |
+| -7005 | No message ID found | Client Error. Not Exist Message ID. | |
 | -8000 | Failed to request alternative sending | Fail to call SMS send API. | |
 | -9000 | Night advertising message delivery restricted | Night ad delivery is limited. | |
 | -9999 | Internal error | System error. Please inquire at support@toast.com. | |
