@@ -44,6 +44,7 @@
 | -7002 | 照会期間条件エラー | Client Error. Send date time and receive date time cannot be requested once. | 送信リクエスト時間条件、受信時間条件は一緒に使用不可 |
 | -7003 | 照会期間条件超過 | Client Error. Invalid date time search parameter. | 最大31日まで指定可能 |
 | -7004 | メッセージ状態条件エラー | Client Error. Invalid message status parameter. | |
+| -7005 | メッセージIDなし | Client Error. Not Exist Message ID. | |
 | -8000 | 代替送信リクエスト失敗 | Fail to call SMS send API. | |
 | -9000 | 夜間広告送信が制限されている | Night ad delivery is limited. | |
 | -9999 | 内部エラー | System error. Please inquire at support@toast.com. | |
