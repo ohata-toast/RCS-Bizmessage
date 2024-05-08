@@ -14,7 +14,7 @@
 
 ## Notification > RCS Bizmessage > Overview
 
-The RCS Bizmessage service allows users to send various types of messages, manage and provide branded information for connecting businesses with their customers.
+The RCS Bizmessage service provides RCS Bizmessage delivery, and management of brands and templates. The RCS Bizmessage service allows users to send various types of messages, manage and provide branded information for connecting businesses with their customers.
 REST APIs for easy integration are provided.
 
 ## Main Features

@@ -14,7 +14,7 @@
 
 ## Notification > RCS Bizmessage > 개요
 
-RCS Bizmessage 서비스를 통해 사용자는 다양한 유형의 메시지를 발송하고 기업과 고객 간 연결을 위한 브랜드 정보를 관리하며 제공할 수 있습니다.
+RCS Bizmessage 서비스는 RCS Bizmessage 발송 및 브랜드, 템플릿 관리 기능을 제공하는 서비스입니다. RCS Bizmessage 서비스를 통해 사용자는 다양한 유형의 메시지를 발송하고 기업과 고객 간 연결을 위한 브랜드 정보를 관리하며 제공할 수 있습니다.
 손쉬운 연동을 위한 REST API를 제공합니다.
 
 ## 주요 기능
