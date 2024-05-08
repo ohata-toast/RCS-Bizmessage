@@ -26,7 +26,7 @@ You can receive and view messages in chats in the Messages app. You can send and
     * RCS business messaging does not support 010 numbers.
     * RCS manager will approve and it will take 2 business days to approve your chatroom.
 
-![RCS_pre_send_guide_02.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_02.png)
+    ![RCS_pre_send_guide_02.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_02.png)
 
 2. If your chat room registration is complete (approved), you can link it to the NHN Cloud Console in **Notification** > **RCS Bizmessage** > **Manage RCS Bizmessage** > **Brand Management**.
 
@@ -39,7 +39,7 @@ To send a template message, you need to register the template in RCS Biz Center.
     * Only text/image templates can be registered. [[Delivery Supported Types]](./overview)
     * RCS manager will approve and it will take 2 business days to approve your chatroom.
 
-![RCS_pre_send_guide_03.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_03.png)
+    ![RCS_pre_send_guide_03.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_03.png)
 
 2. If your template registration is complete (approved), you can link it to the NHN Cloud Console in **Notification** > **RCS Bizmessage** > **Manage RCS Bizmessage** > **Brand Management**.
 

@@ -26,7 +26,7 @@ RCS 브랜드 승인 완료 후, 대행사를 ‘㈜ NHN Cloud’로 설정합�
     * RCS 기업 메시지는 010 번호를 지원하지 않습니다.
     * RCS 담당자가 승인하며 대화방 승인까지 2 영업일 정도 소요됩니다.
 
-![RCS_pre_send_guide_02.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_02.png)
+    ![RCS_pre_send_guide_02.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_02.png)
 
 2. 대화방 등록이 완료(승인)되었다면, **Notification** > **RCS Bizmessage** > **RCS Bizmessage 관리** > **브랜드 관리** 탭에서 NHN Cloud 콘솔에 연동이 가능합니다.
 
@@ -39,7 +39,7 @@ RCS 브랜드 승인 완료 후, 대행사를 ‘㈜ NHN Cloud’로 설정합�
     * 텍스트/이미지 템플릿 한해서 등록이 가능합니다. [[발송 지원 타입]](./overview)
     * RCS 담당자가 승인하며 대화방 승인까지 2 영업일 정도 소요됩니다.
 
-![RCS_pre_send_guide_03.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_03.png)
+    ![RCS_pre_send_guide_03.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_03.png)
 
 2. 템플릿 등록이 완료(승인)되었다면, **Notification** > **RCS Bizmessage** > **RCS Bizmessage 관리** > **브랜드 관리** 탭에서 NHN Cloud 콘솔에 연동이 가능합니다.
 

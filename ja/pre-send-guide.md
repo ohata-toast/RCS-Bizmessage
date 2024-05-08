@@ -26,7 +26,7 @@ RCSブランド承認完了後、代理店を「(株) NHN Cloud」に設定し�
     * RCS企業メッセージは010番号をサポートしていません。
     * RCS担当者が承認し、チャットルームの承認まで2営業日程度かかります。
 
-![RCS_pre_send_guide_02.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_02.png)
+    ![RCS_pre_send_guide_02.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_02.png)
 
 2. チャットルームの登録が完了(承認)したら、**Notification** > **RCS Bizmessage** > **RCS Bizmessage管理** > **ブランド管理**タブでNHN Cloudコンソールに連動が可能です。
 
@@ -39,7 +39,7 @@ RCSブランド承認完了後、代理店を「(株) NHN Cloud」に設定し�
     * テキスト/イメージテンプレートのみ登録が可能です。 [[送信サポートタイプ]](./overview)
     * RCS担当者が承認し、チャットルーム承認まで2営業日程度かかります。
 
-![RCS_pre_send_guide_03.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_03.png)
+    ![RCS_pre_send_guide_03.png](https://static.toastoven.net/prod_rcs/ko/RCS_pre_send_guide_03.png)
 
 2. テンプレートの登録が完了(承認)したら、**Notification** > **RCS Bizmessage** > **RCS Bizmessage管理** > **ブランド管理**タブでNHN Cloudコンソールに連動が可能です。
 
