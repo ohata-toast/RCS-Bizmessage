@@ -39,7 +39,7 @@ To use the RCS Bizmessage service, you can use it after completing identity veri
 
 ### Brand Management
 Once the pre-registration is completed (approved) in RCS Biz Center, proceed to integrate with NHN Cloud Console.
-You can check the pre-registration requirements in [Preparations Before Delivery].
+You can check the pre-registration requirements in [Preparations Before Delivery](./pre-send-guide).
 
 * Brand is linked based on the business registration number on the attached business registration card when authenticating yourself.
 * Clicking on **+ Link Brand** button also links brands and sub-resources (chat rooms, templates).
@@ -51,7 +51,7 @@ You can check the pre-registration requirements in [Preparations Before Delivery
 ![RCS_03_20231004](https://static.toastoven.net/prod_rcs/en/RCS_03_20231004.png)
 
 ### Retrieve Chat Room (sender number)
-You must register a chat room (sender number) in the RCS Biz Center. You can check the pre-registration in [Preparations Before Delivery].
+You must register a chat room (sender number) in the RCS Biz Center. You can check the pre-registration in [Preparations Before Delivery](./pre-send-guide).
 
 * In RCS Biz Center, click **Service Management** > **Brand** > **Brand Operations**, select a brand, and go to the **Manage Sender Numbers** menu to register a calling number.
 * Once the brand linkage is complete, you can look up the list of chat rooms (sender numbers) registered with the brand.
@@ -59,7 +59,7 @@ You must register a chat room (sender number) in the RCS Biz Center. You can che
 * Only sender numbers with an ‘Approved’ status are available.
 
 ### Retrieve Template
-You have to register the template in the RCS Biz Center. You can check the pre-registration in [Preparations Before Delivery].
+You have to register the template in the RCS Biz Center. You can check the pre-registration in [Preparations Before Delivery](./pre-send-guide).
 
 * Once the brand linkage is complete, you can look up the list of templates registered with the brand.
 * If you select the brand you want from the drop box, you can retrieve the list of templates registered with that brand.
